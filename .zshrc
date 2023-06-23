@@ -153,6 +153,8 @@ alias rainbowcat='nyancat'
 
 #btop
 alias btp='btop'
+#timeshift
+alias timeshift-gui='sudo -E timeshift-gtk'
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 

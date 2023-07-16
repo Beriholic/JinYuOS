@@ -17,7 +17,7 @@ local function load_options()
 		breakat = [[\ \	;:,!?]],
 		breakindentopt = "shift:2,min:20",
 		clipboard = "unnamedplus",
-		cmdheight = 2, -- 0, 1, 2
+		cmdheight = 1, -- 0, 1, 2
 		cmdwinheight = 5,
 		complete = ".,w,b,k",
 		completeopt = "menuone,noselect",
@@ -58,7 +58,7 @@ local function load_options()
 		relativenumber = true,
 		ruler = true,
 		scrolloff = 2,
-		sessionoptions = "buffers,curdir,help,tabpages,winsize",
+		sessionoptions = "buffers,curdir,folds,help,tabpages,winpos,winsize",
 		shada = "!,'500,<50,@100,s10,h",
 		shiftround = true,
 		shiftwidth = 4,
@@ -73,7 +73,7 @@ local function load_options()
 		smarttab = true,
 		softtabstop = 4,
 		splitbelow = true,
-		splitkeep = "cursor",
+		splitkeep = "screen",
 		splitright = true,
 		startofline = false,
 		swapfile = false,

@@ -224,7 +224,7 @@ if [[ -n "${NONINTERACTIVE-}" ]]; then
 	USE_SSH=0
 fi
 
-info "This script will install ayamir/nvimdots to:"
+info "This script will install Beriholic/nvimdots to:"
 echo "${DEST_DIR}"
 
 if [[ -d "${DEST_DIR}" ]]; then
@@ -249,11 +249,11 @@ fi
 info "Fetching in progress..."
 if [[ "${USE_SSH}" -eq "1" ]]; then
 	if check_nvim_version "${REQUIRED_NVIM_VERSION}"; then
-		execute "git" "clone" "-b" "main" "${CLONE_ATTR[@]}" "git@github.com:ayamir/nvimdots.git" "${DEST_DIR}"
+		execute "git" "clone" "-b" "main" "${CLONE_ATTR[@]}" "git@github.com:Beriholic/nvimdots.git" "${DEST_DIR}"
 	elif check_nvim_version "${REQUIRED_NVIM_VERSION_LEGACY}"; then
 		warn "You have outdated Nvim installed (< ${REQUIRED_NVIM_VERSION})."
 		info "Automatically redirecting you to the latest compatible version..."
-		execute "git" "clone" "-b" "0.8" "${CLONE_ATTR[@]}" "git@github.com:ayamir/nvimdots.git" "${DEST_DIR}"
+		execute "git" "clone" "-b" "0.8" "${CLONE_ATTR[@]}" "git@github.com:Beriholic/nvimdots.git" "${DEST_DIR}"
 	else
 		warn "You have outdated Nvim installed (< ${REQUIRED_NVIM_VERSION_LEGACY})."
 		abort "$(
@@ -265,11 +265,11 @@ EOABORT
 	fi
 else
 	if check_nvim_version "${REQUIRED_NVIM_VERSION}"; then
-		execute "git" "clone" "-b" "main" "${CLONE_ATTR[@]}" "https://github.com/ayamir/nvimdots.git" "${DEST_DIR}"
+		execute "git" "clone" "-b" "main" "${CLONE_ATTR[@]}" "https://github.com/Beriholic/nvimdot.git" "${DEST_DIR}"
 	elif check_nvim_version "${REQUIRED_NVIM_VERSION_LEGACY}"; then
 		warn "You have outdated Nvim installed (< ${REQUIRED_NVIM_VERSION})."
 		info "Automatically redirecting you to the latest compatible version..."
-		execute "git" "clone" "-b" "0.8" "${CLONE_ATTR[@]}" "https://github.com/ayamir/nvimdots.git" "${DEST_DIR}"
+		execute "git" "clone" "-b" "0.8" "${CLONE_ATTR[@]}" "https://github.com/Beriholic/nvimdots.git" "${DEST_DIR}"
 	else
 		warn "You have outdated Nvim installed (< ${REQUIRED_NVIM_VERSION_LEGACY})."
 		abort "$(

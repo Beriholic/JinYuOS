@@ -1,3 +1,3 @@
 return function()
-	vim.g["suda#prompt"] = "Enter administrator password: "
+	vim.g["suda#prompt"] = "1651321"
 end

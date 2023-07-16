@@ -1,9 +1,19 @@
 local settings = {}
-local home = require("core.global").home
+
+local opt = vim.opt
+
+--防止包裹
+opt.wrap = false
+
+--光标行
+opt.cursorline = true
+
+--系统剪贴板
+opt.clipboard:append("unnamedplus")
 
 -- Set it to false if you want to use https to update plugins and treesitter parsers.
 ---@type boolean
-settings["use_ssh"] = false
+settings["use_ssh"] = true
 
 -- Set it to false if there are no need to format on save.
 ---@type boolean
@@ -14,16 +24,25 @@ settings["format_on_save"] = true
 settings["format_notify"] = true
 
 -- Set it to false if diagnostics virtual text is annoying.
+-- If disabled, you may browse lsp diagnostics using trouble.nvim (press `gt` to toggle it).
 ---@type boolean
 settings["diagnostics_virtual_text"] = true
 
+-- Set it to one of the values below if you want to change the visible severity level of lsp diagnostics.
+-- Priority: `Error` > `Warning` > `Information` > `Hint`.
+--  > e.g. if you set this option to `Warning`, only lsp warnings and errors will be shown.
+-- NOTE: This entry only works when `diagnostics_virtual_text` is true.
+---@type "Error"|"Warning"|"Information"|"Hint"
+settings["diagnostics_level"] = "Hint"
+
 -- Set the format disabled directories here, files under these dirs won't be formatted on save.
+--- NOTE: Directories may contain regular expressions (grammar: vim). |regexp|
+--- NOTE: Directories are automatically normalized. |vim.fs.normalize()|
 ---@type string[]
 settings["format_disabled_dirs"] = {
-	home .. "/format_disabled_dir_under_home",
+	"~/format_disabled_dir",
 }
 
--- NOTE: The startup time will be slowed down when it's true.
 -- Set it to false if you don't use nvim to open big files.
 ---@type boolean
 settings["load_big_files_faster"] = true
@@ -95,6 +114,16 @@ settings["null_ls_deps"] = {
 	"shfmt",
 	"stylua",
 	"vint",
+}
+
+-- Set the Debug Adapter Protocol (DAP) clients that will be installed and configured during bootstrap here.
+-- Check the below link for all supported DAPs:
+-- https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
+---@type string[]
+settings["dap_deps"] = {
+	"codelldb", -- C-Family
+	"delve", -- Go
+	"python", -- Python (debugpy)
 }
 
 return settings

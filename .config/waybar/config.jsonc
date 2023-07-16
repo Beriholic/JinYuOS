@@ -1,66 +1,62 @@
 {
-    "height": 30, // Waybar height (to be removed for auto height)
-    "layer": "top", // Waybar at top layer
-    "margin-top": 6,
-    "margin-left": 10,
-    "margin-bottom": 0,
-    "margin-right": 10,
-    "spacing": 5, // Gaps between modules (4px)
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 6,
     "modules-left": [
-        "custom/launcher",
-        "cpu",
-        "memory",
         "wlr/workspaces",
-        "custom/weather"
+        "hyprland/window"
     ],
-    "modules-center": [
-        "custom/spotify"
-    ],
+    "modules-center": [],
     "modules-right": [
         "tray",
-        "backlight",
-        "pulseaudio",
         "network",
+        "pulseaudio",
+        "backlight",
+        "memory",
+        "cpu",
         "battery",
-        "clock",
-        "custom/power-menu"
+        "clock"
     ],
     "wlr/workspaces": {
         "format": "{icon}",
+        "sort-by-number": true,
         "on-click": "activate",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
-            "active": "",
-            "default": ""
-        }
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "hyprland/window": {
-        "format": "{}"
+        "format": "\uf061 {}",
+        "separate-outputs": true
     },
     "tray": {
+        "icon-size": 21,
         "spacing": 10
     },
     "clock": {
-        "format-alt": "<span color='#bf616a'> </span>{:%I:%M %p}",
-        "format": "<span color='#bf616a'> </span>{:%a %b %d}",
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1,
+        "format": "\uf017 {:%H:%M:%S}",
+        "format-alt": "\uf133 {:%Y-%m-%d %H:%M:%S}"
     },
     "cpu": {
-        "interval": 10,
-        "format": " {}%",
+        "interval": 1,
+        "format": "\uf2db {usage}%",
+        "tooltip": true,
         "max-length": 10,
         "on-click": "",
     },
+    // "memory": {
+    //     "interval": 1,
+    //     "format": "\uf538 {used}G",
+    //     "tooltip": true,
+    //     "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G"
+    // },
     "memory": {
         "interval": 30,
-        "format": " {}%",
-        "format-alt": " {used:0.1f}G",
+        "format": " {}%",
+        "format-alt": "\uf538{used:0.1f}G",
         "max-length": 10,
+        "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G"
     },
     "backlight": {
         "device": "eDP-1",
@@ -78,37 +74,35 @@
         ],
         "on-click": "",
     },
+    // "network": {
+    //     "format-wifi": "\uf1eb {essid} ({signalStrength}%)",
+    //     "format-ethernet": "\uf6ff {ipaddr}/{cidr}",
+    //     "format-linked": "\uf059 No IP ({ifname})",
+    //     "format-disconnected": "\uf071 Disconnected",
+    //     "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
+    //     "format-alt": "\uf6ff {ifname}: {ipaddr}/{cidr}",
+    //     "on-click": "kitty -e 'nmtui'",
+    // },
     "network": {
-        "format-wifi": "直 {signalStrength}%",
-        "format-ethernet": " wired",
-        "format-disconnected": "睊",
-        "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
-        "format-disconnected": " Disconnected",
+        "format-wifi": "\uf1eb {signalStrength}%",
+        "format-ethernet": "\uf6ff  wired",
+        "format-disconnected": "\uf071 Disconnected",
         "on-click": "kitty -e 'nmtui'",
     },
     "pulseaudio": {
+        "scroll-step": 5,
         "format": "{icon} {volume}%",
-        "format-bluetooth": "  {volume}%",
-        "format-bluetooth-muted": " ",
-        "format-muted": "婢",
+        "format-muted": "\uf6a9",
+        "format-bluetooth": "{icon}\uf294 {volume}%",
+        "format-bluetooth-muted": "\ufa69 {icon}\uf294",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": [
-                "",
-                "",
-                ""
+                "\uf026",
+                "\uf027",
+                "\uf028"
             ]
         },
-        "on-click": "pavucontrol"
-    },
-    "bluetooth": {
-        "on-click": "~/.config/waybar/scripts/rofi-bluetooth &",
-        "format": " {status}",
+        "on-click-right": "pavucontrol"
     },
     "battery": {
         "bat": "BAT0",
@@ -133,27 +127,5 @@
             " ",
             " "
         ],
-    },
-    "custom/weather": {
-        "exec": "python ~/.config/waybar/scripts/weather.py",
-        "restart-interval": 300,
-        "return-type": "json",
-        "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/a319796a4173829988d68c4e3a5f90c1b6832667ea7aaa201757a1c887ec667a"
-    },
-    "custom/spotify": {
-        "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
-        "format": "{}  ",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-double-click-right": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-    },
-    "custom/power-menu": {
-        "format": " <span color='#6a92d7'>⏻ </span>",
-        "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh",
-    },
-    "custom/launcher": {
-        "format": " <span color='#6a92d7'> </span>",
-        "on-click": "rofi -show drun",
     },
 }

@@ -1,5 +1,16 @@
 local settings = {}
 
+local opt = vim.opt
+
+--防止包裹
+opt.wrap = false
+
+--光标行
+opt.cursorline = true
+
+--系统剪贴板
+opt.clipboard:append("unnamedplus")
+
 -- Set it to false if you want to use https to update plugins and treesitter parsers.
 ---@type boolean
 settings["use_ssh"] = true

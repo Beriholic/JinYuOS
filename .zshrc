@@ -11,6 +11,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+# Starship prompt
+eval "$(starship init zsh)"
+
 # Zap 
 plug "zap-zsh/supercharge"
 plug "zsh-users/zsh-autosuggestions"
@@ -20,9 +23,9 @@ plug "esc/conda-zsh-completion"
 
 # Alias 
 # Replacement Icons for ls 
+alias l="exa -a  --icons -l"
 alias ll="exa -l --icons"
-alias la="exa -Ga --icons"
-alias l="exa -Ga -l --icons"
+alias lll="exa -Ga --icons"
 
 
 ## Colorize the grep command output for ease of use (good for log files)##
@@ -64,15 +67,13 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
 
 #Cleanup orphaned packages
-alias autoremove='sudo pacman -Rns $(pacman -Qtdq)'
+alias autoremove='sudo pacman -Rns $(pacman -Qtdq) && sudo paccache -r'
 
 #clear
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 
 
-# Bash, zsh, fish configs 
-alias nb="$EDITOR ~/.bashrc"
-alias nz="$EDITOR ~/.zshrc"
+
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -110,7 +111,7 @@ alias cd..="cd .."
 alias ascfish="asciiquarium"
 alias wether='clear && wttr "Chongqing Hechuan"'
 alias mycat='oneko'
-alias fire='aafire -driver curses'
+alias fire='aafire -driver curses -boldfont'
 
 #v2raya
 alias stv2='sudo systemctl start v2raya.service'
@@ -136,11 +137,12 @@ source ~/.nvm/nvm.sh
 
 #bat->cat
 alias cat='bat'
+alias ccat='cat'
 
 #open zhsrc
-alias openzsh='nvim ~/.zshrc'
+alias nz="$EDITOR ~/.zshrc"
 #source zhsrc
-alias savezsh='source ~/.zshrc'
+alias snz='source ~/.zshrc'
 
 #Duf
 alias disk='duf'
@@ -153,8 +155,32 @@ alias rainbowcat='nyancat'
 
 #btop
 alias btp='btop'
+#gtp
+alias gtp='gotop'
 #timeshift
 alias timeshift-gui='sudo -E timeshift-gtk'
+#change theme
+alias theme-blue='cd ~/.config/hypr && git checkout blue && cd ~/.config/waybar && git checkout blue && cd'
+alias theme-pink='cd ~/.config/hypr && git checkout pink && cd ~/.config/waybar && git checkout pink && cd'
+
+alias st_waydroid='sudo systemctl start waydroid-container'   
+alias sp_waydroid='sudo systemctl stop waydroid-container'   
+
+alias fdd='fzf'
+
+alias moto="cat ~/Berijects/moto"
+
+alias dc='cd'
+
+alias openbox='sudo systemctl start libvirtd.service'
+alias stopbox='sudo systemctl stop libvirtd.service'
+
+#sherlock find Hunt down social media accounts by username across social networks
+alias fname='sherlock'
+
+alias colorcat='lolcat'
+
+alias atree='cbonsai'
+
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-

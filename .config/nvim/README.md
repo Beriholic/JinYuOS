@@ -1,11 +1,5 @@
 ## 🏗 How to Install
 
-- **Windows** _(Note: This script REQUIRES `pwsh` > `v7.1`)_
-
-```pwsh
-Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/ayamir/nvimdots/HEAD/scripts/install.ps1'))
-```
-
 - **\*nix**
 
 ```sh

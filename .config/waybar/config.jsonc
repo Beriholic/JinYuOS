@@ -36,7 +36,9 @@
     "clock": {
         "interval": 1,
         "format": "\uf017 {:%H:%M:%S}",
-        "format-alt": "\uf133 {:%Y-%m-%d %H:%M:%S}"
+        "format-alt": "\uf133 {:%Y-%m-%d %H:%M:%S}",
+        "tooltip": true,
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     },
     "cpu": {
         "interval": 1,
@@ -102,7 +104,7 @@
                 "\uf028"
             ]
         },
-        "on-click-right": "pavucontrol"
+        "on-click": "pavucontrol"
     },
     "battery": {
         "bat": "BAT0",

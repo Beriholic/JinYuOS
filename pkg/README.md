@@ -1,13 +1,11 @@
 # export
 
 ```
-yay -Qqen > packages-repository.txt
-yay -Qqem > packages-AUR.txt
+./script/export.sh
 ```
 
 # import
 
 ```
-yay --needed -S - < packages-repository.txt
-cat packages-AUR.txt | xargs yay -S --needed --noconfirm
+./script/import.sh
 ```

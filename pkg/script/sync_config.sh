@@ -1,6 +1,6 @@
 #!/bin/bash
-# Define an array named "name"
-name=(hypr waybar kitty nvim fuzzel gtklock hypr kitty lazygit nvim ranger rofi waybar wlogout zathura)
+# Define an array named "name" with all file names in ../../.config/
+name=( $(ls -1 ../../.config/) )
 
 # Sync the folders in ~/.config/ that are listed in the "name" array to ../../.config/
 

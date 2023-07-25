@@ -7,11 +7,11 @@ return function()
 			},
 			panel = {
 				-- if true, it can interfere with completions in copilot-cmp
-				enabled = false,
+				enabled = true,
 			},
 			suggestion = {
 				-- if true, it can interfere with completions in copilot-cmp
-				enabled = false,
+				enabled = true,
 			},
 			filetypes = {
 				["dap-repl"] = false,

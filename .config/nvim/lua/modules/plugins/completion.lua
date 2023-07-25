@@ -60,7 +60,7 @@ completion["zbirenbaum/copilot.lua"] = {
 	lazy = true,
 	cmd = "Copilot",
 	event = "InsertEnter",
-	config = require("completion.copilot"),
+	-- config = require("completion.copilot"),
 	dependencies = {
 		{
 			"zbirenbaum/copilot-cmp",

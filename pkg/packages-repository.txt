@@ -13,6 +13,7 @@ android-udev
 archlinuxcn-keyring
 aria2
 ark
+asciinema
 asciiquarium
 awesome
 base
@@ -67,6 +68,7 @@ inotify-tools
 jdk17-openjdk
 khal
 kitty
+kooha
 lazydocker
 lazygit
 lib32-mesa
@@ -92,6 +94,7 @@ mpv
 mysql
 nemo
 neofetch
+neovide-git
 neovim
 networkmanager
 noto-fonts
@@ -101,7 +104,6 @@ noto-fonts-extra
 numlockx
 nvm
 nyancat
-obs-studio
 obsidian
 okular
 openbsd-netcat
@@ -125,8 +127,6 @@ qt5ct
 qt6-wayland
 ranger
 ripgrep
-rofi
-rofi-emoji
 ruby
 rust
 sddm

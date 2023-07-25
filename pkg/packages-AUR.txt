@@ -11,6 +11,7 @@ fastgithub-bin
 fortune-mod-zh
 go-musicfox-bin
 google-chrome
+gtk-theme-switch2
 gtklock
 hollywood
 hyprpicker
@@ -19,13 +20,12 @@ jetbrains-toolbox
 libaal
 linuxqq-appimage
 mason.nvim
+nomacs
 ntpdate
-obs-vkcapture-git
 ocs-url
 python-xyzservices
 sherlock-git
 swww
-todesk-bin
 ttf-wps-fonts
 typora-electron
 visual-studio-code-bin

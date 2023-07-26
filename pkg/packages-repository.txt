@@ -20,7 +20,6 @@ base
 base-devel
 bat
 binder_linux-dkms
-bluedevil
 blueman
 bluez-utils
 btop
@@ -129,7 +128,6 @@ ranger
 ripgrep
 ruby
 rust
-sddm
 shotcut
 sl
 slurp
@@ -180,7 +178,6 @@ xdotool
 xf86-video-amdgpu
 xorg-xlsclients
 xorg-xrdb
-xorg-xwayland-lily
 xorg-xwininfo
 xsettingsd
 yarn

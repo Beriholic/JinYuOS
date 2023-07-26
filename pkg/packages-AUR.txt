@@ -34,4 +34,5 @@ wlogout
 wttr
 wudao-dict-git
 zathura-git
+zramd
 zsh-system-clipboard-git

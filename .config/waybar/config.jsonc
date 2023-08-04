@@ -129,6 +129,6 @@
             " ",
             " "
         ],
-        "on-click": "wlogout"
+        "on-click-right": "wlogout"
     },
 }

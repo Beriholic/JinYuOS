@@ -1,13 +1,10 @@
 lastupdatecheck: 1688979859
 recentrepos:
-    - /home/beri/Downloads/go-project-example
-    - /home/beri/Berijects/Dotfiles
-    - /home/beri/Berijects/notebackup
+    - /home/beri/Berijects/go/tiktok
+    - /home/beri/.config/kitty
+    - /home/beri/Berijects/tiktok
+    - /home/beri/Documents/douyin
     - /home/beri/.config/nvim
-    - /home/beri/Berijects/go/wait-to-do
-    - /home/beri/Berijects/go/IM-System
-    - /home/beri/.config/hypr
-    - /home/beri/Berijects/beriholic.github.io
 startuppopupversion: 5
 customcommandshistory:
     - q

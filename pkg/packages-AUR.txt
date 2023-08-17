@@ -4,11 +4,13 @@ cbonsai
 docker-desktop
 envycontrol
 gobang-bin
+grimblast-git
 gtk-theme-switch2
 gtklock
 jetbrains-toolbox
 linuxqq-appimage
 nodejs-tldr-git
+nwg-look-bin
 ocs-url
 portainer-bin
 python-ffmpeg-python

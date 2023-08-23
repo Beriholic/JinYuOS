@@ -1,7 +1,8 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   /* font-family: "IntelOne Mono", "Font Awesome 6 Free"; */
-  font-family: "IntelOne Mono";
+  /* font-family: "IntelOne Mono"; */
+  font-family: otf-font-awesome;
 
   font-weight: 500;
   font-size: 16px;

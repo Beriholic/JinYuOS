@@ -13,10 +13,12 @@ bat
 bc
 blueman
 bluez-utils
+brightnessctl
 btop
 btrfs-progs
 clipman
 docker
+dotnet-sdk
 downgrade
 duf
 ebtables
@@ -46,11 +48,13 @@ grim
 grpc
 grub
 gtk4
+htop
 hyprland-git
 imv
 jdk11-openjdk
 kate
 kitty
+kvantum
 lazydocker
 lazygit
 lib32-mesa
@@ -68,6 +72,7 @@ mako
 man-db
 maven
 meld
+mesa-utils
 motrix
 mpv
 mysql
@@ -116,6 +121,8 @@ systemd-numlockontty
 telegram-desktop
 thefuck
 timeshift
+tlp
+tlp-rdw
 tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd
@@ -134,7 +141,6 @@ wqy-microhei
 xdg-user-dirs
 xf86-video-amdgpu
 xorg-xrdb
-xorg-xwayland
 xorg-xwininfo
 yarn
 yay

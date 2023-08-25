@@ -1,10 +1,9 @@
 lastupdatecheck: 1692166737
 recentrepos:
-- /home/beri/Berijects/go/upstream/tiktok
-- /home/beri/Berijects/go/tiktok
-- /home/beri/Downloads/tiktok
-- /home/beri/.config/nvim
 - /home/beri/Berijects/Dotfiles
+- /home/beri/Berijects/go/tiktok
+- /home/beri/Berijects/go/upstream/tiktok
+- /home/beri/.config/nvim
 - /home/beri/.config/kitty
 - /home/beri/Documents/douyin
 startuppopupversion: 5

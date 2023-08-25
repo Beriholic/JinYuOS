@@ -10,7 +10,6 @@ docker-desktop
 envycontrol
 foliate-git
 gobang-bin
-google-chrome
 grimblast-git
 gtk-theme-switch2
 gtklock
@@ -25,6 +24,7 @@ portainer-bin
 python-ffmpeg-python
 redis-insight-bin
 scrcpy-git
+superproductivity-bin
 swww
 translate-shell-git
 ttf-ms-fonts
@@ -37,5 +37,6 @@ wttr
 wudao-dict-git
 xbyyunpan-bin
 xdg-desktop-portal-wlr-git
+xorg-xwayland-git
 yesplaymusic
 z-library-bin

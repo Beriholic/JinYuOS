@@ -12,8 +12,8 @@
         "tray",
         "network",
         "pulseaudio",
-        "backlight",
         "memory",
+        "backlight",
         "cpu",
         "battery",
         "clock"
@@ -38,13 +38,13 @@
         "format": "\ue641  {:%H:%M}",
         "format-alt": "\uf133  {:%Y-%m-%d %H:%M}",
         "tooltip": true,
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
     },
     "cpu": {
         "interval": 1,
-        "format": "\uf2db  {usage}%",
+        "format": "\uf2db  {max_frequency}GHz | {usage}%",
         "tooltip": true,
-        "max-length": 10,
+        "max-length": 13,
         "on-click": "",
     },
     "memory": {

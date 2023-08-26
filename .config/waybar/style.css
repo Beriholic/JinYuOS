@@ -96,7 +96,7 @@ window#waybar.hidden {
 }
 
 #memory {
-  background-color: #ffeaaa;
+  background-color: #f8bd96;
   color: #000000;
 }
 
@@ -134,6 +134,6 @@ window#waybar.hidden {
 }
 
 #backlight {
+  background-color: #ffeaaa;
   color: #000000;
-  background-color: #f8bd96;
 }

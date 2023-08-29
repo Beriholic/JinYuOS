@@ -1,6 +1,4 @@
 adapta-gtk-theme
-adwaita-qt5
-adwaita-qt6
 alsa-plugins
 alsa-utils
 amd-ucode
@@ -11,12 +9,14 @@ base
 base-devel
 bat
 bc
+blanket
 blueman
 bluez-utils
 brightnessctl
 btop
 btrfs-progs
 clipman
+d2
 docker
 dotnet-sdk
 downgrade
@@ -66,13 +66,13 @@ libvirt
 light
 linux
 linux-firmware
-linux-headers
 lldb
 mako
 man-db
 maven
 meld
 mesa-utils
+mono-msbuild
 motrix
 mpv
 mysql
@@ -94,6 +94,7 @@ opendesktop-fonts
 otf-font-awesome
 p7zip
 pamixer
+paru
 pavucontrol
 pipewire-alsa
 pipewire-pulse
@@ -115,12 +116,12 @@ ripgrep
 rustup
 sl
 slurp
+starship
 swappy
 swayidle
 systemd-numlockontty
 telegram-desktop
 thefuck
-timeshift
 tlp
 tlp-rdw
 tree
@@ -138,6 +139,7 @@ w3m
 waybar
 wget
 wqy-microhei
+xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 xf86-video-amdgpu
 xorg-xrdb

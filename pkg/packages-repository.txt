@@ -2,8 +2,10 @@ adapta-gtk-theme
 alsa-plugins
 alsa-utils
 amd-ucode
+android-sdk-platform-tools
 archlinuxcn-keyring
 aria2
+asciiquarium
 auto-cpufreq
 base
 base-devel
@@ -18,13 +20,14 @@ btrfs-progs
 clipman
 d2
 docker
+docker-compose
 dotnet-sdk
 downgrade
 duf
 ebtables
 efibootmgr
 evince
-exa
+eza
 fcitx5-chinese-addons
 fcitx5-configtool
 fcitx5-git
@@ -37,6 +40,7 @@ feishu-bin
 firefox
 font-manager
 fuzzel
+gimp-devel
 git-lfs
 github-desktop-bin
 gnome-keyring
@@ -114,7 +118,7 @@ qt6-wayland
 ranger
 redis
 ripgrep
-rustup
+rust
 sl
 slurp
 starship
@@ -140,6 +144,8 @@ w3m
 waybar
 wf-recorder
 wget
+wine-for-wechat
+wine-wechat-setup
 wqy-microhei
 xdg-desktop-portal-hyprland-git
 xdg-user-dirs

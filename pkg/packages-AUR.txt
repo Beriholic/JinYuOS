@@ -5,6 +5,7 @@ brillo
 bt-dualboot
 cbonsai
 clipboard
+cpeditor
 dingtalk-bin
 docker-desktop
 envycontrol
@@ -16,12 +17,16 @@ gtk-theme-switch2
 gtklock
 jetbrains-toolbox
 linuxqq-appimage
+mongodb-compass
+mongosh
 nemo-compare
 no-more-secrets
 nodejs-tldr-git
 noto-fonts-sc
 nwg-look-bin
 ocs-url
+protoc-gen-go
+protoc-gen-go-grpc
 python-ffmpeg-python
 redis-insight-bin
 scrcpy-git
@@ -31,6 +36,7 @@ timeshift-bin
 translate-shell-git
 ttf-ms-fonts
 ttf-ms-win11-auto-zh_cn
+typora-free
 v4l2loopback-dkms-git
 visual-studio-code-bin
 wlogout

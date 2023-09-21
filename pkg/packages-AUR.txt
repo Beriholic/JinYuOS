@@ -1,5 +1,6 @@
 adwaita-qt5
 adwaita-qt6
+apifox-bin
 bilibili-bin
 brillo
 bt-dualboot

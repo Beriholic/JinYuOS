@@ -26,6 +26,7 @@ downgrade
 duf
 ebtables
 efibootmgr
+etcd
 evince
 eza
 fcitx5-chinese-addons

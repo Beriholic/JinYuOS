@@ -1,9 +1,9 @@
 lastupdatecheck: 1692166737
 recentrepos:
-- /home/beri/.config/nvim
 - /home/beri/Berijects/go/wait-todo
-- /home/beri/Berijects/go/QM-table
 - /home/beri/Documents/Dotfiles
+- /home/beri/.config/nvim
+- /home/beri/Berijects/go/QM-table
 - /home/beri/Berijects/go/tiktok
 - /home/beri/Berijects/notebackup
 startuppopupversion: 5

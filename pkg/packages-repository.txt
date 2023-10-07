@@ -8,7 +8,6 @@ android-sdk-platform-tools
 archlinuxcn-keyring
 aria2
 asciiquarium
-auto-cpufreq
 base
 base-devel
 bat
@@ -123,7 +122,7 @@ qt6-wayland
 ranger
 redis
 ripgrep
-rust
+rustup
 sl
 slurp
 sof-firmware
@@ -133,6 +132,7 @@ swayidle
 systemd-numlockontty
 telegram-desktop
 thefuck
+thrift
 tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd

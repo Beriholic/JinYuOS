@@ -1,11 +1,13 @@
 adwaita-qt5-git
 adwaita-qt6-git
+apifox
 bilibili-bin
 brillo
 bt-dualboot
 cbonsai
 clipboard
 cpeditor
+debtap
 dingtalk-bin
 docker-desktop
 envycontrol
@@ -25,6 +27,7 @@ nodejs-tldr-git
 noto-fonts-sc
 nwg-look-bin
 ocs-url
+proto
 protoc-gen-go
 protoc-gen-go-grpc
 python-ffmpeg-python
@@ -33,6 +36,7 @@ scrcpy-git
 sherlock-git
 swww
 timeshift-bin
+todesk-bin
 translate-shell-git
 typora-free
 v4l2loopback-dkms-git

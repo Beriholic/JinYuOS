@@ -1,6 +1,6 @@
 #!/bin/bash
 # Define an array named "name" with all file names in ../../.config/
-name=($(ls -1 ../../.config/))
+name=($(ls -1 ../.config))
 
 # Sync the folders in ~/.config/ that are listed in the "name" array to ../../.config/
 
@@ -9,9 +9,13 @@ for i in "${name[@]}"; do
 	# Check if the folder exists in ~/.config/
 	if [ -d "$HOME/.config/$i" ]; then
 		# Sync the folder to ../../.config/
-		rsync -avz "$HOME/.config/$i" ../../.config/
+		rsync -avz "$HOME/.config/$i" ../.config
 	fi
 done
 
-pacman -Qqen >../packages-repository.txt
-pacman -Qqem >../packages-AUR.txt
+pacman -Qqen >./packages-repository.txt
+yay -Qqem >./packages-AUR.txt
+
+cp ~/.zshrc ../
+cp ~/.zprofile ../
+cp /etc/environment ../

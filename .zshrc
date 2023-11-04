@@ -183,5 +183,7 @@ alias colorcat='lolcat'
 
 alias atree='cbonsai'
 
+alias codefetch='onefetch'
 
+alias ktheme='kitten themes'
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

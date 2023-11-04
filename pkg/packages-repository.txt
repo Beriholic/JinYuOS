@@ -61,6 +61,7 @@ imv
 jdk11-openjdk
 kate
 kitty
+kubectl
 kvantum
 lazydocker
 lazygit
@@ -79,6 +80,7 @@ man-db
 maven
 meld
 mesa-utils
+minikube
 mono-msbuild
 motrix
 mpv
@@ -126,6 +128,7 @@ rustup
 sl
 slurp
 sof-firmware
+sonic-pi
 starship
 swappy
 swayidle

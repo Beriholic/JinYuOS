@@ -10,6 +10,7 @@ cpeditor
 debtap
 dingtalk-bin
 docker-desktop
+edex-ui-appimage
 envycontrol
 fluidsynth-git
 foliate-git
@@ -22,12 +23,12 @@ linuxqq-appimage
 mongodb-compass
 mongosh
 nemo-compare
+nexttrace-bin
 no-more-secrets
 nodejs-tldr-git
 noto-fonts-sc
 nwg-look-bin
 ocs-url
-proto
 protoc-gen-go
 protoc-gen-go-grpc
 python-ffmpeg-python

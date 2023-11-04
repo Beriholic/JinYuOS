@@ -33,3 +33,8 @@ function stt
     exec Hyprland
 }
 [ "$(tty)" = "/dev/tty1" ] && stt
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/beri/.local/share/JetBrains/Toolbox/scripts"
+

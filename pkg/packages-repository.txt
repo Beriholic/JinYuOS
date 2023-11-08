@@ -19,6 +19,7 @@ brightnessctl
 btop
 btrfs-progs
 clipman
+cmake
 d2
 docker
 docker-compose

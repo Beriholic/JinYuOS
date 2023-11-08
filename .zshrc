@@ -51,6 +51,17 @@ alias wget="wget -c"
 # pacman or pm
 alias pacman='sudo pacman --color auto'
 alias yay='yay --color auto'
+alias paru='paru --color auto'
+
+yayskip()
+{
+    yay -S $1 --mflags "--skipchecksums --skippgpcheck"
+}
+
+paruskip()
+{
+    paru -S $1 --mflags "--skipchecksums --skippgpcheck"
+}
 
 #ps
 alias psa="ps auxf"
@@ -102,6 +113,7 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
 
 # Apps alias
 alias neofetch='neofetch --source ~/.config/neofetch/logo'
@@ -173,8 +185,8 @@ alias moto="cat ~/Berijects/moto"
 
 alias dc='cd'
 
-alias openbox='sudo systemctl start libvirtd.service'
-alias stopbox='sudo systemctl stop libvirtd.service'
+alias stbox='sudo systemctl start libvirtd.service'
+alias spbox='sudo systemctl stop libvirtd.service'
 
 #sherlock find Hunt down social media accounts by username across social networks
 alias fname='sherlock'
@@ -186,4 +198,12 @@ alias atree='cbonsai'
 alias codefetch='onefetch'
 
 alias ktheme='kitten themes'
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval $(thefuck --alias)
+
+alias togo='cd $HOME/Berijects/go/'
+alias tocpp='cd $HOME/Berijects/C++/'
+alias torust='cd $HOME/Berijects/rust/'
+

@@ -19,7 +19,7 @@ grimblast-git
 gtk-theme-switch2
 gtklock
 jetbrains-toolbox
-linuxqq-appimage
+linuxqq
 mongodb-compass
 mongosh
 nemo-compare
@@ -35,6 +35,7 @@ python-ffmpeg-python
 redis-insight-bin
 scrcpy-git
 sherlock-git
+sublime-text-3
 swww
 timeshift-bin
 todesk-bin

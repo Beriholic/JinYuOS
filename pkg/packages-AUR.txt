@@ -9,7 +9,6 @@ clipboard
 cpeditor
 debtap
 dingtalk-bin
-docker-desktop
 edex-ui-appimage
 envycontrol
 fluidsynth-git
@@ -43,6 +42,7 @@ translate-shell-git
 typora-free
 v4l2loopback-dkms-git
 visual-studio-code-bin
+wemeet-bin
 wlogout
 wttr
 xbyyunpan-bin

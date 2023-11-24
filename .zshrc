@@ -206,4 +206,5 @@ eval $(thefuck --alias)
 alias togo='cd $HOME/Berijects/go/'
 alias tocpp='cd $HOME/Berijects/C++/'
 alias torust='cd $HOME/Berijects/rust/'
+alias nvid='neovide'
 

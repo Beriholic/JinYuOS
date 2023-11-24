@@ -1,5 +1,6 @@
 lastupdatecheck: 1696402509
 recentrepos:
+- /home/beri/Berijects/Dotfiles
 - /home/beri/.config/nvim/lua/custom
 - /home/beri/Berijects/go/blinkable
 - /home/beri/.config/nvim
@@ -7,7 +8,6 @@ recentrepos:
 - /home/beri/Berijects/go/upstream/blinkable
 - /home/beri/Berijects/go/trash
 - /home/beri/Documents/RookiableDocCen
-- /home/beri/Berijects/Dotfiles
 - /home/beri/Berijects/notebackup
 - /home/beri/Berijects/go/learn-micro
 - /home/beri/Berijects/go/tiktok

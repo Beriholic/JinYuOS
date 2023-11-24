@@ -21,8 +21,8 @@ btrfs-progs
 clipman
 cmake
 d2
-dbeaver
 docker
+docker-compose
 dotnet-sdk
 downgrade
 duf
@@ -30,7 +30,6 @@ ebtables
 efibootmgr
 etcd
 evince
-eww-wayland
 eza
 fcitx5-chinese-addons
 fcitx5-configtool
@@ -65,6 +64,7 @@ kate
 kitty
 kubectl
 kvantum
+lazydocker
 lazygit
 lib32-mesa
 lib32-vulkan-radeon
@@ -73,7 +73,6 @@ libreoffice-fresh
 libreoffice-fresh-zh-cn
 libvirt
 light
-linux
 linux-firmware
 linux-lts
 linux-lts-headers
@@ -82,11 +81,10 @@ mako
 man-db
 maven
 meld
+mesa
 mesa-utils
-meson
 minikube
 mono-msbuild
-moonlight-qt
 motrix
 mpv
 mysql
@@ -101,6 +99,7 @@ nomacs
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
+ntfs-3g
 nvm
 obs-studio
 onefetch
@@ -155,10 +154,8 @@ w3m
 waybar
 wf-recorder
 wget
-wireplumber
 wqy-microhei
 wqy-zenhei
-xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdg-user-dirs
 xf86-video-amdgpu

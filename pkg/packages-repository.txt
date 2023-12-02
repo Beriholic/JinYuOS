@@ -8,6 +8,7 @@ android-sdk-platform-tools
 archlinuxcn-keyring
 aria2
 asciiquarium
+auto-cpufreq
 base
 base-devel
 bat
@@ -21,11 +22,11 @@ btrfs-progs
 clipman
 cmake
 d2
-docker
 docker-compose
 dotnet-sdk
 downgrade
 duf
+dunst
 ebtables
 efibootmgr
 etcd
@@ -47,6 +48,7 @@ gimp-devel
 git-lfs
 github-desktop-bin
 gnome-keyring
+gnome-shell
 gnome-tweaks
 go
 go-musicfox
@@ -59,6 +61,7 @@ htop
 httpie
 hyprland-git
 imv
+inotify-tools
 jdk11-openjdk
 kate
 kitty
@@ -83,6 +86,7 @@ maven
 meld
 mesa
 mesa-utils
+meson
 minikube
 mono-msbuild
 motrix
@@ -91,7 +95,7 @@ mysql
 nemo
 nemo-fileroller
 neofetch
-neovide-git
+neovide
 neovim
 net-tools
 networkmanager
@@ -129,6 +133,7 @@ ranger
 redis
 ripgrep
 rustup
+sassc
 sl
 slurp
 sof-firmware
@@ -136,10 +141,12 @@ sonic-pi
 starship
 swappy
 swayidle
+swww
 systemd-numlockontty
 telegram-desktop
 thefuck
 thrift
+timeshift
 tree
 ttf-font-awesome
 ttf-jetbrains-mono-nerd

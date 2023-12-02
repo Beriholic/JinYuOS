@@ -74,6 +74,24 @@ window#waybar.hidden {
   padding: 0 12px;
   color: #ffffff;
 }
+#custom-weather,
+#custom-weather.severe,
+#custom-weather.sunnyDay,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.default {
+  margin-top: 2px;
+  padding: 0 12px;
+  /* padding: 0 12px; */
+  color: #000000;
+  /* color: #bf616a; */
+  background-color: #cbecff;
+}
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > * {
@@ -118,7 +136,7 @@ window#waybar.hidden {
 #window {
   font-family: "IntelOne Mono", "Noto Sans CJK SC", sans-serif;
   font-weight: 400;
-  background-color: #cbecff;
+  background-color: #d4eae5;
   color: #000000;
 }
 
@@ -136,4 +154,35 @@ window#waybar.hidden {
 #backlight {
   background-color: #ffeaaa;
   color: #000000;
+}
+
+#custom-weather.severe {
+  color: #eb937d;
+}
+
+#custom-weather.sunnyDay {
+  color: #c2ca76;
+}
+
+#custom-weather.clearNight {
+  color: #cad3f5;
+}
+
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight {
+  color: #c2ddda;
+}
+
+#custom-weather.rainyDay,
+#custom-weather.rainyNight {
+  color: #5aaca5;
+}
+
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight {
+  color: #d6e7e5;
+}
+
+#custom-weather.default {
+  color: #dbd9d8;
 }

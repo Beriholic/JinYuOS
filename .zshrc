@@ -8,8 +8,7 @@ export EDITOR=nvim
 
 ZSH_THEME="robbyrussell"
 
-# Plugins 
-plugins=(git)
+# Plugins plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Starship prompt
@@ -116,13 +115,12 @@ ex ()
 
 
 # Apps alias
-alias neofetch='neofetch --source ~/.config/neofetch/logo'
+alias neofetch='neofetch --source ~/.config/neofetch/ascii.txt'
 
 
 alias cd..="cd .."
 #ascii art
 alias ascfish="asciiquarium"
-alias wether='clear && wttr "Chongqing Hechuan"'
 alias mycat='oneko'
 alias fire='aafire -driver curses -boldfont'
 

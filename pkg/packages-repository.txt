@@ -22,6 +22,7 @@ btrfs-progs
 clipman
 cmake
 d2
+docker
 docker-compose
 dotnet-sdk
 downgrade
@@ -63,11 +64,11 @@ hyprland-git
 imv
 inotify-tools
 jdk11-openjdk
+jp2a
 kate
 kitty
 kubectl
 kvantum
-lazydocker
 lazygit
 lib32-mesa
 lib32-vulkan-radeon

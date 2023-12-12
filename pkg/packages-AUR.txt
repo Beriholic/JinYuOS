@@ -6,11 +6,11 @@ bilibili-bin
 brillo
 bt-dualboot
 cbonsai
+cf-tool
 cpeditor
 ddcci-driver-linux-dkms
 debtap
 dingtalk-bin
-docker-desktop
 edex-ui-appimage
 envycontrol
 fluidsynth-git

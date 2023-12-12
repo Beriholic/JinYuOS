@@ -1,15 +1,14 @@
 lastupdatecheck: 1696402509
 recentrepos:
-- /home/beri/.config/waybar
+- /home/beri/Berijects/notebackup
 - /home/beri/.config/nvim/lua/custom
+- /home/beri/Berijects/Dotfiles
 - /home/beri/Berijects/go/blinkable
 - /home/beri/Berijects/go/upstream/blinkable
-- /home/beri/Berijects/Dotfiles
 - /home/beri/.config/nvim
 - /home/beri/.config/nvim_bk
 - /home/beri/Berijects/go/trash
 - /home/beri/Documents/RookiableDocCen
-- /home/beri/Berijects/notebackup
 - /home/beri/Berijects/go/learn-micro
 - /home/beri/Berijects/go/tiktok
 startuppopupversion: 5

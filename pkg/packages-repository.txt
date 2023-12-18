@@ -48,6 +48,7 @@ fuzzel
 gimp-devel
 git-lfs
 github-desktop-bin
+glow
 gnome-keyring
 gnome-shell
 gnome-tweaks

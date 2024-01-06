@@ -113,6 +113,20 @@ ex ()
   fi
 }
 
+acinit ()
+{
+    s_dir=$HOME/Berijects/notebackup/acm/
+    dir=$HOME/Berijects/C++/acm/
+    if [ -d $s_dir ]; then
+        rm -r $dir
+        cp -r $s_dir $HOME/Berijects/C++/
+    else
+        rm -r $HOME/Berijects/C++/acm/
+        mkdir -p $HOME/Berijects/C++/acm/output
+    fi
+    
+    cd ~/Berijects/C++/acm
+}
 
 # Apps alias
 alias neofetch='neofetch --source ~/.config/neofetch/ascii.txt'
@@ -205,4 +219,3 @@ alias togo='cd $HOME/Berijects/go/'
 alias tocpp='cd $HOME/Berijects/C++/'
 alias torust='cd $HOME/Berijects/rust/'
 alias nvid='neovide'
-

@@ -12,6 +12,8 @@ ddcci-driver-linux-dkms
 debtap
 dingtalk-bin
 edex-ui-appimage
+electron21-bin
+electron22-bin
 envycontrol
 fluidsynth-git
 foliate-git
@@ -20,6 +22,7 @@ grimblast-git
 gtk-theme-switch2
 gtklock
 jetbrains-toolbox
+light
 linuxqq
 mongodb-compass
 mongosh

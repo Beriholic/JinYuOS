@@ -61,7 +61,7 @@ grub
 gtk4
 htop
 httpie
-hyprland-git
+hyprland
 imv
 inotify-tools
 jdk11-openjdk
@@ -77,7 +77,6 @@ libguestfs
 libreoffice-fresh
 libreoffice-fresh-zh-cn
 libvirt
-light
 linux-firmware
 linux-lts
 linux-lts-headers

@@ -139,9 +139,8 @@ alias mycat='oneko'
 alias fire='aafire -driver curses -boldfont'
 
 #v2raya
-alias stv2='sudo systemctl start v2raya.service'
-alias spv2='sudo systemctl stop v2raya.service'
-
+alias stv2="bash $HOME/.script/v2/st.sh"
+alias spv2="bash $HOME/.script/v2/sp.sh"
 
 # Neofetch 
 neofetch

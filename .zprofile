@@ -18,7 +18,6 @@ function set_wayland_env
 	export _JAVA_AWT_WM_NONEREPARENTING=1 #1
 	# GTK后端为 wayland和x11,优先wayland
 	export GDK_BACKEND="wayland,x11"
-
 }
 
 # 命令行输入这个命令启动hyprland,可以自定义

@@ -166,7 +166,7 @@ wf-recorder
 wget
 wqy-microhei
 wqy-zenhei
-xdg-desktop-portal-wlr
+xdg-desktop-portal-hyprland
 xdg-user-dirs
 xf86-video-amdgpu
 xorg-xrdb

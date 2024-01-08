@@ -3,7 +3,7 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
-export GTK_IM_MODULE=fcitx
+export GTK_IM_MODULE=
 export QT_IM_MODULE=fcitx
 export QT4_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx

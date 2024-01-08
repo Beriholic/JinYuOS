@@ -11,6 +11,7 @@ cpeditor
 ddcci-driver-linux-dkms
 debtap
 dingtalk-bin
+dooit
 edex-ui-appimage
 electron21-bin
 electron22-bin

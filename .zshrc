@@ -143,7 +143,7 @@ alias stv2="bash $HOME/.script/v2/st.sh"
 alias spv2="bash $HOME/.script/v2/sp.sh"
 
 # Neofetch 
-neofetch
+#neofetch
 
 # neovide
 alias xw='env -u WAYLAND_DISPLAY'
@@ -218,3 +218,5 @@ alias togo='cd $HOME/Berijects/go/'
 alias tocpp='cd $HOME/Berijects/C++/'
 alias torust='cd $HOME/Berijects/rust/'
 alias nvid='neovide'
+
+alias todo='dooit'

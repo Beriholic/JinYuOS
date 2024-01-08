@@ -1,11 +1,11 @@
 lastupdatecheck: 1696402509
 recentrepos:
-- /home/beri/Berijects/Dotfiles
 - /home/beri/.config/nvim/lua/custom
-- /home/beri/.config/nvim
-- /home/beri/Downloads/NvChad
 - /home/beri/Berijects/go/blinkable
+- /home/beri/.config/nvim
 - /home/beri/Berijects/notebackup
+- /home/beri/Berijects/Dotfiles
+- /home/beri/Downloads/NvChad
 - /home/beri/Berijects/go/res
 - /home/beri/Berijects/go/upstream/blinkable
 - /home/beri/.config/nvim_bk

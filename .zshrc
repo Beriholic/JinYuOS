@@ -3,6 +3,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/env:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export EDITOR=nvim
 
@@ -36,9 +37,6 @@ alias fgrep='fgrep --color=auto'
 #readable output
 alias df='df -h'
 
-#which graphical card is working
-alias whichvga="/usr/local/bin/arcolinux-which-vga"
-
 #free
 alias free="free -mt"
 
@@ -63,8 +61,8 @@ paruskip()
 }
 
 #ps
-alias psa="ps auxf"
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+#alias psa="ps auxf"
+#alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 #grub update
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -72,61 +70,15 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 #add new fonts
 alias update-fc='sudo fc-cache -fv'
 
-#switch between bash and zsh and zsh
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-
-
 #Cleanup orphaned packages
 alias autoremove='sudo pacman -Rns $(pacman -Qtdq) && sudo paccache -r'
 
 #clear
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 
+alias ex='~/.script/ex.sh'
 
-
-
-# # ex = EXtractor for all kinds of archives
-# # usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *.deb)       ar x $1      ;;
-      *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   tar xf $1    ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
-
-acinit ()
-{
-    s_dir=$HOME/Berijects/notebackup/acm/
-    dir=$HOME/Berijects/C++/acm/
-    if [ -d $s_dir ]; then
-        rm -r $dir
-        cp -r $s_dir $HOME/Berijects/C++/
-    else
-        rm -r $HOME/Berijects/C++/acm/
-        mkdir -p $HOME/Berijects/C++/acm/output
-    fi
-    
-    cd ~/Berijects/C++/acm
-}
+alias acinit='~/.script/acinit.sh'
 
 # Apps alias
 alias neofetch='neofetch --source ~/.config/neofetch/ascii.txt'
@@ -196,8 +148,8 @@ alias moto="cat ~/Berijects/moto"
 
 alias dc='cd'
 
-alias stbox='sudo systemctl start libvirtd.service'
-alias spbox='sudo systemctl stop libvirtd.service'
+alias stbox='~/.script/virsh/st.sh'
+alias spbox='~/.script/virsh/sp.sh'
 
 #sherlock find Hunt down social media accounts by username across social networks
 alias fname='sherlock'
@@ -220,3 +172,6 @@ alias torust='cd $HOME/Berijects/rust/'
 alias nvid='neovide'
 
 alias todo='dooit'
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/beri/minio-binaries/mc mc

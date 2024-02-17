@@ -29,7 +29,6 @@ gtk-theme-switch2
 jetbrains-toolbox
 light
 linuxqq
-nemo-compare
 nexttrace-bin
 no-more-secrets
 nodejs-tldr-git

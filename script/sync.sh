@@ -18,6 +18,4 @@ rsync -av --delete "$HOME/.script" ../
 pacman -Qqen > ../package/packages-repository.txt
 yay -Qqem >../package/packages-AUR.txt
 
-cp ~/.zshrc ../
-cp ~/.zprofile ../
 cp /etc/environment ../

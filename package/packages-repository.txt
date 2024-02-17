@@ -51,6 +51,7 @@ fcitx5-qt
 fcitx5-rime
 fd
 firefox
+fish
 font-manager
 freeradius
 fuzzel
@@ -95,9 +96,9 @@ lib32-mesa
 lib32-vulkan-radeon
 libguestfs
 libvirt
-linux
 linux-firmware
-linux-headers
+linux-zen
+linux-zen-headers
 lldb
 lorcon
 lshw
@@ -116,8 +117,6 @@ motrix
 mpv
 mysql
 nautilus
-nemo
-nemo-fileroller
 neofetch
 neovide
 neovim
@@ -128,7 +127,6 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
-nvm
 obs-studio
 onefetch
 openbsd-netcat
@@ -192,6 +190,7 @@ vulkan-radeon
 w3m
 wavemon
 waybar
+wezterm
 wf-recorder
 wget
 wifite
@@ -209,5 +208,3 @@ yarn
 yay
 zip
 zoxide
-zsh
-zsh-completions

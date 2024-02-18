@@ -4,6 +4,7 @@ adwaita-qt6-git
 anyrun-git
 aylurs-gtk-shell
 brillo
+chatbox-bin
 envycontrol
 gojq
 gradience-git

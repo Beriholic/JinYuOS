@@ -119,8 +119,8 @@
     "on-click": "pavucontrol"
   },
   "battery": {
-    "bat": "BAT0",
-    "adapter": "ADP0",
+    "bat": "BAT1",
+    "adapter": "ADP1",
     "interval": 60,
     "states": {
       "warning": 30,

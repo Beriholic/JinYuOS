@@ -1,22 +1,8 @@
 lastupdatecheck: 1696402509
 recentrepos:
 - /home/beri/Berijects/Dotfiles
-- /home/beri/Berijects/go/GoYin
-- /home/beri/Berijects/go/upstream/blinkable
-- /home/beri/Downloads/dots-hyprland
 - /home/beri/.config/nvim/lua/custom
 - /home/beri/.config/nvim
-- /home/beri/Berijects/go/blinkable
-- /home/beri/Berijects/Beriholic
-- /home/beri/Berijects/go/Bnote
-- /home/beri/Berijects/go/tiktok
-- /home/beri/Berijects/rust/wd
-- /home/beri/Berijects/notebackup
-- /home/beri/Documents/XCPC
-- /home/beri/Berijects/go/res
-- /home/beri/.config/nvim_bk
-- /home/beri/Berijects/go/trash
-- /home/beri/Berijects/go/learn-micro
 startuppopupversion: 5
 customcommandshistory:
 - q

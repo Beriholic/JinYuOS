@@ -40,6 +40,8 @@ alias neofetch 'neofetch --source ~/.config/neofetch/ascii.txt'
 
 alias cd.. "cd .."
 
+alias ascfish "asciiquarium"
+alias mycat 'oneko'
 alias fire 'aafire -driver curses -boldfont'
 
 #v2raya

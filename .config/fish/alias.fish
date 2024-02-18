@@ -2,10 +2,6 @@ alias l "exa -a  --icons -l"
 alias ll "exa -l --icons"
 alias lll "exa -Ga --icons"
 
-alias grep 'grep --color auto'
-alias egrep 'egrep --color auto'
-alias fgrep 'fgrep --color auto'
-
 alias df 'df -h'
 
 alias free "free -mt"
@@ -44,8 +40,6 @@ alias neofetch 'neofetch --source ~/.config/neofetch/ascii.txt'
 
 alias cd.. "cd .."
 
-alias ascfish "asciiquarium"
-alias mycat 'oneko'
 alias fire 'aafire -driver curses -boldfont'
 
 #v2raya

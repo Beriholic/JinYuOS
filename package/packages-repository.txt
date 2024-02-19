@@ -83,7 +83,7 @@ hcxtools
 hmcl
 htop
 httpie
-hyprland-git
+hyprland
 imv
 inotify-tools
 jdk11-openjdk
@@ -209,6 +209,7 @@ wezterm
 wf-recorder
 wget
 wifite
+wlogout
 wlsunset
 woff-fira-code
 wqy-microhei

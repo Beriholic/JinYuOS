@@ -2,6 +2,7 @@ adw-gtk3-git
 adwaita-qt5-git
 adwaita-qt6-git
 anyrun-git
+apifox
 aylurs-gtk-shell
 brillo
 chatbox-bin
@@ -19,6 +20,5 @@ ttf-material-symbols-variable-git
 v4l2loopback-dkms-git
 visual-studio-code-bin
 wayland-idle-inhibitor-git
-wlogout
 wttr
 yesplaymusic

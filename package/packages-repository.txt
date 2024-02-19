@@ -69,7 +69,6 @@ gnome-shell
 gnome-tweaks
 gnuradio
 go
-go-musicfox
 gotop
 gping
 gqrx

@@ -1,9 +1,9 @@
 lastupdatecheck: 1696402509
 recentrepos:
-- /home/beri/Berijects/go/upstream/blinkable
 - /home/beri/Berijects/Dotfiles
-- /home/beri/Berijects/go/GoYin
 - /home/beri/Downloads/dots-hyprland
+- /home/beri/Berijects/go/upstream/blinkable
+- /home/beri/Berijects/go/GoYin
 - /home/beri/.config/nvim/lua/custom
 - /home/beri/.config/nvim
 - /home/beri/Berijects/go/blinkable

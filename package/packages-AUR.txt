@@ -7,6 +7,7 @@ aylurs-gtk-shell
 brillo
 chatbox-bin
 envycontrol
+go-musicfox-bin
 gojq
 gradience-git
 gtklock

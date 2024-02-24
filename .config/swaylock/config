@@ -1,18 +1,17 @@
 daemonize
 ignore-empty-password
 font=Rubik
-font-size=23
+#font-size=23
 
-#clock
-#timestr=%R
-datestr=%a, %e of %B
-
+clock
+timestr=%R
+datestr=
 color=000000dd
 
-#fade-in=0.1
-#effect-blur=20x2
-#effect-greyscale
-#effect-scale=0.3
+fade-in=0.2
+effect-blur=20x2
+effect-greyscale
+effect-scale=0.3
 
 indicator
 indicator-radius=80
@@ -53,3 +52,5 @@ caps-lock-bs-hl-color=470400
 # caps-lock-bs-hl-color=ee2e24FF
 # disable-caps-lock-text
 text-caps-lock-color=d4d4d4
+
+screenshot

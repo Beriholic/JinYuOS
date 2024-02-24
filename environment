@@ -3,9 +3,9 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
-export GTK_IM_MODULE=
-export QT_IM_MODULE=fcitx5
-export QT4_IM_MODULE=fcitx5
-export XMODIFIERS=@im=fcitx5
-export SDL_IM_MODULE=fcitx5
-export INPUT_METHOD=fcitx5
+GTK_IM_MODULE=
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+INPUT_METHOD=fcitx
+GLFW_IM_MODULE=ibus

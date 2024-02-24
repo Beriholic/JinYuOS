@@ -50,27 +50,7 @@ get_light_dark() {
     echo "$lightdark"
 }
 
-apply_term() {
-    # Check if scripts/templates/foot/foot.ini exists
-    if [ ! -f "scripts/templates/terminal/sequences.txt" ]; then
-        echo "Template file not found for Terminal. Skipping that."
-        return
-    fi
-    # Copy template
-    mkdir -p "$HOME"/.cache/ags/user/generated/terminal
-    cp "scripts/templates/terminal/sequences.txt" "$HOME"/.cache/ags/user/generated/terminal/sequences.txt
-    # Apply colors
-    for i in "${!colorlist[@]}"; do
-        sed -i "s/${colorlist[$i]} #/${colorvalues[$i]#\#}/g" "$HOME"/.cache/ags/user/generated/terminal/sequences.txt
-    done
-    cp "$HOME"/.cache/ags/user/generated/terminal/sequences.txt "$HOME"/.config/fish/sequences.txt
 
-    for file in /dev/pts/*; do
-      if [[ $file =~ ^/dev/pts/[0-9]+$ ]]; then
-        cat "$HOME"/.config/fish/sequences.txt > "$file"
-      fi
-    done
-}
 
 apply_kitty() {
     if [ ! -f "scripts/templates/kitty/kitty.conf" ]; then
@@ -139,8 +119,25 @@ apply_ags() {
     ags run-js "App.resetCss(); App.applyCss('${HOME}/.config/ags/style.css');"
 }
 
+apply_fuzzel() {
+    # Check if scripts/templates/fuzzel/fuzzel.ini exists
+    if [ ! -f "scripts/templates/fuzzel/fuzzel.ini" ]; then
+        echo "Template file not found for Fuzzel. Skipping that."
+        return
+    fi
+    # Copy template
+    mkdir -p "$HOME"/.cache/ags/user/generated/fuzzel
+    cp "scripts/templates/fuzzel/fuzzel.ini" "$HOME"/.cache/ags/user/generated/fuzzel/fuzzel.ini
+    # Apply colors
+    for i in "${!colorlist[@]}"; do
+        sed -i "s/{{ ${colorlist[$i]} }}/${colorvalues[$i]#\#}/g" "$HOME"/.cache/ags/user/generated/fuzzel/fuzzel.ini
+    done
+
+    cp  "$HOME"/.cache/ags/user/generated/fuzzel/fuzzel.ini "$HOME"/.config/fuzzel/fuzzel.ini
+}
+
 apply_ags &
 apply_hyprland &
 apply_kitty &
+apply_fuzzel &
 #apply_gtk &
-#apply_term &

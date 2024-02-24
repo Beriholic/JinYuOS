@@ -26,6 +26,7 @@ gradience-git
 grimblast-git
 gtk-theme-switch2
 gtklock
+hyprland-git
 hyprpicker-git
 jetbrains-toolbox
 lexend-fonts-git
@@ -55,6 +56,5 @@ v4l2loopback-dkms-git
 ventoy-bin
 visual-studio-code-bin
 wayland-idle-inhibitor-git
-wlogout
 wttr
 yesplaymusic

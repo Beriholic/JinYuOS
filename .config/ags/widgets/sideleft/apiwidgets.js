@@ -9,8 +9,6 @@ import { setupCursorHover, setupCursorHoverInfo } from "../../lib/cursorhover.js
 import { contentStack } from './sideleft.js';
 // APIs
 import ChatGPT from '../../services/chatgpt.js';
-import Gemini from '../../services/gemini.js';
-import { geminiView, geminiCommands, sendMessage as geminiSendMessage, geminiTabIcon } from './apis/gemini.js';
 import { chatGPTView, chatGPTCommands, sendMessage as chatGPTSendMessage, chatGPTTabIcon } from './apis/chatgpt.js';
 import { waifuView, waifuCommands, sendMessage as waifuSendMessage, waifuTabIcon } from './apis/waifu.js';
 import { enableClickthrough } from '../../lib/roundedcorner.js';
@@ -19,14 +17,6 @@ const TextView = Widget.subclass(Gtk.TextView, "AgsTextView");
 
 const EXPAND_INPUT_THRESHOLD = 30;
 const APIS = [
-    {
-        name: 'Assistant (Gemini Pro)',
-        sendCommand: geminiSendMessage,
-        contentWidget: geminiView,
-        commandBar: geminiCommands,
-        tabIcon: geminiTabIcon,
-        placeholderText: 'Message Gemini...',
-    },
     {
         name: 'Assistant (ChatGPT 3.5)',
         sendCommand: chatGPTSendMessage,
@@ -70,10 +60,6 @@ export const chatEntry = TextView({
         .hook(ChatGPT, (self) => {
             if (APIS[currentApiId].name != 'Assistant (ChatGPT 3.5)') return;
             self.placeholderText = (ChatGPT.key.length > 0 ? 'Message ChatGPT...' : 'Enter OpenAI API Key...');
-        }, 'hasKey')
-        .hook(Gemini, (self) => {
-            if (APIS[currentApiId].name != 'Assistant (Gemini Pro)') return;
-            self.placeholderText = (Gemini.key.length > 0 ? 'Message Gemini...' : 'Enter Google AI API Key...');
         }, 'hasKey')
         .on("key-press-event", (widget, event) => {
             const keyval = event.get_keyval()[1];

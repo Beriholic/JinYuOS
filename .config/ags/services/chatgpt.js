@@ -125,7 +125,9 @@ class ChatGPTService extends Service {
     _key = '';
     _decoder = new TextDecoder();
 
-    url = GLib.Uri.parse(replaceapidom('https://api.openai.com/v1/chat/completions'), GLib.UriFlags.NONE);
+    //url = GLib.Uri.parse(replaceapidom('https://api.openai.com/v1/chat/completions'), GLib.UriFlags.NONE);
+    //url = GLib.Uri.parse(replaceapidom('https://api.chatanywhere.tech/v1/chat/completions'), GLib.UriFlags.NONE);
+    url = GLib.Uri.parse(replaceapidom('https://api.chatanywhere.com.cn/v1/chat/completions'), GLib.UriFlags.NONE);
 
     constructor() {
         super();

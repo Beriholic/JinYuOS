@@ -70,7 +70,6 @@ hcxdumptool
 hcxtools
 htop
 httpie
-hyprland-git
 imv
 inotify-tools
 intel-media-driver
@@ -193,6 +192,7 @@ webp-pixbuf-loader
 wf-recorder
 wget
 wifite
+wlogout
 wlsunset
 wqy-microhei
 wqy-zenhei
@@ -206,6 +206,5 @@ yay
 ydotool
 zip
 zoxide
-zram-generator
 zsh
 zsh-completions

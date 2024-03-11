@@ -6,7 +6,7 @@ alsa-plugins
 alsa-utils
 amd-ucode
 amdgpu_top
-android-sdk-platform-tools
+android-tools
 appmenu-gtk-module
 archlinuxcn-keyring
 aria2
@@ -32,6 +32,7 @@ cmake
 cowpatty
 d2
 dbeaver
+dnsmasq
 docker
 docker-compose
 dotnet-sdk
@@ -90,6 +91,7 @@ jdk8-openjdk
 john
 jp2a
 kate
+kdeconnect
 kismet
 kitty
 kubectl
@@ -97,6 +99,7 @@ kvantum
 lazydocker
 lazygit
 lib32-mesa
+lib32-nvidia-utils
 lib32-vulkan-radeon
 libguestfs
 libvirt
@@ -132,6 +135,10 @@ noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
 numlockx
+nvidia-dkms
+nvidia-prime
+nvidia-settings
+nwg-look
 obs-studio
 onefetch
 openbsd-netcat
@@ -147,6 +154,7 @@ pipewire-x11-bell
 pipewire-zeroconf
 pixiewps
 plasma-browser-integration
+podman
 polkit-gnome
 polkit-kde-agent
 python-build
@@ -179,6 +187,7 @@ swappy
 swayidle
 swww
 systemd-numlockontty
+tealdeer
 telegram-desktop
 tesseract
 thefuck
@@ -204,7 +213,6 @@ w3m
 wavemon
 waybar
 webp-pixbuf-loader
-wezterm
 wf-recorder
 wget
 wifite

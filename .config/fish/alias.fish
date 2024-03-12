@@ -40,8 +40,6 @@ alias neofetch 'neofetch --source ~/.config/neofetch/ascii.txt'
 
 alias cd.. "cd .."
 
-alias ascfish "asciiquarium"
-alias mycat 'oneko'
 alias fire 'aafire -driver curses -boldfont'
 
 #v2raya
@@ -93,6 +91,7 @@ function stbox
     sudo systemctl start libvirtd-ro.socket  
     sudo systemctl start libvirtd-admin.socket  
     sudo systemctl start libvirtd.socket
+    sudo virsh net-start default
 end
 function spbox
     sudo systemctl stop libvirtd.service 
@@ -105,7 +104,7 @@ alias fname 'sherlock'
 
 alias colorcat 'lolcat'
 
-alias atree 'cbonsai'
+alias atree 'cbonsai --live'
 
 alias codefetch 'onefetch'
 
@@ -113,5 +112,18 @@ alias ktheme 'kitten themes'
 
 alias nvid 'neovide'
 
-alias todo 'dooit'
+alias todo 'dooitj'
 alias nemo 'nautilus'
+
+function clean-shot
+    for shot in $HOME/Pictures/screenshot/*.png
+        rm $shot
+    end
+end
+
+alias lazypod 'systemctl --user start podman.socket && DOCKER_HOST=unix:///run/user/1000/podman/podman.sock lazydocker'
+alias stpod='systemctl --user start podman.socket'
+alias sppod='systemctl --user stop podman.socket'
+alias stdeeplx='podman start deeplx'
+alias stop='podman stop deeplx'
+alias kssh='kitten ssh'

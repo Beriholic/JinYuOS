@@ -2,12 +2,11 @@ function set_wayland_env
     # 设置语言环境为中文
     set -gx LANG zh_CN.UTF-8
     # 解决QT程序缩放问题
-    set -gx QT_AUTO_SCREEN_SCALE_FACTOR 1.5
+    set -gx QT_AUTO_SCREEN_SCALE_FACTOR 1.6
     # QT使用wayland和gtk
-    set -gx QT_QPA_PLATFORM "wayland"
     set -gx QT_WAYLAND_DISABLE_WINDOWDECORATION 1
     # 使用qt5ct软件配置QT程序外观
-    set -gx QT_QPA_PLATFORMTHEME qt5ct
+    set -gx QT_QPA_PLATFORMTHEME wayland
     # 一些游戏使用wayland
     set -gx SDL_VIDEODRIVER wayland
     # 解决java程序启动黑屏错误
@@ -20,9 +19,8 @@ function set_wayland_env
     set -gx XDG_CURRENT_DESKTOP sway
     # Wayland stuff
     set -gx MOZ_ENABLE_WAYLAND 1
-    set -gx QT_QPA_PLATFORM wayland
     set -gx SDL_VIDEODRIVER wayland
-    set -gx _JAVA_AWT_WM_NONREPARENTING 1
+    #set -gx _JAVA_AWT_WM_NONREPARENTING 1
 end
 # 命令行输入这个命令启动 Hyprland，可以自定义
 function stt

@@ -27,6 +27,7 @@ cmake
 cowpatty
 d2
 dialog
+docker
 downgrade
 duf
 dunst
@@ -70,6 +71,7 @@ hcxdumptool
 hcxtools
 htop
 httpie
+hyprland-git
 imv
 inotify-tools
 intel-media-driver
@@ -80,12 +82,11 @@ kate
 kismet
 kitty
 kvantum
+lazydocker
 lazygit
 lib32-mesa
 lib32-vulkan-intel
 libguestfs
-libreoffice-fresh
-libreoffice-fresh-zh-cn
 libvirt
 light-git
 linux-firmware
@@ -105,6 +106,7 @@ mono-msbuild
 motrix
 mpv
 mysql
+nautilus
 nemo
 nemo-fileroller
 neofetch
@@ -155,6 +157,7 @@ redis
 rfdump
 ripgrep
 rustup
+s-tui
 sassc
 sl
 slurp
@@ -165,6 +168,7 @@ swappy
 swayidle
 swww
 systemd-numlockontty
+tealdeer
 telegram-desktop
 tesseract
 thefuck

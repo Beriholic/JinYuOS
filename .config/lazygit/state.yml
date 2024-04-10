@@ -1,5 +1,11 @@
 lastupdatecheck: 1696402509
 recentrepos:
+- /home/beri/Berijects/Dotfiles
+- /home/beri/Berijects/java/Reusehive
+- /home/beri/Berijects/java/BookManager
+- /home/beri/Berijects/java/CloudLearn
+- /home/beri/Berijects/go/tiktok
+- /home/beri/Berijects/QiMenDunJia
 - /home/beri/.config/nvim
 - /home/beri/Berijects/rust/Bnote
 - /home/beri/Berijects/go/trash
@@ -10,17 +16,20 @@ recentrepos:
 - /home/beri/Berijects/rust/wd
 - /home/beri/Berijects/rust/blinkable
 - /home/beri/Berijects/go/upstream/blinkable
-- /home/beri/Berijects/Dotfiles
 - /home/beri/Berijects/go/GoYin
 - /home/beri/Berijects/go/blinkable
 - /home/beri/Berijects/go/Bnote
-- /home/beri/Berijects/go/tiktok
 - /home/beri/Berijects/notebackup
-- /home/beri/Documents/XCPC
 - /home/beri/Berijects/go/res
 - /home/beri/Berijects/go/learn-micro
 startuppopupversion: 5
+lastversion: 0.41.0
 customcommandshistory:
 - q
 hidecommandlog: false
 ignorewhitespaceindiffview: false
+diffcontextsize: 3
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always

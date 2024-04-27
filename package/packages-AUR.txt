@@ -9,6 +9,7 @@ aylurs-gtk-shell
 bilibili
 brillo
 cbonsai
+cpeditor
 dingtalk-bin
 envycontrol
 freetype2-wps
@@ -28,7 +29,6 @@ python-materialyoucolor-git
 qflipper-bin
 sam
 swaylock-effects-git
-tlpui
 todesk-bin
 try
 ttf-material-symbols-variable-git

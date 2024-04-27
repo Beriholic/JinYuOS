@@ -1,21 +1,12 @@
 lastupdatecheck: 1696402509
 recentrepos:
 - /home/beri/Berijects/Dotfiles
-- /home/beri/Berijects/java/BookManager
-- /home/beri/Berijects/java/CloudLearn
-- /home/beri/Berijects/go/tiktok
-- /home/beri/Berijects/QiMenDunJia
-- /home/beri/.config/nvim
-- /home/beri/Berijects/rust/Bnote
-- /home/beri/Berijects/go/trash
-- /home/beri/Berijects/tldr
-- /home/beri/Berijects/C++/SAM
-- /home/beri/Berijects/Beriholic
-- /home/beri/Berijects/web/ccs-md-editor
-- /home/beri/Berijects/rust/wd
-- /home/beri/Berijects/rust/blinkable
-- /home/beri/Berijects/go/upstream/blinkable
 - /home/beri/Berijects/go/GoYin
+- /home/beri/.config/nvim
+- /home/beri/Berijects/go/tiktok
+- /home/beri/Berijects/go/trash
+- /home/beri/Berijects/C++/SAM
+- /home/beri/Berijects/go/upstream/blinkable
 - /home/beri/Berijects/go/blinkable
 - /home/beri/Berijects/go/Bnote
 - /home/beri/Berijects/notebackup

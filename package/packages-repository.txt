@@ -19,6 +19,7 @@ bat
 batctl
 bc
 bettercap
+bind
 blanket
 blueberry
 blueman
@@ -133,6 +134,7 @@ neovide
 neovim
 net-tools
 networkmanager
+nload
 nomacs
 noto-fonts-cjk
 noto-fonts-emoji
@@ -158,6 +160,7 @@ pipewire-x11-bell
 pipewire-zeroconf
 pixiewps
 plasma-browser-integration
+pnpm
 podman
 polkit-gnome
 polkit-kde-agent
@@ -201,6 +204,7 @@ timeshift
 tinyxml2
 tlp
 tlp-rdw
+tlpui
 toastify
 tree
 ts-node
@@ -227,7 +231,6 @@ wlsunset
 woff-fira-code
 wqy-microhei
 wqy-zenhei
-xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 xf86-video-amdgpu

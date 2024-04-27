@@ -231,6 +231,7 @@ wlsunset
 woff-fira-code
 wqy-microhei
 wqy-zenhei
+xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland-git
 xdg-user-dirs
 xf86-video-amdgpu

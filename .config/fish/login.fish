@@ -28,14 +28,15 @@ function set_wayland_env
 end
 # 命令行输入这个命令启动 Hyprland，可以自定义
 function stt
-    set_wayland_env
+    #set_wayland_env
     #exec xrandr --output eDP-1 --scale 1.5x1.5
     # 启动 Hyprland 程序
+    set -gx LANG zh_CN.UTF-8
     exec Hyprland
 end
 # 如果当前终端是 /dev/tty1，则执行 stt 函数
 if test (tty) = "/dev/tty1"
-    stt
+   stt
 end
 # Added by Toolbox App
 set -gx PATH $PATH /home/beri/.local/share/JetBrains/Toolbox/scripts

@@ -44,11 +44,13 @@ alias fire 'aafire -driver curses -boldfont'
 
 #v2raya
 function stv2
-    sudo systemctl start v2raya.service
+    sudo systemctl start dae
+    sudo systemctl start daed
 end
 
 function spv2
-    sudo systemctl stop v2raya.service
+    sudo systemctl stop dae
+    sudo systemctl stop daed
 end
 # Neofetch 
 #neofetch

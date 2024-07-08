@@ -8,18 +8,18 @@ import { AnimatedCircProg } from "../../.commonwidgets/cairo_circularprogress.js
 import { MaterialIcon } from '../../.commonwidgets/materialicon.js';
 import { showMusicControls } from '../../../variables.js';
 
-const CUSTOM_MODULE_CONTENT_INTERVAL_FILE = `${GLib.get_home_dir()}/.cache/ags/user/scripts/custom-module-interval.txt`;
-const CUSTOM_MODULE_CONTENT_SCRIPT = `${GLib.get_home_dir()}/.cache/ags/user/scripts/custom-module-poll.sh`;
-const CUSTOM_MODULE_LEFTCLICK_SCRIPT = `${GLib.get_home_dir()}/.cache/ags/user/scripts/custom-module-leftclick.sh`;
-const CUSTOM_MODULE_RIGHTCLICK_SCRIPT = `${GLib.get_home_dir()}/.cache/ags/user/scripts/custom-module-rightclick.sh`;
-const CUSTOM_MODULE_MIDDLECLICK_SCRIPT = `${GLib.get_home_dir()}/.cache/ags/user/scripts/custom-module-middleclick.sh`;
-const CUSTOM_MODULE_SCROLLUP_SCRIPT = `${GLib.get_home_dir()}/.cache/ags/user/scripts/custom-module-scrollup.sh`;
-const CUSTOM_MODULE_SCROLLDOWN_SCRIPT = `${GLib.get_home_dir()}/.cache/ags/user/scripts/custom-module-scrolldown.sh`;
+const CUSTOM_MODULE_CONTENT_INTERVAL_FILE = `${GLib.get_user_cache_dir()}/ags/user/scripts/custom-module-interval.txt`;
+const CUSTOM_MODULE_CONTENT_SCRIPT = `${GLib.get_user_cache_dir()}/ags/user/scripts/custom-module-poll.sh`;
+const CUSTOM_MODULE_LEFTCLICK_SCRIPT = `${GLib.get_user_cache_dir()}/ags/user/scripts/custom-module-leftclick.sh`;
+const CUSTOM_MODULE_RIGHTCLICK_SCRIPT = `${GLib.get_user_cache_dir()}/ags/user/scripts/custom-module-rightclick.sh`;
+const CUSTOM_MODULE_MIDDLECLICK_SCRIPT = `${GLib.get_user_cache_dir()}/ags/user/scripts/custom-module-middleclick.sh`;
+const CUSTOM_MODULE_SCROLLUP_SCRIPT = `${GLib.get_user_cache_dir()}/ags/user/scripts/custom-module-scrollup.sh`;
+const CUSTOM_MODULE_SCROLLDOWN_SCRIPT = `${GLib.get_user_cache_dir()}/ags/user/scripts/custom-module-scrolldown.sh`;
 
 function trimTrackTitle(title) {
     if (!title) return '';
     const cleanPatterns = [
-        /【[^】]*】/,         // Touhou n weeb stuff
+        /【[^】]*】/,        // Touhou n weeb stuff
         " [FREE DOWNLOAD]", // F-777
     ];
     cleanPatterns.forEach((expr) => title = title.replace(expr, ''));
@@ -67,13 +67,12 @@ const BarResource = (name, icon, command, circprogClassName = 'bar-batt-circprog
                 resourceProgress,
                 resourceLabel,
             ],
-            setup: (self) => self
-                .poll(5000, () => execAsync(['bash', '-c', command])
-                    .then((output) => {
-                        resourceCircProg.css = `font-size: ${Number(output)}px;`;
-                        resourceLabel.label = `${Math.round(Number(output))}%`;
-                        widget.tooltipText = `${name}: ${Math.round(Number(output))}%`;
-                    }).catch(print))
+            setup: (self) => self.poll(5000, () => execAsync(['bash', '-c', command])
+                .then((output) => {
+                    resourceCircProg.css = `font-size: ${Number(output)}px;`;
+                    resourceLabel.label = `${Math.round(Number(output))}%`;
+                    widget.tooltipText = `${name}: ${Math.round(Number(output))}%`;
+                }).catch(print))
             ,
         })
     });
@@ -140,7 +139,7 @@ export default () => {
         hexpand: true,
         className: 'txt-smallie bar-music-txt',
         truncate: 'end',
-        maxWidthChars: 10, // Doesn't matter, just needs to be non negative
+        maxWidthChars: 1, // Doesn't matter, just needs to be non negative
         setup: (self) => self.hook(Mpris, label => {
             const mpris = Mpris.getPlayer('');
             if (mpris)
@@ -158,7 +157,7 @@ export default () => {
         ]
     })
     const SystemResourcesOrCustomModule = () => {
-        // Check if ~/.cache/ags/user/scripts/custom-module-poll.sh exists
+        // Check if $XDG_CACHE_HOME/ags/user/scripts/custom-module-poll.sh exists
         if (GLib.file_test(CUSTOM_MODULE_CONTENT_SCRIPT, GLib.FileTest.EXISTS)) {
             const interval = Number(Utils.readFile(CUSTOM_MODULE_CONTENT_INTERVAL_FILE)) || 5000;
             return BarGroup({

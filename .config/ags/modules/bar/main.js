@@ -46,7 +46,7 @@ export const Bar = async (monitor = 0) => {
             const minHeight = styleContext.get_property('min-height', Gtk.StateFlags.NORMAL);
             // execAsync(['bash', '-c', `hyprctl keyword monitor ,addreserved,${minHeight},0,0,0`]).catch(print);
         },
-        startWidget: (await WindowTitle()),
+        startWidget: (await WindowTitle(monitor)),
         centerWidget: Widget.Box({
             className: 'spacing-h-4',
             children: [
@@ -77,11 +77,14 @@ export const Bar = async (monitor = 0) => {
         endWidget: Widget.Box({}),
         setup: (self) => {
             self.hook(Battery, (self) => {
-                if(!Battery.available) return;
+                if (!Battery.available) return;
                 self.toggleClassName('bar-bg-focus-batterylow', Battery.percent <= userOptions.battery.low);
             })
         }
     });
+    const nothingContent = Widget.Box({
+        className: 'bar-bg-nothing',
+    })
     return Widget.Window({
         monitor,
         name: `bar${monitor}`,
@@ -95,9 +98,11 @@ export const Bar = async (monitor = 0) => {
             children: {
                 'normal': normalBarContent,
                 'focus': focusedBarContent,
+                'nothing': nothingContent,
             },
             setup: (self) => self.hook(currentShellMode, (self) => {
                 self.shown = currentShellMode.value;
+
             })
         }),
     });

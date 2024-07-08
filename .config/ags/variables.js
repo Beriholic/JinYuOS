@@ -21,12 +21,16 @@ globalThis['currentMode'] = currentShellMode;
 globalThis['cycleMode'] = () => {
     if (currentShellMode.value === 'normal') {
         currentShellMode.value = 'focus';
-    } else {
+    } 
+    else if (currentShellMode.value === 'focus') {
+        currentShellMode.value = 'nothing';
+    }
+    else {
         currentShellMode.value = 'normal';
     }
 }
 
-// // Window controls
+// Window controls
 const range = (length, start = 1) => Array.from({ length }, (_, i) => i + start);
 globalThis['toggleWindowOnAllMonitors'] = (name) => {
     range(Gdk.Display.get_default()?.get_n_monitors() || 1, 0).forEach(id => {
@@ -47,7 +51,6 @@ globalThis['openWindowOnAllMonitors'] = (name) => {
 globalThis['closeEverything'] = () => {
     const numMonitors = Gdk.Display.get_default()?.get_n_monitors() || 1;
     for (let i = 0; i < numMonitors; i++) {
-        App.closeWindow(`click2close${i}`);
         App.closeWindow(`cheatsheet${i}`);
         App.closeWindow(`session${i}`);
     }

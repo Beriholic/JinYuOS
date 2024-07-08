@@ -6,12 +6,12 @@ import GLib from 'gi://GLib';
 import Soup from 'gi://Soup?version=3.0';
 import { fileExists } from '../modules/.miscutils/files.js';
 
-const HISTORY_DIR = `${GLib.get_user_cache_dir()}/ags/user/ai/chats/`;
+const HISTORY_DIR = `${GLib.get_user_state_dir()}/ags/user/ai/chats/`;
 const HISTORY_FILENAME = `gemini.txt`;
 const HISTORY_PATH = HISTORY_DIR + HISTORY_FILENAME;
 const initMessages =
     [
-        { role: "user", parts: [{ text: "You are an assistant on a sidebar of a Wayland Linux desktop. Please always use a casual tone when answering your questions, unless requested otherwise or making writing suggestions. These are the steps you should take to respond to the user's queries:\n1. If it's a writing- or grammar-related question or a sentence in quotation marks, Please point out errors and correct when necessary using underlines, and make the writing more natural where appropriate without making too major changes. If you're given a sentence in quotes but is grammatically correct, explain briefly concepts that are uncommon.\n2. If it's a question about system tasks, give a bash command in a code block with very brief explanation for each command\n3. Otherwise, when asked to summarize information or explaining concepts, you are should use bullet points and headings. For mathematics expressions, you *have to* use LaTeX within a code block with the language set as \"latex\" for the interface to render it properly. Use casual language and be short and concise. \nThanks!" }], },
+        { role: "user", parts: [{ text: "You are an assistant on a sidebar of a Wayland Linux desktop. Please always use a casual tone when answering your questions, unless requested otherwise or making writing suggestions. These are the steps you should take to respond to the user's queries:\n1. If it's a writing- or grammar-related question or a sentence in quotation marks, Please point out errors and correct when necessary using underlines, and make the writing more natural where appropriate without making too major changes. If you're given a sentence in quotes but is grammatically correct, explain briefly concepts that are uncommon.\n2. If it's a question about system tasks, give a bash command in a code block with brief explanation.\n3. Otherwise, when asked to summarize information or explaining concepts, you are should use bullet points and headings. For mathematics expressions, you *have to* use LaTeX within a code block with the language set as \"latex\". \nNote: Use casual language, be short, while ensuring the factual correctness of your response. If you are unsure or don’t have enough information to provide a confident answer, simply say “I don’t know” or “I’m not sure.”. \nThanks!" }], },
         { role: "model", parts: [{ text: "Got it!" }], },
         { role: "user", parts: [{ text: "\"He rushed to where the event was supposed to be hold, he didn't know it got calceled\"" }], },
         { role: "model", parts: [{ text: "## Grammar correction\nErrors:\n\"He rushed to where the event was supposed to be __hold____,__ he didn't know it got calceled\"\nCorrection + minor improvements:\n\"He rushed to the place where the event was supposed to be __held____, but__ he didn't know that it got calceled\"" }], },
@@ -34,9 +34,9 @@ if (!fileExists(`${GLib.get_user_config_dir()}/gemini_history.json`)) {
     Utils.writeFile('[ ]', `${GLib.get_user_config_dir()}/gemini_history.json`).catch(print);
 }
 
-Utils.exec(`mkdir -p ${GLib.get_user_cache_dir()}/ags/user/ai`);
-const KEY_FILE_LOCATION = `${GLib.get_user_cache_dir()}/ags/user/ai/google_key.txt`;
-const APIDOM_FILE_LOCATION = `${GLib.get_user_cache_dir()}/ags/user/ai/google_api_dom.txt`;
+Utils.exec(`mkdir -p ${GLib.get_user_state_dir()}/ags/user/ai`);
+const KEY_FILE_LOCATION = `${GLib.get_user_state_dir()}/ags/user/ai/google_key.txt`;
+const APIDOM_FILE_LOCATION = `${GLib.get_user_state_dir()}/ags/user/ai/google_api_dom.txt`;
 function replaceapidom(URL) {
     if (fileExists(APIDOM_FILE_LOCATION)) {
         var contents = Utils.readFile(APIDOM_FILE_LOCATION).trim();
@@ -44,7 +44,7 @@ function replaceapidom(URL) {
     }
     return URL;
 }
-const CHAT_MODELS = ["gemini-pro"]
+const CHAT_MODELS = ["gemini-1.5-flash"]
 const ONE_CYCLE_COUNT = 3;
 
 class GeminiMessage extends Service {
@@ -326,4 +326,3 @@ class GeminiService extends Service {
 }
 
 export default new GeminiService();
-

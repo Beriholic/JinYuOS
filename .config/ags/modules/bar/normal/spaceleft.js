@@ -15,7 +15,7 @@ const WindowTitle = async () => {
                     Widget.Label({
                         xalign: 0,
                         truncate: 'end',
-                        maxWidthChars: 10, // Doesn't matter, just needs to be non negative
+                        maxWidthChars: 1, // Doesn't matter, just needs to be non negative
                         className: 'txt-smaller bar-wintitle-topdesc txt',
                         setup: (self) => self.hook(Hyprland.active.client, label => { // Hyprland.active.client
                             label.label = Hyprland.active.client.class.length === 0 ? 'Desktop' : Hyprland.active.client.class;
@@ -24,7 +24,7 @@ const WindowTitle = async () => {
                     Widget.Label({
                         xalign: 0,
                         truncate: 'end',
-                        maxWidthChars: 10, // Doesn't matter, just needs to be non negative
+                        maxWidthChars: 1, // Doesn't matter, just needs to be non negative
                         className: 'txt-smallie bar-wintitle-txt',
                         setup: (self) => self.hook(Hyprland.active.client, label => { // Hyprland.active.client
                             label.label = Hyprland.active.client.title.length === 0 ? `Workspace ${Hyprland.active.workspace.id}` : Hyprland.active.client.title;
@@ -39,16 +39,16 @@ const WindowTitle = async () => {
 }
 
 
-export default async () => {
+export default async (monitor = 0) => {
     const optionalWindowTitleInstance = await WindowTitle();
     return Widget.EventBox({
         onScrollUp: () => {
             Indicator.popup(1); // Since the brightness and speaker are both on the same window
-            Brightness.screen_value += 0.05;
+            Brightness[monitor].screen_value += 0.05;
         },
         onScrollDown: () => {
             Indicator.popup(1); // Since the brightness and speaker are both on the same window
-            Brightness.screen_value -= 0.05;
+            Brightness[monitor].screen_value -= 0.05;
         },
         onPrimaryClick: () => {
             App.toggleWindow('sideleft');

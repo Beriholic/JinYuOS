@@ -13,8 +13,9 @@ import Hyprland from 'resource:///com/github/Aylur/ags/service/hyprland.js';
 const { execAsync, exec } = Utils;
 import { setupCursorHoverGrab } from '../.widgetutils/cursorhover.js';
 import { dumpToWorkspace, swapWorkspace } from "./actions.js";
-import { substitute } from "../.miscutils/icons.js";
-import { monitors } from '../.miscutils/hyprlanddata.js';
+import { iconExists, substitute } from "../.miscutils/icons.js";
+import { monitors } from '../.commondata/hyprlanddata.js';
+import { MaterialIcon } from '../.commonwidgets/materialicon.js';
 
 const NUM_OF_WORKSPACES_SHOWN = userOptions.overview.numOfCols * userOptions.overview.numOfRows;
 const TARGET = [Gtk.TargetEntry.new('text/plain', Gtk.TargetFlags.SAME_APP, 0)];
@@ -23,7 +24,6 @@ const overviewTick = Variable(false);
 
 export default (overviewMonitor = 0) => {
     const clientMap = new Map();
-    let workspaceGroup = 0;
     const ContextMenuWorkspaceArray = ({ label, actionFunc, thisWorkspace }) => Widget.MenuItem({
         label: `${label}`,
         setup: (menuItem) => {
@@ -49,7 +49,7 @@ export default (overviewMonitor = 0) => {
         }
     })
 
-    const Window = ({ address, at: [x, y], size: [w, h], workspace: { id, name }, class: c, monitor, title, xwayland }, screenCoords) => {
+    const Window = ({ address, at: [x, y], size: [w, h], workspace: { id, name }, class: c, initialClass, monitor, title, xwayland }, screenCoords) => {
         const revealInfoCondition = (Math.min(w, h) * userOptions.overview.scale > 70);
         if (w <= 0 || h <= 0 || (c === '' && title === '')) return null;
         // Non-primary monitors
@@ -61,12 +61,16 @@ export default (overviewMonitor = 0) => {
         if (y + h <= 0) x += (Math.floor(y / monitors[monitor].height) * monitors[monitor].height);
         else if (y < 0) { h = y + h; y = 0; }
         // Truncate if offscreen
-        if (x + w > monitors[monitor]) w = monitors[monitor] - x;
+        if (x + w > monitors[monitor].width) w = monitors[monitor].width - x;
         if (y + h > monitors[monitor].height) h = monitors[monitor].height - y;
 
-        const appIcon = Widget.Icon({
-            icon: substitute(c),
+        if(c.length == 0) c = initialClass;
+        const iconName = substitute(c);
+        const appIcon = iconExists(iconName) ? Widget.Icon({
+            icon: iconName,
             size: Math.min(w, h) * userOptions.overview.scale / 2.5,
+        }) : MaterialIcon('terminal', 'gigantic', {
+            css: `font-size: ${Math.min(w, h) * userOptions.overview.scale / 2.5}px`,
         });
         return Widget.Button({
             attribute: {
@@ -137,7 +141,7 @@ export default (overviewMonitor = 0) => {
                                 transition: 'slide_down',
                                 revealChild: revealInfoCondition,
                                 child: Widget.Label({
-                                    maxWidthChars: 10, // Doesn't matter what number
+                                    maxWidthChars: 1, // Doesn't matter what number
                                     truncate: 'end',
                                     className: `margin-top-5 ${xwayland ? 'txt txt-italic' : 'txt'}`,
                                     css: `
@@ -320,6 +324,7 @@ export default (overviewMonitor = 0) => {
     const OverviewRow = ({ startWorkspace, workspaces, windowName = 'overview' }) => Widget.Box({
         children: arr(startWorkspace, workspaces).map(Workspace),
         attribute: {
+            workspaceGroup: Math.floor((Hyprland.active.workspace.id - 1) / NUM_OF_WORKSPACES_SHOWN),
             monitorMap: [],
             getMonitorMap: (box) => {
                 execAsync('hyprctl -j monitors').then(monitors => {
@@ -331,7 +336,6 @@ export default (overviewMonitor = 0) => {
             },
             update: (box) => {
                 const offset = Math.floor((Hyprland.active.workspace.id - 1) / NUM_OF_WORKSPACES_SHOWN) * NUM_OF_WORKSPACES_SHOWN;
-                if (!App.getWindow(windowName).visible) return;
                 Hyprland.messageAsync('j/clients').then(clients => {
                     const allClients = JSON.parse(clients);
                     const kids = box.get_children();
@@ -357,7 +361,7 @@ export default (overviewMonitor = 0) => {
                     offset + startWorkspace <= id &&
                     id <= offset + startWorkspace + workspaces
                 )) return;
-                // if (!App.getWindow(windowName).visible) return;
+                // if (!App.getWindow(windowName)?.visible) return;
                 Hyprland.messageAsync('j/clients').then(clients => {
                     const allClients = JSON.parse(clients);
                     const kids = box.get_children();
@@ -395,6 +399,7 @@ export default (overviewMonitor = 0) => {
                     const previousGroup = box.attribute.workspaceGroup;
                     const currentGroup = Math.floor((Hyprland.active.workspace.id - 1) / NUM_OF_WORKSPACES_SHOWN);
                     if (currentGroup !== previousGroup) {
+                        if (!App.getWindow(windowName) || !App.getWindow(windowName).visible) return;
                         box.attribute.update(box);
                         box.attribute.workspaceGroup = currentGroup;
                     }

@@ -65,9 +65,6 @@ alias toac 'cd ~/Berijects/C++/acm'
 alias stdc "sudo systemctl start docker"
 alias spdc "sudo systemctl stop docker.service docker.socket"
 
-alias cat 'bat'
-alias ccat 'cat'
-
 #Duf
 alias disk 'duf'
 
@@ -83,6 +80,7 @@ alias btp 'btop'
 alias gtp 'gotop'
 #timeshift
 alias timeshift-gui 'sudo -E timeshift-gtk'
+alias tgui 'sudo -E timeshift-gtk'
 
 alias fdd 'fzf'
 

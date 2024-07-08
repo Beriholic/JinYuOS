@@ -72,9 +72,9 @@ const TextBlock = (content = '') => Label({
     label: content,
 });
 
-Utils.execAsync(['bash', '-c', `rm ${LATEX_DIR}/*`])
+Utils.execAsync(['bash', '-c', `rm -rf ${LATEX_DIR}`])
     .then(() => Utils.execAsync(['bash', '-c', `mkdir -p ${LATEX_DIR}`]))
-    .catch(() => { });
+    .catch(print);
 const Latex = (content = '') => {
     const latexViewArea = Box({
         // vscroll: 'never',
@@ -102,7 +102,8 @@ const Latex = (content = '') => {
                 // You can add this line in the middle for debugging: echo "$text" > ${filePath}.tmp
                 const renderScript = `#!/usr/bin/env bash
 text=$(cat ${filePath} | sed 's/$/ \\\\\\\\/g' | sed 's/&=/=/g')
-LaTeX -headless -input="$text" -output=${outFilePath} -textsize=${fontSize * 1.1} -padding=0 -maxwidth=${latexViewArea.get_allocated_width() * 0.85}
+cd /opt/MicroTeX
+./LaTeX -headless -input="$text" -output=${outFilePath} -textsize=${fontSize * 1.1} -padding=0 -maxwidth=${latexViewArea.get_allocated_width() * 0.85} > /dev/null 2>&1
 sed -i 's/fill="rgb(0%, 0%, 0%)"/style="fill:#000000"/g' ${outFilePath}
 sed -i 's/stroke="rgb(0%, 0%, 0%)"/stroke="${darkMode.value ? '#ffffff' : '#000000'}"/g' ${outFilePath}
 `;

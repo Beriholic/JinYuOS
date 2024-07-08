@@ -374,6 +374,22 @@
     margin-bottom: 0rem;
 }
 
+.spacing-h-30>* {
+    margin-right: 1.364rem;
+}
+
+.spacing-h-30>*:last-child {
+    margin-right: 0rem;
+}
+
+.spacing-v-30>* {
+    margin-bottom: 1.364rem;
+}
+
+.spacing-v-30>*:last-child {
+    margin-bottom: 0rem;
+}
+
 .anim-enter {
     @include anim-enter;
 }
@@ -386,7 +402,7 @@
     @include button-minsize;
 }
 
-@each $spacing in (5, 8, 10, 15) {
+@each $spacing in (5, 8, 10, 15, 20) {
     @each $dir in ("top", "bottom", "left", "right") {
         .margin-#{$dir}-#{$spacing} {
             margin-#{$dir}: 0.068rem * $spacing;

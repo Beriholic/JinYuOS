@@ -3,10 +3,3 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
-export GTK_IM_MODULE=
-export QT_IM_MODULE=fcitx
-export QT4_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export SDL_IM_MODULE=fcitx
-export INPUT_METHOD=fcitx
-export DOCKER_HOST=unix:///var/run/docker.sock

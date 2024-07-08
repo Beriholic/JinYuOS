@@ -35,7 +35,6 @@ export const TabContainer = ({ icons, names, children, className = '', setup = (
         }),
     });
     const tabIndicatorLine = Box({
-        hexpand: true,
         vertical: true,
         homogeneous: true,
         setup: (self) => self.hook(shownIndex, (self) => {
@@ -54,7 +53,6 @@ export const TabContainer = ({ icons, names, children, className = '', setup = (
             onScrollDown: () => mainBox.nextTab(),
             child: Box({
                 vertical: true,
-                hexpand: true,
                 children: [
                     tabs,
                     tabIndicatorLine
@@ -105,7 +103,6 @@ export const IconTabContainer = ({
     let previousShownIndex = 0;
     const count = Math.min(iconWidgets.length, names.length, children.length);
     const tabs = Box({
-        homogeneous: true,
         hpack: tabsHpack,
         className: `spacing-h-5 ${tabSwitcherClassName}`,
         children: iconWidgets.map((icon, i) => Button({

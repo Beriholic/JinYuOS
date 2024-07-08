@@ -8,25 +8,12 @@
 //     bind = Super, Tab, exec, ags -t overview
 
 // Import
-import GLib from 'gi://GLib';
 import App from 'resource:///com/github/Aylur/ags/app.js'
-import * as Utils from 'resource:///com/github/Aylur/ags/utils.js'
-// Stuff
-import userOptions from './modules/.configuration/user_options.js';
 // Widgets
 import Overview from './modules/overview/main.js';
+import { COMPILED_STYLE_DIR } from './init.js';
 
-Utils.exec(`bash -c 'echo "" > ${App.configDir}/scss/_musicwal.scss'`); // reset music styles
-Utils.exec(`bash -c 'echo "" > ${App.configDir}/scss/_musicmaterial.scss'`); // reset music styles
-const COMPILED_STYLE_DIR = `${GLib.get_user_cache_dir()}/ags/user/generated`
-async function applyStyle() {
-    Utils.exec(`mkdir -p ${COMPILED_STYLE_DIR}`);
-    Utils.exec(`sass ${App.configDir}/scss/main.scss ${COMPILED_STYLE_DIR}/style.css`);
-    App.resetCss();
-    App.applyCss(`${COMPILED_STYLE_DIR}/style.css`);
-    console.log('[LOG] Styles loaded')
-}
-applyStyle().catch(print);
+handleStyles(true);
 
 App.config({
     css: `${COMPILED_STYLE_DIR}/style.css`,
@@ -35,4 +22,3 @@ App.config({
         Overview(),
     ],
 });
-

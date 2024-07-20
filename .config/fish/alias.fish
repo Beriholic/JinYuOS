@@ -36,8 +36,6 @@ alias clean "clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 
 alias acinit 'cd $HOME && sh ~/.script/acinit.sh && toac'
 
-alias neofetch 'neofetch --source ~/.config/neofetch/ascii.txt'
-
 alias cd.. "cd .."
 
 alias fire 'aafire -driver curses -boldfont'
@@ -55,7 +53,6 @@ end
 # Neofetch 
 #neofetch
 
-# neovide
 alias xw 'env -u WAYLAND_DISPLAY'
 
 #cd acm
@@ -121,9 +118,6 @@ function clean-shot
     end
 end
 
-alias lazypod 'systemctl --user start podman.socket && DOCKER_HOST=unix:///run/user/1000/podman/podman.sock lazydocker'
-alias stpod 'systemctl --user start podman.socket'
-alias sppod 'systemctl --user stop podman.socket'
 alias stdeeplx 'podman start deeplx'
 alias stop 'podman stop deeplx'
 alias kssh 'kitten ssh'
@@ -140,3 +134,7 @@ function fuck -d "Correct your previous console command"
 end
 
 
+
+alias stol='sudo systemctl start ollama'
+alias spol='sudo systemctl stop ollama'
+alias rstol='sudo systemctl restart ollama'

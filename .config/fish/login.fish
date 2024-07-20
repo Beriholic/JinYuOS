@@ -7,3 +7,4 @@ if test (tty) = "/dev/tty1"
    stt
 end
 
+

@@ -1,0 +1,98 @@
+linux_display_server wayland
+# wayland_titlebar_color background
+
+font_family Agave Nerd Font mono
+# font_family JetbrainsMono Nerd Font
+
+bold_font Agave Nerd Font Bold
+# bold_font JetbrainsMono Nerd Font
+
+font_size 13
+background_opacity 0.5
+
+# window settings
+initial_window_width 95c
+initial_window_height 35c
+window_padding_width 20
+confirm_os_window_close 0
+tab_bar_style fade
+tab_fade 1
+
+
+# {{{ Keybindings
+# map ctrl+shift+n new_tab_with_cwd
+# map ctrl+shift+k next_tab
+# map ctrl+shift+j previous_tab
+# }}
+
+linux_display_server wayland
+wayland_titlebar_color background
+
+# Upstream colors {{{
+
+# Special
+background #{{ $background }} 
+foreground #{{ $onBackground }} 
+
+
+
+# Black
+color0 #{{ $background }}
+color8 #{{ $background }}
+
+# Red
+color1 #{{ $error }}
+color9 #{{ $error }}
+
+# Green
+color2  #{{ $inversePrimary }}
+color10  #{{ $inversePrimary }}
+
+# Yellow
+color3  #{{ $onPrimaryContainer }}
+color11 #{{ $onPrimaryContainer }}
+
+# Blue
+color4 #{{ $onPrimaryContainer }}
+color12 #{{ $onPrimaryContainer }}
+
+# Magenta
+color5  #{{ $onSecondaryContainer }}
+color13 #{{ $onSecondaryContainer }}
+
+# Cyan
+color6  #{{ $primary }}
+color14 #{{ $primary }}
+
+# White
+color7  #{{ $onSurfaceVariant }}
+color15 #{{ $onSurfaceVariant }}
+
+# Cursor
+#cursor            #{{ $background }} 
+#cursor_text_color #{{ $onBackground }} 
+cursor            #cbced3
+cursor_text_color #a5b6cf
+
+
+url color #5de4c7
+
+# Window borders
+active_border_color   #{{ $inversePrimary }}
+inactive_border_color #{{ $background }}
+bell_border_color     #fffac2
+
+# Tab bar
+tab_bar_style fade
+tab_fade 1
+active_tab_foreground #{{ $onBackground }} 
+active_tab_background #{{ $background }}
+active_tab_font_style bold
+
+inactive_tab_foreground #{{ $onBackground }}
+inactive_tab_background #{{ $background }}
+inactive_tab_font_style bold
+tab_bar_background #{{ $background }}
+
+# Title bar
+macos_titlebar_color #{{ $background }}

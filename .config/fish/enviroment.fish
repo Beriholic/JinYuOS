@@ -10,5 +10,8 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 set --export ANDROID_HOME $HOME/Android/Sdk
-set -x PATH $PATH:$ANDROID_HOME/platform-tools
-set -x PATH $PATH:$ANDROID_HOME/emulator
+set --export PATH $ANDROID_HOME/platform-tools $PATH
+set --export PATH $ANDROID_HOME/emulator $PATH
+
+set --export PUB_HOSTED_URL "https://pub.flutter-io.cn"
+set --export FLUTTER_STORAGE_BASE_URL "https://storage.flutter-io.cn"

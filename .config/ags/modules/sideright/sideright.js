@@ -172,7 +172,7 @@ export default () => Box({
                         sidebarOptionsStack,
                     ],
                 }),
-                ModuleCalendar(),
+                //ModuleCalendar(),
             ]
         }),
     ],

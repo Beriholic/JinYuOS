@@ -196,4 +196,4 @@ apply_lightdark &
 apply_gtk &
 apply_fuzzel &
 apply_term &
-apply_kitty $
+apply_kitty &

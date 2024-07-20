@@ -23,7 +23,7 @@ const PROVIDERS = Object.assign({ // There's this list hmm https://github.com/zu
         'base_url': 'http://localhost:11434/v1/chat/completions',
         'key_get_url': 'it\'s just ollama',
         'key_file': 'ollama_key.txt',
-        'model': 'llama3:instruct',
+        'model': 'shiyi-qw:latest',
     },
     'openrouter': {
         'name': 'OpenRouter (Llama-3-70B)',

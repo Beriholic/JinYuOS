@@ -138,3 +138,6 @@ end
 alias stol='sudo systemctl start ollama'
 alias spol='sudo systemctl stop ollama'
 alias rstol='sudo systemctl restart ollama'
+
+
+alias update-mirrorlist='sudo reflector --verbose --latest 10 --country China --protocol https --sort rate --save /etc/pacman.d/mirrorlist' 

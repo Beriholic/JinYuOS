@@ -1,8 +1,11 @@
 adw-gtk3-git
+apifox-bin
 ascii-image-converter
 bilibili-appimage
 clash-verge-rev-bin
 eww
+figma-linux-bin
+freetype2-wps
 gg
 gotop
 gradience
@@ -32,7 +35,10 @@ ttf-gabarito-git
 ttf-material-symbols-variable-git
 ttf-readex-pro
 ttf-rubik-vf
+ttf-wps-fonts
 visual-studio-code-bin
 watchman-bin
 wechat-universal-bwrap
+wps-office
+wps-office-mui-zh-cn
 yesplaymusic

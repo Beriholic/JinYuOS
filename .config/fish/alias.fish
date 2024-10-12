@@ -42,12 +42,10 @@ alias fire 'aafire -driver curses -boldfont'
 
 #v2raya
 function stv2
-    sudo systemctl start dae
     sudo systemctl start daed
 end
 
 function spv2
-    sudo systemctl stop dae
     sudo systemctl stop daed
 end
 # Neofetch 
@@ -95,6 +93,7 @@ function spbox
     sudo systemctl stop libvirtd-ro.socket  
     sudo systemctl stop libvirtd-admin.socket  
     sudo systemctl stop libvirtd.socket
+    sudo virsh net-destroy default
 end
 
 alias fname 'sherlock'
@@ -141,3 +140,17 @@ alias rstol='sudo systemctl restart ollama'
 
 
 alias update-mirrorlist='sudo reflector --verbose --latest 10 --country China --protocol https --sort rate --save /etc/pacman.d/mirrorlist' 
+alias cat='bat'
+
+
+alias fackwork='genact'
+
+alias icat='kitten icat'
+
+alias ranger='yazi'
+
+abbr --erase z &>/dev/null
+alias z=__zoxide_z
+
+abbr --erase zi &>/dev/null
+alias zi=__zoxide_zi

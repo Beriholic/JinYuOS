@@ -1,3 +1,4 @@
+
 hyprpm add https://github.com/hyprwm/hyprland-plugins/hyprexpo
 hyprpm add https://github.com/Beriholic/hyprscroller
 

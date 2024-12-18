@@ -69,6 +69,7 @@ gtksourceview3
 gtksourceviewmm
 gvfs-gphoto2
 gvfs-mtp
+hmcl
 hugo
 hypridle
 hyprland-git
@@ -96,6 +97,7 @@ libvirt
 linux-firmware
 linux-zen
 linux-zen-headers
+maven
 mesa
 meson
 mpv
@@ -122,6 +124,7 @@ pnpm
 polkit-gnome
 power-profiles-daemon
 python-build
+python-libsass
 python-pywal
 python-pywayland
 python-regex

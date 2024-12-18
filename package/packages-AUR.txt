@@ -17,10 +17,11 @@ jetbrains-toolbox
 jmtpfs
 lazydocker
 linuxqq
+mpvpaper
 prince-bin
-python-libsass
 python-material-color-utilities
 python-materialyoucolor-git
+snapd
 ttf-gabarito-git
 ttf-material-symbols-variable-git
 ttf-readex-pro

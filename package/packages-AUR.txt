@@ -12,6 +12,8 @@ gg
 go-musicfox-git
 gotop
 gradience
+hyprland-qtutils-git
+hyprlock-git
 hyprpicker-git
 jetbrains-toolbox
 jmtpfs

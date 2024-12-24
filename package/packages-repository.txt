@@ -1,3 +1,4 @@
+7zip
 adobe-source-han-sans-cn-fonts
 adobe-source-han-serif-cn-fonts
 android-tools
@@ -15,6 +16,7 @@ bluez-utils
 brightnessctl
 btop
 btrfs-progs
+chezmoi
 clang
 clash-verge
 cliphist
@@ -71,9 +73,11 @@ gvfs-gphoto2
 gvfs-mtp
 hmcl
 hugo
+hyprcursor-git
+hyprgraphics-git
 hypridle
 hyprland-git
-hyprlock
+hyprutils-git
 hyprwayland-scanner-git
 imv
 iptables-nft
@@ -116,7 +120,6 @@ nvidia-settings
 obs-studio
 onefetch
 openbsd-netcat
-p7zip
 pavucontrol
 plantuml
 plasma-browser-integration

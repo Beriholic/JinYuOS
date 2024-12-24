@@ -20,10 +20,13 @@
  Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  Boston, MA 02111-1307, USA.
 -->
+
 <!-- MODIFIED -->
+
 <style-scheme id="custom" _name="Custom" version="1.0">
   <author>Leo Iannacone</author>
   <_description>Based on SublimeText Monokai Extended - Generated with tm2gtksw2</_description>
+
   <style name="bracket-match"  background="#333333" bold="true"/>
   <style name="bracket-mismatch"  background="#333333" underline="true"/>
   <style name="c:preprocessor" foreground="#be84ff"/>
@@ -112,4 +115,7 @@
   <style name="xml:entity" foreground="#c8cecc"/>
   <style name="xml:namespace" foreground="#f92672"/>
   <style name="xml:tag" foreground="#f92672"/>
+
+
 </style-scheme>
+

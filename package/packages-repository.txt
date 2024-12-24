@@ -16,7 +16,6 @@ bluez-utils
 brightnessctl
 btop
 btrfs-progs
-chezmoi
 clang
 clash-verge
 cliphist
@@ -85,7 +84,6 @@ jdk8-openjdk
 jemalloc
 jp2a
 jq
-kafka
 kitty
 krita
 lazygit

@@ -166,6 +166,23 @@ apply_ags() {
     ags run-js 'openColorScheme.value = true; Utils.timeout(2000, () => openColorScheme.value = false);'
 }
 
+apply_kitty() {
+    if [ ! -f "scripts/templates/kitty/kitty.conf" ]; then
+        echo "Template file not found for Kitty. Skipping that."
+        return
+    fi
+    # Copy template
+    mkdir -p "$HOME"/.cache/ags/user/generated/kitty
+    cp "scripts/templates/kitty/kitty.conf" "$HOME"/.cache/ags/user/generated/kitty/kitty.conf
+    # Apply colors
+    for i in "${!colorlist[@]}"; do
+        # sed -i "s/${colorlist[$i]} #/${colorvalues[$i]#\#}/g" "$HOME"/.cache/ags/user/generated/foot/foot.ini
+        sed -i "s/{{ ${colorlist[$i]} }}/${colorvalues[$i]#\#}/g" "$HOME"/.cache/ags/user/generated/kitty/kitty.conf
+    done
+
+    cp $HOME/.cache/ags/user/generated/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+}
+
 
 colornames=$(cat $STATE_DIR/scss/_material.scss | cut -d: -f1)
 colorstrings=$(cat $STATE_DIR/scss/_material.scss | cut -d: -f2 | cut -d ' ' -f2 | cut -d ";" -f1)
@@ -180,3 +197,4 @@ apply_lightdark &
 apply_gtk &
 apply_fuzzel &
 apply_term &
+apply_kitty &

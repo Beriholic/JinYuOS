@@ -2,6 +2,7 @@
 <style-scheme id="custom-light" _name="Custom" version="1.0">
   <author>end_4</author>
   <_description>Catppuccin port but very random</_description>
+
   <style name="bracket-match"  background="#E3E6EB" bold="true"/>
   <style name="bracket-mismatch"  background="#E3E6EB" underline="true"/>
   <style name="c:preprocessor" foreground="#DF8E1D"/>
@@ -90,4 +91,5 @@
   <style name="xml:entity" foreground="#c8cecc"/>
   <style name="xml:namespace" foreground="#8839EF"/>
   <style name="xml:tag" foreground="#8839EF"/>
+
 </style-scheme>

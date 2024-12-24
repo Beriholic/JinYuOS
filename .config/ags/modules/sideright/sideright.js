@@ -9,7 +9,6 @@ import {
   ModuleNightLight,
   ModuleInvertColors,
   ModuleIdleInhibitor,
-  ModuleEditIcon,
   ModuleReloadIcon,
   ModuleSettingsIcon,
   ModulePowerIcon,
@@ -29,28 +28,28 @@ import { checkKeybind } from "../.widgetutils/keybind.js";
 
 const centerWidgets = [
   {
-    name: "Notifications",
+    name: getString("Notifications"),
     materialIcon: "notifications",
     contentWidget: ModuleNotificationList,
   },
   {
-    name: "Audio controls",
+    name: getString("Audio controls"),
     materialIcon: "volume_up",
     contentWidget: ModuleAudioControls,
   },
   {
-    name: "Bluetooth",
+    name: getString("Bluetooth"),
     materialIcon: "bluetooth",
     contentWidget: ModuleBluetooth,
   },
   {
-    name: "Wifi networks",
+    name: getString("Wifi networks"),
     materialIcon: "wifi",
     contentWidget: ModuleWifiNetworks,
     onFocus: () => execAsync("nmcli dev wifi list").catch(print),
   },
   {
-    name: "Live config",
+    name: getString("Live config"),
     materialIcon: "tune",
     contentWidget: ModuleConfigure,
   },
@@ -106,7 +105,7 @@ const timeRow = Box({
         self.poll(5000, (label) => {
           getUptime()
             .then((upTimeString) => {
-              label.label = `Uptime: ${upTimeString}`;
+              label.label = `${getString("Uptime:")} ${upTimeString}`;
             })
             .catch((err) => {
               console.error(`Failed to fetch uptime: ${err}`);
@@ -115,9 +114,8 @@ const timeRow = Box({
       },
     }),
     Widget.Box({ hexpand: true }),
-    // ModuleEditIcon({ hpack: 'end' }), // TODO: Make this work
     ModuleReloadIcon({ hpack: "end" }),
-    ModuleSettingsIcon({ hpack: "end" }),
+    // ModuleSettingsIcon({ hpack: 'end' }), // Button does work, gnome-control-center is kinda broken
     ModulePowerIcon({ hpack: "end" }),
   ],
 });
@@ -174,7 +172,6 @@ export default () =>
             className: "sidebar-group",
             children: [sidebarOptionsStack],
           }),
-          //ModuleCalendar(),
         ],
       }),
     ],

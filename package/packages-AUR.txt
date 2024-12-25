@@ -23,7 +23,6 @@ prince-bin
 python-gradergen-git
 python-material-color-utilities
 python-materialyoucolor-git
-snapd
 ttf-gabarito-git
 ttf-material-symbols-variable-git
 ttf-readex-pro

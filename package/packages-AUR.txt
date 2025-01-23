@@ -16,6 +16,7 @@ gotop
 gradience
 hyprland-qtutils-git
 hyprpicker-git
+hyprshot
 illogical-impulse-ags
 illogical-impulse-ags-debug
 jetbrains-toolbox

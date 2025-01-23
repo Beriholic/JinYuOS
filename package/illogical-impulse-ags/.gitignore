@@ -1,0 +1,5 @@
+ags
+libgnome-volume-control
+pkg
+src
+*.pkg.tar.zst

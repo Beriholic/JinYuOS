@@ -154,3 +154,4 @@ alias z=__zoxide_z
 
 abbr --erase zi &>/dev/null
 alias zi=__zoxide_zi
+

@@ -47,11 +47,11 @@ globalThis['cycleMode'] = () => {
         updateMonitorShellMode(currentShellMode, monitor, 'focus')
     }
     else if (currentShellMode.value[monitor] === 'focus') {
+        updateMonitorShellMode(currentShellMode, monitor, 'nothing')
+    }
+    else {
         updateMonitorShellMode(currentShellMode, monitor, 'normal')
     }
-    //else {
-    //    updateMonitorShellMode(currentShellMode, monitor, 'normal')
-    //}
 }
 
 // Window controls

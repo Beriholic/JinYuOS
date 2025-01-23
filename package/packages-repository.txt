@@ -13,11 +13,11 @@ bc
 bind
 blueberry
 bluez-utils
+bottles
 brightnessctl
 btop
 btrfs-progs
 clang
-clash-verge
 cliphist
 cpio
 cuda
@@ -26,6 +26,7 @@ dart
 dart-sass
 ddcutil
 deno
+discord
 dnsmasq
 dnssec-anchors
 docker
@@ -49,6 +50,7 @@ ffmpegthumbnailer
 firefox
 fish
 fisher
+flutter
 foot
 fuzzel
 fzf
@@ -105,8 +107,10 @@ meson
 mpv
 mtpfs
 nautilus
+navi
 neovide
 neovim
+net-tools
 networkmanager
 niri
 noto-fonts-cjk
@@ -137,6 +141,7 @@ reflector
 ripgrep
 rust-analyzer
 s-tui
+scrcpy
 sl
 slurp
 socat
@@ -178,6 +183,7 @@ ttf-jetbrains-mono-nerd
 ttf-space-mono-nerd
 typescript
 udiskie
+unrar
 vde2
 vi
 vim
@@ -188,6 +194,7 @@ waybar-git
 webp-pixbuf-loader
 wf-recorder
 wget
+wine-wow64
 wl-clipboard
 wlogout
 wqy-microhei

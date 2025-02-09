@@ -4,6 +4,7 @@ set -x PATH $HOME/.cargo/env $PATH
 set -x PATH $HOME/go/bin $PATH
 set -x PATH $HOME/.nvm $PATH
 set -x PATH $HOME/.npm-global/bin $PATH
+set -x PATH $HOME/.devenv/flutter/bin $PATH
 set -x EDITOR nvim
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
@@ -15,5 +16,3 @@ set --export PATH $ANDROID_HOME/emulator $PATH
 
 set --export PUB_HOSTED_URL "https://pub.flutter-io.cn"
 set --export FLUTTER_STORAGE_BASE_URL "https://storage.flutter-io.cn"
-
-set --export PATH ~/.npm-global/bin $PATH

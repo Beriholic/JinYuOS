@@ -147,8 +147,6 @@ alias fackwork='genact'
 
 alias icat='kitten icat'
 
-alias ranger='yazi'
-
 abbr --erase z &>/dev/null
 alias z=__zoxide_z
 

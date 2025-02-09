@@ -9,9 +9,11 @@ cbonsai
 ciphey
 dingtalk-bin
 docker-slim-bin
+flclash-bin
 freetype2-wps
 gg
 go-musicfox-git
+google-chrome
 gotop
 gradience
 hyprland-qtutils-git
@@ -23,12 +25,15 @@ jetbrains-toolbox
 jmtpfs
 lazydocker
 linuxqq
+lmstudio
+localsend-bin
 mihomo-party-bin
 mpvpaper
 prince-bin
 python-gradergen-git
 python-material-color-utilities
 python-materialyoucolor-git
+risuai-bin
 tradingview
 ttf-gabarito-git
 ttf-material-symbols-variable-git

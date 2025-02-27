@@ -5,6 +5,7 @@ arch-mirror-gen
 ascii-image-converter
 bibata-cursor-theme-bin
 bilibili-appimage
+bunster
 cbonsai
 ciphey
 dingtalk-bin

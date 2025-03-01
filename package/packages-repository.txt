@@ -76,11 +76,13 @@ gvfs-gphoto2
 gvfs-mtp
 hmcl
 hugo
-hyprcursor-git
-hyprgraphics-git
+hyprcursor
+hyprgraphics
 hypridle
-hyprland-git
-hyprutils-git
+hyprland
+hyprland-qtutils
+hyprlang
+hyprutils
 hyprwayland-scanner-git
 imv
 iptables-nft
@@ -96,7 +98,6 @@ lenovolegionlinux-dkms-git
 lenovolegionlinux-git
 less
 lib32-mesa
-lib32-nvidia-utils
 lib32-vulkan-radeon
 libmaxminddb
 libsass
@@ -115,14 +116,12 @@ neovide
 neovim
 net-tools
 networkmanager
-niri
 noto-fonts-cjk
 noto-fonts-emoji
 npm
 ntp
 nvidia-dkms
 nvidia-prime
-nvidia-settings
 obs-studio
 ollama
 onefetch
@@ -195,7 +194,6 @@ udiskie
 unrar
 upx
 vde2
-vesktop
 vi
 vim
 virt-manager
@@ -209,7 +207,7 @@ wine-wow64
 wl-clipboard
 wlogout
 wqy-microhei
-xdg-desktop-portal-hyprland-git
+xdg-desktop-portal-hyprland
 xf86-video-amdgpu
 xorg-server
 xorg-xeyes

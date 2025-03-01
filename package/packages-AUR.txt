@@ -17,7 +17,6 @@ go-musicfox-git
 google-chrome
 gotop
 gradience
-hyprland-qtutils-git
 hyprpicker-git
 hyprshot
 illogical-impulse-ags
@@ -35,13 +34,13 @@ python-gradergen-git
 python-material-color-utilities
 python-materialyoucolor-git
 risuai-bin
-tradingview
 ttf-gabarito-git
 ttf-material-symbols-variable-git
 ttf-ms-win11-auto
 ttf-readex-pro
 ttf-rubik-vf
 ttf-wps-fonts
+vesktop
 visual-studio-code-bin
 watchman-bin
 wechat-universal-bwrap

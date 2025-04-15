@@ -9,10 +9,12 @@ EnumerateForwardKeys=
 EnumerateBackwardKeys=
 # 轮换输入法时跳过第一个输入法
 EnumerateSkipFirst=False
+# 触发修饰键快捷键的时限 (毫秒)
+ModifierOnlyKeyTimeout=250
 
 [Hotkey/TriggerKeys]
 0=Shift+Meta_L
-1=Alt+Shift+Shift_L
+1=Alt+Shift+Alt_L
 
 [Hotkey/EnumerateGroupForwardKeys]
 0=Super+space

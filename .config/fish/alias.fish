@@ -153,3 +153,7 @@ alias z=__zoxide_z
 abbr --erase zi &>/dev/null
 alias zi=__zoxide_zi
 
+
+alias stsp='sudo systemctl start snapd && sudo systemctl start snapd.apparmor'
+alias spsp='sudo systemctl stop snapd.socket && sudo systemctl stop snapd.service && sudo systemctl stop snap.multipass.multipassd.service && sudo systemctl stop snapd.mounts.target && sudo systemctl stop snapd.mounts-pre.target'
+

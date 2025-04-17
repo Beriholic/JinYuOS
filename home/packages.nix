@@ -12,6 +12,7 @@
     qq
     obs-studio
     bilibili
+    wechat-uos
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })

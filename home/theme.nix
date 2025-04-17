@@ -23,11 +23,6 @@ in
       # themes
       adwaita-qt6
       adw-gtk3
-      material-symbols
-      nerdfonts
-      noto-fonts
-      noto-fonts-cjk-sans
-      google-fonts
       moreWaita
       bibata-cursors
       # morewaita-icon-theme

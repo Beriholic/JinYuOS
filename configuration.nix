@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -27,6 +25,32 @@
     nixfmt-rfc-style
     upower
   ];
+
+  xdg = {
+      portal = {
+        enable = true;
+        xdgOpenUsePortal = true;
+        config = {
+          common.default = ["gtk"];
+          hyprland.default = ["gtk" "hyprland"];
+        };
+        extraPortals = [
+          pkgs.xdg-desktop-portal-gtk
+          pkgs.xdg-desktop-portal-hyprland
+        ];
+      };
+    };
+
+    services.greetd = {
+      enable = true;
+      vt = 3;
+      settings = {
+        default_session = {
+          user = "beri";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        };
+      };
+    };
 
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.11";

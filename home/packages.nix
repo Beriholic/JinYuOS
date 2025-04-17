@@ -11,6 +11,7 @@
     vscode
     qq
     obs-studio
+    bilibili
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })

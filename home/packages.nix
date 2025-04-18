@@ -58,7 +58,4 @@
     android-studio
   ];
 
-  services = {
-    udiskie.enable = true;
-  };
 }

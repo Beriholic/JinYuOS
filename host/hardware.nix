@@ -1,5 +1,10 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
+  services.xserver.videoDrivers = ["nvidia"];
+  boot.kernelParams = [
+    "modprobe.blacklist=nouveau"
+  ];
+
   hardware = {
     i2c.enable = true;
     graphics = {
@@ -20,6 +25,21 @@
           Experimental = true;
         };
       };
+    };
+    nvidia = {
+      prime = {
+        offload ={
+          enable = true;
+          enableOffloadCmd = true;
+        };
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:2:0:0";
+      };
+      modesetting.enable = true;
+      nvidiaSettings = true;
+      open = false;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      forceFullCompositionPipeline = true;
     };
   };
 }

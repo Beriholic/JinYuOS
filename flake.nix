@@ -21,7 +21,6 @@
       url = "github:somepaulo/MoreWaita";
       flake = false;
     };
-    daeuniverse.url = "github:daeuniverse/flake.nix";
   };
   outputs =
     inputs@{
@@ -40,8 +39,6 @@
             ./configuration.nix
             hyprland.nixosModules.default
             home-manager.nixosModules.home-manager
-            inputs.daeuniverse.nixosModules.dae
-            inputs.daeuniverse.nixosModules.daed
             {
               home-manager = {
                 useGlobalPkgs = true;

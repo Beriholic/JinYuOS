@@ -1,4 +1,5 @@
 {
+  inputs,
   lib,
   pkgs,
   ...
@@ -51,7 +52,7 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+    #package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
     settings = lib.mkMerge [
@@ -61,6 +62,8 @@ in
       rules.settings
       layout.settings
       { source = [ "./colors.conf" ]; }
+    ];
+    plugins = [
     ];
     extraConfig = ''
       env = LANG,zh_CN.UTF-8

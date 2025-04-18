@@ -1,34 +1,42 @@
 {
   settings = {
-    windowrule = [
-      # Float Necessary Windows
-      "float,Rofi"
-      "float,fuzzel"
-      "float,nmtui"
-      "float,pavucontrol"
-      # Increase the opacity
-      "opacity 0.8,kitty"
-      "opacity 0.8,foot"
-      "opacity 0.92,Thunar"
-      "opacity 0.96,discord"
-      "opacity 0.9,VSCodium"
-      "opacity 0.88,obsidian"
-      "opacity 0.5,dunst"
-      "opacity 0.5,mako"
-      "noblur,^(wemeetapp)$"
-      #^.*nvim.*$
-      "tile,librewolf"
-      "tile,spotify"
-      "opacity 0.5,neovim"
-      "opacity 0.5,nvim"
-      # Dialogs
-      "float,title:^(Open File)(.*)$"
-      "float,title:^(Select a File)(.*)$"
-      "float,title:^(Choose wallpaper)(.*)$"
-      "float,title:^(Open Folder)(.*)$"
-      "float,title:^(Save As)(.*)$"
-      "float,title:^(Library)(.*)$"
-      "pseudo, fcitx"
+    windowrulev2 = [
+      "float, class:^(blueberry\.py)$"
+      "float, class:^(steam)$"
+      "float, class:^(guifetch)$"
+      "float, class:^(pavucontrol)$"
+      "size 45%, class:^(pavucontrol)$"
+      "center, class:^(pavucontrol)$"
+      "float, class:^(org.pulseaudio.pavucontrol)$"
+      "size 45%, class:^(org.pulseaudio.pavucontrol)$"
+      "center, class:^(org.pulseaudio.pavucontrol)$"
+      "float, class:^(nm-connection-editor)$"
+      "size 45%, class:^(nm-connection-editor)$"
+      "center, class:^(nm-connection-editor)$"
+      "tile, class:^dev\.warp\.Warp$"
+      "float, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
+      "keepaspectratio, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
+      "move 73% 72%, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$ "
+      "size 25%, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
+      "float, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
+      "pin, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
+      "center, title:^(Open File)(.*)$"
+      "center, title:^(Select a File)(.*)$"
+      "center, title:^(Choose wallpaper)(.*)$"
+      "center, title:^(Open Folder)(.*)$"
+      "center, title:^(Save As)(.*)$"
+      "center, title:^(Library)(.*)$"
+      "center, title:^(File Upload)(.*)$"
+      "float, title:^(Open File)(.*)$"
+      "float, title:^(Select a File)(.*)$"
+      "float, title:^(Choose wallpaper)(.*)$"
+      "float, title:^(Open Folder)(.*)$"
+      "float, title:^(Save As)(.*)$"
+      "float, title:^(Library)(.*)$"
+      "float, title:^(File Upload)(.*)$"
+      "immediate, title:.*\.exe"
+      "immediate, class:^(steam_app)"
+      "noshadow, floating:0"
     ];
     layerrule = [
       "animation slide left, sideleft.*"
@@ -74,12 +82,3 @@
     ];
   };
 }
-
-#windowrulev2=windowdance,class:^(jetbrains-.*)$
-# search dialog
-#windowrulev2=dimaround,class:^(jetbrains-.*)$,floating:1,title:^(?!win)
-#windowrulev2=center,class:^(jetbrains-.*)$,floating:1,title:^(?!win)
-# autocomplete & menus
-#windowrulev2=noanim,class:^(jetbrains-.*)$,title:^(win.*)$
-#windowrulev2=noinitialfocus,class:^(jetbrains-.*)$,title:^(win.*)$
-#windowrulev2=rounding 0,class:^(jetbrains-.*)$,title:^(win.*)$

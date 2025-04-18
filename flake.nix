@@ -7,7 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      url = "github:hyprwm/Hyprland?ref=v0.48.1";
     };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -35,12 +35,13 @@
       nixosConfigurations = {
         Jiny = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
-          specialArgs = { inherit hyprland inputs; };
+          specialArgs = { 
+            inherit hyprland inputs; 
+          };
           modules = [
             ./configuration.nix
             hyprland.nixosModules.default
             home-manager.nixosModules.home-manager
-            inputs.daeuniverse.nixosModules.dae
             inputs.daeuniverse.nixosModules.daed
             {
               home-manager = {

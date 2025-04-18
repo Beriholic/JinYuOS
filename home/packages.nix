@@ -9,6 +9,7 @@
     icon-library
     yad
     vscode
+    wechat-uos
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })
@@ -39,6 +40,9 @@
     xorg.xprop
     lazygit
     zoxide
+    typos-lsp
+    cmake
+    gnumake
 
     # dev
     nodejs

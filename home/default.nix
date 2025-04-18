@@ -24,6 +24,7 @@ in
 
   gtk = {
     enable = true;
+    font.name = "Rubik";
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";

@@ -12,7 +12,7 @@
       nvidiaSettings = true;
       open = false;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
-      #forceFullCompositionPipeline = true;
+      forceFullCompositionPipeline = true;
      };
     bluetooth = {
       enable = true;

@@ -4,8 +4,7 @@
     "exec-once" = [
       "swww-daemon --format xrgb"
       "ags &"
-      "fcitx5 -d -r"
-      "fcitx5-remote -r"
+      "fcitx5"
       "gnome-keyring-daemon --start --components=secrets"
       "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       # "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

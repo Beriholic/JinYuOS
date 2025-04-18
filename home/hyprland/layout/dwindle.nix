@@ -1,5 +1,8 @@
 {
   settings = {
+    general = {
+      layout = "dwindle";
+    };
     bind = [
       "SUPER,j,movefocus,d"
       "SUPER,k,movefocus,u"

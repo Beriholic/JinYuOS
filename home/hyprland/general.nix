@@ -31,7 +31,6 @@
       follow_mouse = true;
     };
     general = {
-      layout = "dwindle";
       gaps_in = 5;
       gaps_out = 18;
       border_size = 5;

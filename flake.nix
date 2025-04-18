@@ -7,7 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {
-      url = "github:hyprwm/Hyprland?ref=v0.48.1";
+      url = "github:hyprwm/Hyprland";
     };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -22,6 +22,7 @@
       flake = false;
     };
     daeuniverse.url = "github:daeuniverse/flake.nix";
+    minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
   };
   outputs =
     inputs@{
@@ -43,6 +44,7 @@
             hyprland.nixosModules.default
             home-manager.nixosModules.home-manager
             inputs.daeuniverse.nixosModules.daed
+            inputs.minegrub-world-sel-theme.nixosModules.default
             {
               home-manager = {
                 useGlobalPkgs = true;

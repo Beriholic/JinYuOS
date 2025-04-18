@@ -223,16 +223,15 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1743178567,
-        "narHash": "sha256-MRgOvqs+bqS7I72N/1CJUShaXxej1m1XzheH60t1xLs=",
+        "lastModified": 1744921985,
+        "narHash": "sha256-to3lo8FYzHl4Z0O30wHprOZHUQdKYvAecWyX+zdoEEY=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "29e2e59fdbab8ed2cc23a20e3c6043d5decb5cdc",
+        "rev": "ddae3036ca6a1729ffe7854a59184116d2622809",
         "type": "github"
       },
       "original": {
         "owner": "hyprwm",
-        "ref": "v0.48.1",
         "repo": "Hyprland",
         "type": "github"
       }
@@ -458,6 +457,24 @@
         "type": "github"
       }
     },
+    "minegrub-world-sel-theme": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1742155838,
+        "narHash": "sha256-gMaQkkI8e45AR/fbVE/rpJftwXUINuR2mrce1zpge70=",
+        "owner": "Lxtharia",
+        "repo": "minegrub-world-sel-theme",
+        "rev": "5c2f5c3fb9ba9f7a633881943240f376c754553f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Lxtharia",
+        "repo": "minegrub-world-sel-theme",
+        "type": "github"
+      }
+    },
     "more-waita": {
       "flake": false,
       "locked": {
@@ -552,6 +569,22 @@
     },
     "nixpkgs_5": {
       "locked": {
+        "lastModified": 1719317636,
+        "narHash": "sha256-bu0xbu2Z6DDzA9LGV81yJunIti6r7tjUImeR8orAL/I=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9c513fc6fb75142f6aec6b7545cb8af2236b80f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_6": {
+      "locked": {
         "lastModified": 1744440957,
         "narHash": "sha256-FHlSkNqFmPxPJvy+6fNLaNeWnF1lZSgqVCl/eWaJRc4=",
         "owner": "nixos",
@@ -597,8 +630,9 @@
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
         "matugen": "matugen",
+        "minegrub-world-sel-theme": "minegrub-world-sel-theme",
         "more-waita": "more-waita",
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       }
     },
     "systems": {

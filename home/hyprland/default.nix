@@ -63,8 +63,7 @@ in
       layout.settings
       { source = [ "./colors.conf" ]; }
     ];
-    plugins = [
-    ];
+    plugins = [ ];
     extraConfig = ''
       env = LANG,zh_CN.UTF-8
       env = AGS_WEATHER_CITY, chongqing

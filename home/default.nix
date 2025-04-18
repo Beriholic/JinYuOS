@@ -9,7 +9,6 @@ in
     ./ags.nix
     ./mimelist.nix
     ./packages.nix
-    ./starship.nix
     ./theme.nix
     ./hyprland
     ./dconf.nix

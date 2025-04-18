@@ -8,13 +8,25 @@
     ./host
   ];
 
-  # services.xserver.dpi = 96;
+  boot.loader = {
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      useOSProber = true;
+      gfxmodeEfi = "2560x1600";
+    };
+    efi.canTouchEfiVariables = true;
+  };
+
+
   boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  networking.hostName = "jiny";
+  networking.hostName = "Jiny";
   networking.networkmanager.enable = true;
   security.polkit.enable = true;
+  #services.xserver.enable = true;
+  #services.xserver.displayManager.sddm.enable = true;
+  #services.xserver.desktopManager.plasma5.enable = true;
 
   environment.systemPackages = with pkgs; [
     git
@@ -25,6 +37,8 @@
     fastfetch
     nixfmt-rfc-style
     upower
+    firefox
+    kitty
   ];
 
   xdg = {

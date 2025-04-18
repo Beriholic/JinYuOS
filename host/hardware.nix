@@ -1,21 +1,19 @@
-{ config, pkgs, ... }:
+{ pkgs, config, ... }:
 {
-  services.xserver.videoDrivers = ["nvidia"];
-  boot.kernelParams = [
-    "modprobe.blacklist=nouveau"
-  ];
-
+  boot.kernelParams = ["modprobe.blacklist=nouveau"];
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware = {
     i2c.enable = true;
     graphics = {
       enable = true;
-      extraPackages = with pkgs; [
-        vpl-gpu-rt
-        intel-media-driver
-        libvdpau-va-gl
-        libva
-      ];
     };
+    nvidia = {
+      modesetting.enable = true;
+      nvidiaSettings = true;
+      open = false;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      #forceFullCompositionPipeline = true;
+     };
     bluetooth = {
       enable = true;
       powerOnBoot = true;
@@ -25,21 +23,6 @@
           Experimental = true;
         };
       };
-    };
-    nvidia = {
-      prime = {
-        offload ={
-          enable = true;
-          enableOffloadCmd = true;
-        };
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:2:0:0";
-      };
-      modesetting.enable = true;
-      nvidiaSettings = true;
-      open = false;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-      forceFullCompositionPipeline = true;
     };
   };
 }

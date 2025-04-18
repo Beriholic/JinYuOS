@@ -21,6 +21,7 @@
       url = "github:somepaulo/MoreWaita";
       flake = false;
     };
+    daeuniverse.url = "github:daeuniverse/flake.nix";
   };
   outputs =
     inputs@{
@@ -32,13 +33,15 @@
     }:
     {
       nixosConfigurations = {
-        jiny = nixpkgs.lib.nixosSystem rec {
+        Jiny = nixpkgs.lib.nixosSystem rec {
           system = "x86_64-linux";
           specialArgs = { inherit hyprland inputs; };
           modules = [
             ./configuration.nix
             hyprland.nixosModules.default
             home-manager.nixosModules.home-manager
+            inputs.daeuniverse.nixosModules.dae
+            inputs.daeuniverse.nixosModules.daed
             {
               home-manager = {
                 useGlobalPkgs = true;

@@ -9,10 +9,6 @@
     icon-library
     yad
     vscode
-    qq
-    obs-studio
-    bilibili
-    wechat-uos
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })
@@ -55,7 +51,9 @@
     eslint
 
     # ide
-    android-studio
   ];
 
+  services = {
+    udiskie.enable = true;
+  };
 }

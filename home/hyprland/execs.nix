@@ -19,7 +19,7 @@
       #exec-once=udiskie &
       #exec-once=systemctl --user start xsettingsd.servic
       "xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 1"
-      "xrdb ~/.Xresources"
+      "echo 'Xft.dpi:144' | xrdb -merge"
       #exec-once=sh $HOME/.config/hypr/script/adjust-kitty-opactiy.sh
     ];
   };

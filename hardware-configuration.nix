@@ -8,27 +8,27 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "uas" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/bd16ce01-8ea5-415d-9860-d57ac2127ff9";
+    { device = "/dev/disk/by-uuid/715e5e6c-ac72-48d0-b0db-8e34be4638a3";
       fsType = "btrfs";
-      options = [ "subvol=@" "compress=zstd" ];
+      options = [ "subvol=root" "compress=zstd" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/bd16ce01-8ea5-415d-9860-d57ac2127ff9";
+    { device = "/dev/disk/by-uuid/715e5e6c-ac72-48d0-b0db-8e34be4638a3";
       fsType = "btrfs";
-      options = [ "subvol=@home" "compress=zstd" ];
+      options = [ "subvol=home" "compress=zstd" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/bd16ce01-8ea5-415d-9860-d57ac2127ff9";
+    { device = "/dev/disk/by-uuid/715e5e6c-ac72-48d0-b0db-8e34be4638a3";
       fsType = "btrfs";
-      options = [ "subvol=@nix" "compress=zstd" ];
+      options = [ "subvol=nix" "noatime"  "compress=zstd"];
     };
 
   fileSystems."/boot" =

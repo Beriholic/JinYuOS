@@ -25,7 +25,7 @@
       # Action
       "SUPER,Escape, exec, pkill wlogout || wlogout -p layer-shell"
       "Control+Super, T, exec, ~/.config/ags/scripts/color_generation/switchwall.sh"
-      "Control+Super, B, exec, ags run-js 'openColorScheme.value = true Utils.timeout(2000, () => openColorScheme.value = false)'"
+      "Control+Super, B, exec, ags run-js 'openColorScheme.value = true;Utils.timeout(2000, () => openColorScheme.value = false)'"
       # bind = SUPER,m,exec, mpvpaper '*' -o "no-audio --loop" $HOME/Pictures/wallpapers/kosihiiii.mp4
       "SUPERSHIFT,m,exec, pkill -9 mpvpaper"
       "Ctrl+Alt, Slash, exec, ags run-js 'cycleMode()'"

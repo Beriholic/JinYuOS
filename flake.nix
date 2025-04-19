@@ -21,7 +21,6 @@
       url = "github:somepaulo/MoreWaita";
       flake = false;
     };
-    daeuniverse.url = "github:daeuniverse/flake.nix";
     minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
   };
   outputs =
@@ -43,7 +42,6 @@
             ./configuration.nix
             hyprland.nixosModules.default
             home-manager.nixosModules.home-manager
-            inputs.daeuniverse.nixosModules.daed
             inputs.minegrub-world-sel-theme.nixosModules.default
             {
               home-manager = {

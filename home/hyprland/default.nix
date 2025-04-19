@@ -13,6 +13,10 @@ let
 in
 {
   home.packages =  with pkgs; [
+    blueberry
+    icon-library
+    yad
+    hyprshot
     brightnessctl
     cliphist
     fuzzel
@@ -65,11 +69,10 @@ in
     ];
     plugins = [ ];
     extraConfig = ''
-      env = LANG,zh_CN.UTF-8
       env = AGS_WEATHER_CITY, chongqing
       env = GDK_SCALE,1.5
-      env = XCURSOR_SIZE, 32
-      env = HYPRCURSOR_SIZE,32
+      env = XCURSOR_SIZE, 24
+      env = HYPRCURSOR_SIZE,24
       env = __GL_VRR_ALLOWED,1
       env = WLR_NO_HARDWARE_CURSORS,1
       env = WLR_DRM_NO_ATOMIC,1

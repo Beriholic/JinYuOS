@@ -3,13 +3,14 @@
 {
   home.packages = with pkgs; [
     # app
-    blueberry
     firefox
     kitty
-    icon-library
-    yad
     vscode
     wechat-uos
+    jetbrains-toolbox
+    bilibili
+    qq
+    clash-verge-rev
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })

@@ -25,5 +25,14 @@
       "ALT,Q,workspace,e-1"
       "ALT,E,workspace,e+1"
     ];
+
+    animation = [
+      "windows,1,5,bounce,popin"
+      "border,1,20,default"
+      "fade, 1, 5, overshot"
+      "workspaces, 1, 6, overshot, slide"
+      "windowsIn,1,5,slow,popin"
+      "windowsMove,1,5,default"
+    ];
   };
 }

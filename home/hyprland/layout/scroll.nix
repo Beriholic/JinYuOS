@@ -37,5 +37,14 @@
       "SUPER,K,workspace,e-1"
       "SUPER,J,workspace,e+1"
     ];
+
+    animation = [
+        "windows,1,5,bounce,popin"
+        "border,1,20,default"
+        "fade, 1, 5, overshot"
+        "workspaces, 1, 4.5, overshot, slidevert"
+        "windowsIn,1,5,slow,popin"
+        "windowsMove,1,5,default"
+    ];
   };
 }

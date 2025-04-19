@@ -9,7 +9,7 @@ let
   general = import ./general.nix;
   keybinds = import ./keybinds.nix;
   rules = import ./rules.nix;
-  layout = import ./layout/dwindle.nix;
+  layout = import ./layout/scroll.nix;
 in
 {
   home.packages =  with pkgs; [
@@ -56,7 +56,7 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
-    #package = pkgs.hyprland;
+    package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
     settings = lib.mkMerge [
@@ -67,7 +67,9 @@ in
       layout.settings
       { source = [ "./colors.conf" ]; }
     ];
-    plugins = [ ];
+    plugins = [
+      (pkgs.hyprlandPlugins.hyprscroller)
+    ];
     extraConfig = ''
       env = AGS_WEATHER_CITY, chongqing
       env = GDK_SCALE,1.5

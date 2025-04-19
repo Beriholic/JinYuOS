@@ -93,22 +93,6 @@
         "slingshot,1,-1,0.15,1.25"
         "nice,0,6.9,0.5,-4.20"
       ];
-      # animation = [
-      #     "windows,1,5,bounce,popin"
-      #     "border,1,20,default"
-      #     "fade, 1, 5, overshot"
-      #     "workspaces, 1, 4.5, overshot, slidevert"
-      #     "windowsIn,1,5,slow,popin"
-      #     "windowsMove,1,5,default"
-      # ];
-      animation = [
-        "windows,1,5,bounce,popin"
-        "border,1,20,default"
-        "fade, 1, 5, overshot"
-        "workspaces, 1, 6, overshot, slide"
-        "windowsIn,1,5,slow,popin"
-        "windowsMove,1,5,default"
-      ];
     };
 
     # animations {

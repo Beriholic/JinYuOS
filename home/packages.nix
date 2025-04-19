@@ -10,7 +10,6 @@
     jetbrains-toolbox
     bilibili
     qq
-    clash-verge-rev
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })
@@ -44,6 +43,7 @@
     typos-lsp
     cmake
     gnumake
+    tlrc
 
     # dev
     nodejs

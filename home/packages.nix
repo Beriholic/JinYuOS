@@ -32,7 +32,6 @@
     usbutils
     btop
     gradience
-    mihomo-party
     ranger
     duf
     xdg-user-dirs
@@ -44,6 +43,7 @@
     cmake
     gnumake
     tlrc
+    go-musicfox
 
     # dev
     nodejs

@@ -1,5 +1,4 @@
 {
-  inputs,
   lib,
   pkgs,
   ...
@@ -52,6 +51,7 @@ in
     dconf-editor
     hyprlock
     gnome-keyring
+    font-manager
   ];
 
   wayland.windowManager.hyprland = {

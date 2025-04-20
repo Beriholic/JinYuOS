@@ -1,10 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-{
   imports = [
     ./hardware.nix
     ./users.nix
@@ -14,6 +8,7 @@
     ./virtualisation.nix
     ./programs.nix
     ./services.nix
+    ./steam.nix
   ];
 
   nix = {

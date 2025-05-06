@@ -16,7 +16,7 @@ const PROVIDERS = Object.assign(
       ),
       base_url: "https://newapi.beriholic.xyz/v1/chat/completions",
       key_get_url: "https://platform.openai.com/api-keys",
-      key_file: "google_key.txt",
+      key_file: "openai_key.txt",
       model: "gemini-2.0-flash",
     },
     ollama: {

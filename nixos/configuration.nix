@@ -6,11 +6,13 @@
   lib,
   config,
   pkgs,
+  hyprland,
   ...
 }:
 {
   # You can import other NixOS modules here
   imports = [
+    inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ./hardware.nix
     ./users.nix
@@ -131,6 +133,13 @@
         "wheel"
         "docker"
       ];
+    };
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs hyprland; };
+    users = {
+      beri = import ../home-manager/home.nix;
     };
   };
 

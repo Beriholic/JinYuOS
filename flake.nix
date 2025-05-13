@@ -49,23 +49,24 @@
 
       nixosConfigurations = {
         Jiny = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = { inherit inputs outputs hyprland; };
           modules = [
-            inputs.minegrub-world-sel-theme.nixosModules.default
             ./nixos/configuration.nix
+            inputs.minegrub-world-sel-theme.nixosModules.default
+            hyprland.nixosModules.default
           ];
         };
       };
 
-      homeConfigurations = {
-        "beri@Jiny" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs hyprland; };
-          modules = [
-            hyprland.homeManagerModules.default
-            ./home-manager/home.nix
-          ];
-        };
-      };
+      # homeConfigurations = {
+      #   "beri@Jiny" = home-manager.lib.homeManagerConfiguration {
+      #     pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      #     extraSpecialArgs = { inherit inputs outputs hyprland; };
+      #     modules = [
+      #       hyprland.homeManagerModules.default
+      #       ./home-manager/home.nix
+      #     ];
+      #   };
+      # };
     };
 }

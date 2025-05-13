@@ -15,7 +15,6 @@
     inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ./hardware.nix
-    ./users.nix
     ./fonts.nix
     ./locate.nix
     ./audio.nix
@@ -124,8 +123,8 @@
   };
   programs.nix-ld.enable = true;
 
-  users.users = {
-    beri = {
+  users = {
+    users.beri = {
       initialPassword = "114514";
       isNormalUser = true;
       extraGroups = [
@@ -134,6 +133,7 @@
         "docker"
       ];
     };
+    defaultUserShell = pkgs.fish;
   };
 
   home-manager = {

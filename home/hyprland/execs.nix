@@ -11,7 +11,7 @@
       "dbus-update-activation-environment --all"
       "sleep 1 && dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       # "hyprpm reload -nn"
-      #exec-once = mpvpaper '*' -o "no-audio --loop" $HOME/Pictures/wallpapers/kosihiiii.mp4
+      #"exec-once = mpvpaper '*' -o 'no-audio --loop' $HOME/Videos/12.mp4"
       "hypridle"
       #exec-once=blueman-applet
       #exec-once=~/.config/hypr/scripts/screensharing.sh

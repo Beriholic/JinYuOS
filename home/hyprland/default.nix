@@ -47,11 +47,16 @@ in
     nautilus
     wlogout
     hypridle
+    hyprutils
+    hyprwayland-scanner
     d-spy
     dconf-editor
     hyprlock
     gnome-keyring
     font-manager
+    multipass
+    mpvpaper
+    w3m
   ];
 
   wayland.windowManager.hyprland = {

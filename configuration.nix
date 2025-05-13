@@ -15,29 +15,21 @@
       device = "nodev";
       efiSupport = true;
       useOSProber = true;
-      # theme = pkgs.fetchFromGitHub {
-      #   owner = "shvchk";
-      #   repo = "fallout-grub-theme";
-      #   rev = "80734103d0b48d724f0928e8082b6755bd3b2078";
-      #   sha256 = "sha256-7kvLfD6Nz4cEMrmCA9yq4enyqVyqiTkVZV5y4RyUatU=";
-      # };
       minegrub-world-sel = {
         enable = true;
         customIcons = [
           {
-            name = "nixos";
+            name = "NixOS";
             lineTop = "NixOS (23/11/2023, 23:03)";
-            lineBottom = "Survival Mode, No Cheats, Version: 23.11";
-            # Icon: you can use an icon from the remote repo, or load from a local file
+            lineBottom = "Survival Mode, No Cheats, Version: 24.11";
             imgName = "nixos";
-            # customImg = builtins.path {
-            #   path = ./nixos-logo.png;
-            #   name = "nixos-img";
-            # };
+             # customImg = builtins.path {
+             #   path = ./nixos-logo.png;
+             #   name = "nixos-img";
+             # };
           }
         ];
       };
-
     };
     efi.canTouchEfiVariables = true;
   };
@@ -81,17 +73,7 @@
     };
   };
 
-  services.greetd = {
-    enable = true;
-    vt = 3;
-    settings = {
-      default_session = {
-        user = "beri";
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-      };
-    };
-  };
-
+  programs.nix-ld.enable = true;
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.11";
 }

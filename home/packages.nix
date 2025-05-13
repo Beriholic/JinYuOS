@@ -10,6 +10,7 @@
     jetbrains-toolbox
     bilibili
     qq
+    obs-studio
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })
@@ -44,6 +45,9 @@
     gnumake
     tlrc
     go-musicfox
+    lazydocker
+    pandoc
+    neovide
 
     # dev
     nodejs
@@ -56,6 +60,7 @@
     eslint
 
     # ide
+    android-studio
   ];
 
   services = {

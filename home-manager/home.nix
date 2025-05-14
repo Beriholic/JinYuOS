@@ -20,7 +20,6 @@ in
     ./theme.nix
     ./hyprland
     ./dconf.nix
-    ./liboffice.nix
   ];
 
   nixpkgs = {

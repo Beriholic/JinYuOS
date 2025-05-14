@@ -11,6 +11,7 @@
     bilibili
     qq
     obs-studio
+    wpsoffice-cn
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })

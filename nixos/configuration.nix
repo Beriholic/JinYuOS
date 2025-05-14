@@ -85,7 +85,6 @@
       };
     };
 
-  networking.hostName = "Jiny";
   networking.networkmanager.enable = true;
   security.polkit.enable = true;
 

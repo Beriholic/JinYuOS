@@ -51,7 +51,15 @@
         Jiny = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs hyprland; };
           modules = [
-            ./nixos/configuration.nix
+            ./nixos/Jiny
+            inputs.minegrub-world-sel-theme.nixosModules.default
+            hyprland.nixosModules.default
+          ];
+        };
+        JinyLite = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs hyprland; };
+          modules = [
+            ./nixos/JinyLite
             inputs.minegrub-world-sel-theme.nixosModules.default
             hyprland.nixosModules.default
           ];

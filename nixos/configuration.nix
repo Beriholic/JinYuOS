@@ -91,7 +91,7 @@
   environment.systemPackages = with pkgs; [
     git
     vim
-    neovim
+    unstable.neovim
     curl
     wget
     fastfetch

@@ -23,7 +23,7 @@
       "SUPER,RETURN,exec,kitty"
       "SUPER,E,exec,nautilus"
       # Action
-      "SUPER,Escape, exec, pkill wlogout || wlogout -p layer-shell"
+      "SUPER,Escape, exec, ~/.config/ags/scripts/open_session.sh"
       "Control+Super, T, exec, ~/.config/ags/scripts/color_generation/switchwall.sh"
       "Control+Super, B, exec, ags run-js 'openColorScheme.value = true;Utils.timeout(8000, () => openColorScheme.value = false)'"
       "bind = SUPER,m,exec, mpvpaper '*' -o 'no-audio --loop' $HOME/Videos/12.mp4"

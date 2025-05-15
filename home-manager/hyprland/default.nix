@@ -1,7 +1,6 @@
-{
-  lib,
-  pkgs,
-  ...
+{ lib
+, pkgs
+, ...
 }:
 let
   execs = import ./execs.nix { inherit pkgs; };
@@ -11,7 +10,7 @@ let
   layout = import ./layout/scroll.nix;
 in
 {
-  home.packages =  with pkgs; [
+  home.packages = with pkgs; [
     blueberry
     icon-library
     yad
@@ -45,7 +44,6 @@ in
     gnome-tweaks
     ddcutil
     nautilus
-    wlogout
     hypridle
     hyprutils
     hyprwayland-scanner

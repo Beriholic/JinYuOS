@@ -12,9 +12,11 @@
     qq
     obs-studio
     wpsoffice-cn
+    telegram-desktop
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })
+    imv
     bat
     fd
     eza
@@ -49,6 +51,7 @@
     lazydocker
     pandoc
     neovide
+    upx
 
     # dev
     nodejs
@@ -64,7 +67,5 @@
     android-studio
   ];
 
-  services = {
-    udiskie.enable = true;
-  };
+  services = { udiskie.enable = true; };
 }

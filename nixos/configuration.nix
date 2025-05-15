@@ -1,13 +1,12 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  hyprland,
-  ...
+{ inputs
+, outputs
+, lib
+, config
+, pkgs
+, hyprland
+, ...
 }:
 {
   # You can import other NixOS modules here
@@ -139,6 +138,7 @@
     users = {
       beri = import ../home-manager/home.nix;
     };
+    backupFileExtension = "hm_backup";
   };
 
   system.stateVersion = "24.11";

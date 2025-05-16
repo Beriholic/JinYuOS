@@ -13,6 +13,7 @@
     obs-studio
     wpsoffice-cn
     telegram-desktop
+    efile
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })
@@ -67,5 +68,7 @@
     android-studio
   ];
 
-  services = { udiskie.enable = true; };
+  services = {
+    udiskie.enable = true;
+  };
 }

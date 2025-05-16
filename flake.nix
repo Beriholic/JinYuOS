@@ -30,18 +30,21 @@
     }@inputs:
     let
       inherit (self) outputs;
-      systems = [
-        # "aarch64-linux"
-        # "i686-linux"
-        "x86_64-linux"
-        # "aarch64-darwin"
-        # "x86_64-darwin"
-      ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
+      # systems = [
+      #   "aarch64-linux"
+      #   "i686-linux"
+      #   "x86_64-linux"
+      #   "aarch64-darwin"
+      #   "x86_64-darwin"
+      # ];
+      # forAllSystems = nixpkgs.lib.genAttrs systems;
+      system = "x86_64-linux";
     in
     {
-      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+      #packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+      #formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+      packages = import ./pkgs nixpkgs.legacyPackages.${system};
+      formatter = nixpkgs.legacyPackages.${system}.alejandra;
 
       overlays = import ./overlays { inherit inputs; };
       nixosModules = import ./modules/nixos;
@@ -49,7 +52,14 @@
 
       nixosConfigurations = {
         Jiny = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs hyprland; };
+          specialArgs = {
+            inherit
+              inputs
+              outputs
+              hyprland
+              system
+              ;
+          };
           modules = [
             ./nixos/Jiny
             inputs.minegrub-world-sel-theme.nixosModules.default
@@ -57,7 +67,14 @@
           ];
         };
         JinyLite = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs hyprland; };
+          specialArgs = {
+            inherit
+              inputs
+              outputs
+              hyprland
+              system
+              ;
+          };
           modules = [
             ./nixos/JinyLite
             inputs.minegrub-world-sel-theme.nixosModules.default

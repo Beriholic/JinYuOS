@@ -6,7 +6,6 @@
   ...
 }:
 rec {
-  # example = pkgs.callPackage ./example { };
-  # wpsoffice-cn = pkgs.callPackage ./wps-office.nix { };
-  wpsoffice-cn = pkgs.callPackage ./wspoffice-cn.nix {};
+  wpsoffice-cn = pkgs.callPackage ./wspoffice-cn.nix { };
+  efile = pkgs.callPackage ./efile.nix { };
 }

@@ -1,14 +1,7 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   services = {
     udisks2.enable = true;
     upower.enable = true;
-    mihomo = {
-      enable = true;
-      tunMode = true;
-      configFile = "/home/beri/mihomo/config.yaml";
-      webui = pkgs.metacubexd;
-    };
 
     greetd = {
       enable = true;
@@ -16,7 +9,8 @@
       settings = {
         default_session = {
           user = "beri";
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+          command =
+            "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
         };
       };
     };

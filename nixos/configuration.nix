@@ -13,6 +13,7 @@
     ./services.nix
     ./steam.nix
     ./mihomo.nix
+    ./nix-ld.nix
   ];
 
   boot.loader = {
@@ -101,7 +102,6 @@
         [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
     };
   };
-  programs.nix-ld.enable = true;
 
   users = {
     users.beri = {

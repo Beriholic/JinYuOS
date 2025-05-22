@@ -65,10 +65,8 @@
     eslint
 
     # ide
-    android-studio
+    jetbrains-toolbox
   ];
 
-  services = {
-    udiskie.enable = true;
-  };
+  services = { udiskie.enable = true; };
 }

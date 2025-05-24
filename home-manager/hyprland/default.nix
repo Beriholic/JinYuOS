@@ -1,15 +1,11 @@
-{ lib
-, pkgs
-, ...
-}:
+{ lib, pkgs, ... }:
 let
   execs = import ./execs.nix { inherit pkgs; };
   general = import ./general.nix;
   keybinds = import ./keybinds.nix;
   rules = import ./rules.nix;
   layout = import ./layout/scroll.nix;
-in
-{
+in {
   home.packages = with pkgs; [
     blueberry
     icon-library
@@ -36,7 +32,6 @@ in
     xwayland
     gvfs
     polkit_gnome
-    easyeffects
     file-roller
     gnome-text-editor
     gnome-system-monitor
@@ -70,9 +65,7 @@ in
       layout.settings
       { source = [ "./colors.conf" ]; }
     ];
-    plugins = [
-      (pkgs.hyprlandPlugins.hyprscroller)
-    ];
+    plugins = [ (pkgs.hyprlandPlugins.hyprscroller) ];
     extraConfig = ''
       env = AGS_WEATHER_CITY, chongqing
       env = GDK_SCALE,1.5

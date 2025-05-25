@@ -1,8 +1,6 @@
 {
   settings = {
-    general = {
-      layout = "dwindle";
-    };
+    general = { layout = "scrolling"; };
     bind = [
       "SUPER,j,movefocus,d"
       "SUPER,k,movefocus,u"

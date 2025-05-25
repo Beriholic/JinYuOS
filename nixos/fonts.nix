@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   fonts = {
@@ -10,10 +7,10 @@
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-emoji
-      fira-code-nerdfont
-      nerdfonts
-      # nerd-fonts.agave
-      # nerd-fonts._0xproto
+      nerd-fonts.agave
+      nerd-fonts.hack
+      nerd-fonts.fira-code
+      nerd-fonts.noto
       material-symbols
       google-fonts
       jetbrains-mono

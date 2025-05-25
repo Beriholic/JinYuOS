@@ -13,21 +13,10 @@
     };
     ags.url = "github:Aylur/ags/v1";
     matugen.url = "github:/InioX/Matugen";
-    more-waita = {
-      url = "github:somepaulo/MoreWaita";
-      flake = false;
-    };
     minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      hyprland,
-      ...
-    }@inputs:
+  outputs = { self, nixpkgs, home-manager, hyprland, ... }@inputs:
     let
       inherit (self) outputs;
       # systems = [
@@ -39,8 +28,7 @@
       # ];
       # forAllSystems = nixpkgs.lib.genAttrs systems;
       system = "x86_64-linux";
-    in
-    {
+    in {
       #packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
       #formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
       packages = import ./pkgs nixpkgs.legacyPackages.${system};
@@ -52,14 +40,7 @@
 
       nixosConfigurations = {
         Jiny = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit
-              inputs
-              outputs
-              hyprland
-              system
-              ;
-          };
+          specialArgs = { inherit inputs outputs hyprland system; };
           modules = [
             ./nixos/Jiny
             inputs.minegrub-world-sel-theme.nixosModules.default
@@ -67,14 +48,7 @@
           ];
         };
         JinyLite = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit
-              inputs
-              outputs
-              hyprland
-              system
-              ;
-          };
+          specialArgs = { inherit inputs outputs hyprland system; };
           modules = [
             ./nixos/JinyLite
             inputs.minegrub-world-sel-theme.nixosModules.default

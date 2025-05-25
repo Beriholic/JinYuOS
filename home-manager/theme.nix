@@ -1,31 +1,16 @@
-{
-  pkgs,
-  lib,
-  inputs,
-  ...
-}:
+{ pkgs, lib, inputs, ... }:
 let
   cursor-theme = "Bibata-Modern-Classic";
   cursor-package = pkgs.bibata-cursors;
-  moreWaita = pkgs.stdenv.mkDerivation {
-    name = "MoreWaita";
-    src = inputs.more-waita;
-    installPhase = ''
-      mkdir -p $out/share/icons
-      mv * $out/share/icons
-    '';
-  };
-in
-{
+in {
 
   home = {
     packages = with pkgs; [
       # themes
       adwaita-qt6
       adw-gtk3
-      moreWaita
       bibata-cursors
-      # morewaita-icon-theme
+      morewaita-icon-theme
       # papirus-icon-theme
       # qogir-icon-theme
       # whitesur-icon-theme
@@ -45,9 +30,5 @@ in
       size = 24;
       gtk.enable = true;
     };
-  };
-
-  home.file.".local/share/icons/MoreWaita" = {
-    source = "${moreWaita}/share/icons";
   };
 }

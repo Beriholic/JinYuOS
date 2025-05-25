@@ -438,22 +438,6 @@
         "type": "github"
       }
     },
-    "more-waita": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1744345616,
-        "narHash": "sha256-Um4z4QX+CY8GgVrV8ofsaEMy/uHPnRop2P4TX1/oofs=",
-        "owner": "somepaulo",
-        "repo": "MoreWaita",
-        "rev": "7f56a8fbecc8fd27182075d0fb383074b4208eff",
-        "type": "github"
-      },
-      "original": {
-        "owner": "somepaulo",
-        "repo": "MoreWaita",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1725634671,
@@ -581,7 +565,6 @@
         "hyprland-plugins": "hyprland-plugins",
         "matugen": "matugen",
         "minegrub-world-sel-theme": "minegrub-world-sel-theme",
-        "more-waita": "more-waita",
         "nixpkgs": "nixpkgs_5",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }

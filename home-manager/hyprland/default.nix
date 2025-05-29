@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 let
   execs = import ./execs.nix { inherit pkgs; };
   general = import ./general.nix;
@@ -64,40 +64,31 @@ in {
       layout.settings
       { source = [ "./colors.conf" ]; }
     ];
+    plugins = [ pkgs.hyprscroller ];
 
-    plugins = [ (pkgs.hyprlandPlugins.hyprscrolling) ];
     extraConfig = ''
-            env = AGS_WEATHER_CITY, chongqing
-            env = GDK_SCALE,1.5
-            env = XCURSOR_SIZE, 24
-            env = HYPRCURSOR_SIZE,24
-            env = __GL_VRR_ALLOWED,1
-            env = WLR_NO_HARDWARE_CURSORS,1
-            env = WLR_DRM_NO_ATOMIC,1
-            env = AGS_WEATHER_CITY, Chongqing
-            env = QT_IM_MODULE, fcitx
-            env = XMODIFIERS, @im=fcitx
-            env = SDL_IM_MODULE, fcitx
-            env = GLFW_IM_MODULE, ibus
-            env = INPUT_METHOD, fcitx
-            env = QT_QPA_PLATFORMTHEME, qt5ct
-            env = GDK_BACKEND,wayland,x11
-            env = QT_QPA_PLATFORM,wayland;xcb
-            env = SDL_VIDEODRIVER，wayland
-            env = CLUTTER_BACKEND，wayland
-            env = XDG_CURRENT_DESKTOP,Hyprland
-            env = XDG_SESSION_TYPE,wayland
-            env = XDG_SESSION_DESKTOP,Hyprland
-            #env = NIXOS_OZONE_WL, 1
-
-      plugin {  
-          hyprscrolling {  
-              enable = true
-              column_width = 0.7
-              fullscreen_on_one_column = 1
-          }  
-      }  
+      env = AGS_WEATHER_CITY, chongqing
+      env = GDK_SCALE,1.5
+      env = XCURSOR_SIZE, 24
+      env = HYPRCURSOR_SIZE,24
+      env = __GL_VRR_ALLOWED,1
+      env = WLR_NO_HARDWARE_CURSORS,1
+      env = WLR_DRM_NO_ATOMIC,1
+      env = AGS_WEATHER_CITY, Chongqing
+      env = QT_IM_MODULE, fcitx
+      env = XMODIFIERS, @im=fcitx
+      env = SDL_IM_MODULE, fcitx
+      env = GLFW_IM_MODULE, ibus
+      env = INPUT_METHOD, fcitx
+      env = QT_QPA_PLATFORMTHEME, qt5ct
+      env = GDK_BACKEND,wayland,x11
+      env = QT_QPA_PLATFORM,wayland;xcb
+      env = SDL_VIDEODRIVER，wayland
+      env = CLUTTER_BACKEND，wayland
+      env = XDG_CURRENT_DESKTOP,Hyprland
+      env = XDG_SESSION_TYPE,wayland
+      env = XDG_SESSION_DESKTOP,Hyprland
+      #env = NIXOS_OZONE_WL, 1
     '';
-
   };
 }

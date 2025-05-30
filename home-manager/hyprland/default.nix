@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 let
   execs = import ./execs.nix { inherit pkgs; };
   general = import ./general.nix;
@@ -54,7 +54,6 @@ in {
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
     settings = lib.mkMerge [
@@ -65,7 +64,8 @@ in {
       layout.settings
       { source = [ "./colors.conf" ]; }
     ];
-    plugins = [ (pkgs.hyprlandPlugins.hyprscroller) ];
+    plugins = [ inputs.hyprscroller.packages.${pkgs.system}.hyprscroller ];
+
     extraConfig = ''
       env = AGS_WEATHER_CITY, chongqing
       env = GDK_SCALE,1.5
@@ -90,6 +90,5 @@ in {
       env = XDG_SESSION_DESKTOP,Hyprland
       #env = NIXOS_OZONE_WL, 1
     '';
-
   };
 }

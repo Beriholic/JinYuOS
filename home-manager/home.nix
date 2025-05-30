@@ -1,19 +1,10 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  hyprland,
-  ...
-}:
+{ inputs, outputs, pkgs, ... }:
 let
   username = "beri";
   homeDirectory = "/home/beri";
-in
-{
+in {
   imports = [
-    hyprland.homeManagerModules.default
+    inputs.hyprland.homeManagerModules.default
     ./ags.nix
     ./mimelist.nix
     ./packages.nix
@@ -28,17 +19,13 @@ in
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
     ];
-    config = {
-      allowUnfree = true;
-    };
+    config = { allowUnfree = true; };
   };
 
   home = {
     inherit username homeDirectory;
     packages = [ pkgs.dconf ];
-    sessionPath = [
-      "$HOME/.local/bin"
-    ];
+    sessionPath = [ "$HOME/.local/bin" ];
   };
 
   gtk = {
@@ -48,17 +35,14 @@ in
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
     };
-    gtk3.bookmarks =
-      let
-        homePath = "file://${homeDirectory}";
-      in
-      [
-        "${homePath}/Downloads"
-        "${homePath}/Documents"
-        "${homePath}/Pictures"
-        "${homePath}/Music"
-        "${homePath}/Videos"
-      ];
+    gtk3.bookmarks = let homePath = "file://${homeDirectory}";
+    in [
+      "${homePath}/Downloads"
+      "${homePath}/Documents"
+      "${homePath}/Pictures"
+      "${homePath}/Music"
+      "${homePath}/Videos"
+    ];
   };
 
   qt = {
@@ -67,9 +51,7 @@ in
     style.name = "kvantum";
   };
 
-  xdg.userDirs = {
-    createDirectories = true;
-  };
+  xdg.userDirs = { createDirectories = true; };
 
   programs.home-manager.enable = true;
   programs.git = {

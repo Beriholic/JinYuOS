@@ -1,6 +1,6 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-{ inputs, outputs, lib, config, pkgs, hyprland, ... }: {
+{ inputs, outputs, lib, config, pkgs, hyprland, hyprland-plugins, ... }: {
   # You can import other NixOS modules here
   imports = [
     inputs.home-manager.nixosModules.home-manager
@@ -113,7 +113,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs hyprland; };
+    extraSpecialArgs = { inherit inputs outputs; };
     users = { beri = import ../home-manager/home.nix; };
     backupFileExtension = "hm_backup";
   };

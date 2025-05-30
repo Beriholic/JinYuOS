@@ -15,6 +15,10 @@
     ags.url = "github:Aylur/ags/v1";
     matugen.url = "github:/InioX/Matugen";
     minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
+    hyprscroller = {
+      url = "github:cpiber/hyprscroller";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

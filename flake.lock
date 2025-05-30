@@ -352,6 +352,26 @@
         "type": "github"
       }
     },
+    "hyprscroller": {
+      "inputs": {
+        "hyprland": [
+          "hyprland"
+        ]
+      },
+      "locked": {
+        "lastModified": 1748498601,
+        "narHash": "sha256-fz3e9Vf+UfP48bu8/J5LCcw9cijGRR6VoVdxEXrqkwM=",
+        "owner": "cpiber",
+        "repo": "hyprscroller",
+        "rev": "2c72e35b985a275a02ec1fe79dea5b6e41cb2ea8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cpiber",
+        "repo": "hyprscroller",
+        "type": "github"
+      }
+    },
     "hyprutils": {
       "inputs": {
         "nixpkgs": [
@@ -564,6 +584,7 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
+        "hyprscroller": "hyprscroller",
         "matugen": "matugen",
         "minegrub-world-sel-theme": "minegrub-world-sel-theme",
         "nixpkgs": "nixpkgs_5",

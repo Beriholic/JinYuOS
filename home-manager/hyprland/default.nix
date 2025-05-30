@@ -4,7 +4,7 @@ let
   general = import ./general.nix;
   keybinds = import ./keybinds.nix;
   rules = import ./rules.nix;
-  layout = import ./layout/dwindle.nix;
+  layout = import ./layout/scroll.nix;
 in {
   home.packages = with pkgs; [
     blueberry
@@ -64,7 +64,7 @@ in {
       layout.settings
       { source = [ "./colors.conf" ]; }
     ];
-    plugins = [ pkgs.hyprscroller ];
+    plugins = [ inputs.hyprscroller.packages.${pkgs.system}.hyprscroller ];
 
     extraConfig = ''
       env = AGS_WEATHER_CITY, chongqing

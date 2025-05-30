@@ -16,26 +16,30 @@
     ./nix-ld.nix
   ];
 
-  boot.loader = {
-    timeout = -1;
-    grub = {
-      enable = true;
-      device = "nodev";
-      efiSupport = true;
-      useOSProber = true;
-      minegrub-world-sel = {
+  boot = {
+    tmp.useTmpfs = true;
+
+    loader = {
+      timeout = -1;
+      grub = {
         enable = true;
-        customIcons = [{
-          name = "NixOS";
-          lineTop = "NixOS (23/11/2023, 23:03)";
-          lineBottom = "Survival Mode, No Cheats, Version: 24.11";
-          imgName = "nixos";
-        }];
+        device = "nodev";
+        efiSupport = true;
+        useOSProber = true;
+        minegrub-world-sel = {
+          enable = true;
+          customIcons = [{
+            name = "NixOS";
+            lineTop = "NixOS (23/11/2023, 23:03)";
+            lineBottom = "Survival Mode, No Cheats, Version: 24.11";
+            imgName = "nixos";
+          }];
+        };
       };
+      efi.canTouchEfiVariables = true;
     };
-    efi.canTouchEfiVariables = true;
+    kernelPackages = pkgs.linuxPackages_zen;
   };
-  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   nixpkgs = {
     overlays = [

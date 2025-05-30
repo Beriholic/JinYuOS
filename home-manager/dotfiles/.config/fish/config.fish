@@ -5,6 +5,3 @@ source $fhome/enviroment.fish
 source $fhome/alias.fish
 
 starship init fish | source
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /home/beri/.lmstudio/bin

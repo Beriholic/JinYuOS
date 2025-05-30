@@ -14,6 +14,7 @@
     wpsoffice-cn
     telegram-desktop
     efile
+    discord
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })

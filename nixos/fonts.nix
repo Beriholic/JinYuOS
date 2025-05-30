@@ -17,6 +17,9 @@
       google-fonts
       cascadia-code
       material-symbols
+      maple-mono.truetype
+      maple-mono.NF-unhinted
+      maple-mono.NF-CN-unhinted
     ];
     fontconfig = {
       antialias = true;

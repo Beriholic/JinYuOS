@@ -5,4 +5,5 @@
   wpsoffice-cn = pkgs.callPackage ./wspoffice-cn.nix { };
   efile = pkgs.callPackage ./efile.nix { };
   hyprscroller = pkgs.callPackage ./hyprscroller.nix { };
+  mihomo-alpha = pkgs.callPackage ./mihomo-alpha.nix { };
 }

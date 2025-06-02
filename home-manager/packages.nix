@@ -15,6 +15,7 @@
     telegram-desktop
     efile
     discord
+    geminic
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })

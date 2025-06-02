@@ -11,6 +11,7 @@ in {
     ./theme.nix
     ./hyprland
     ./dconf.nix
+    ./minelist.nix
   ];
 
   nixpkgs = {

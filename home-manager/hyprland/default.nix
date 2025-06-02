@@ -51,6 +51,7 @@ in {
     multipass
     mpvpaper
     w3m
+    loupe
   ];
 
   wayland.windowManager.hyprland = {

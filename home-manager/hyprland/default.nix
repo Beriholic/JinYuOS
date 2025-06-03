@@ -48,7 +48,6 @@ in {
     hyprlock
     gnome-keyring
     font-manager
-    multipass
     mpvpaper
     w3m
     loupe

@@ -16,6 +16,7 @@
     efile
     discord
     geminic
+    hmcl
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })
@@ -65,6 +66,7 @@
     gcc
     typescript
     eslint
+    jdk17
 
     # ide
     jetbrains-toolbox

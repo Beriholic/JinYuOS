@@ -17,6 +17,7 @@
     discord
     geminic
     hmcl
+    lazysql
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })

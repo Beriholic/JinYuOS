@@ -5,6 +5,7 @@
     libinput.enable = true;
     power-profiles-daemon.enable = true;
     displayManager.sessionPackages = [ pkgs.hyprland ];
+    flatpak.enable = true;
 
     xserver = {
       enable = true;

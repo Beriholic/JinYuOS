@@ -1,18 +1,13 @@
-{ pkgs, config, ... }:
-{
-  boot.kernelParams = [ "modprobe.blacklist=nouveau" ];
+{ pkgs, config, ... }: {
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware = {
-    graphics = {
-      enable = true;
-    };
+    graphics = { enable = true; };
     nvidia = {
       modesetting.enable = true;
       nvidiaSettings = true;
-      open = false;
+      open = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
-      forceFullCompositionPipeline = true;
     };
   };
 }

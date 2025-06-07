@@ -5,10 +5,6 @@ GIT_BASE_DIR="./.config"
 SKIP_DIRS=("mihomo")
 NO_DELETE_DIRS=("hypr") # 添加不删除目标文件的目录列表
 
-export_fcitx5_theme() {
-  echo 正在导出fcitx5主题
-  cp -r ./.local/share/fcitx5 "$HOME"/.local/share/fcitx5
-}
 export_starship() {
   echo 正在导出starship主题
   cp ./.config/starship.toml "$HOME"/.config
@@ -75,7 +71,6 @@ sync_config() {
     fi
   done
 
-  export_fcitx5_theme
   export_starship
 
   echo "${mode}操作完成。"

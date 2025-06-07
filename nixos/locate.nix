@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ inputs, pkgs, ... }: {
   time.timeZone = "Asia/Shanghai";
 
   i18n.defaultLocale = "zh_CN.UTF-8";
@@ -19,10 +18,13 @@
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
-    fcitx5.addons = with pkgs; [
-      fcitx5-gtk
-      fcitx5-chinese-addons
-    ];
+    fcitx5 = {
+      waylandFrontend = true;
+      addons = with pkgs; [
+        fcitx5-gtk
+        fcitx5-chinese-addons
+        inputs.fcitx5-simple-theme.defaultPackage.${pkgs.system}
+      ];
+    };
   };
-  i18n.inputMethod.fcitx5.waylandFrontend = true;
 }

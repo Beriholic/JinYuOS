@@ -19,6 +19,7 @@
       url = "github:cpiber/hyprscroller";
       inputs.hyprland.follows = "hyprland";
     };
+    fcitx5-simple-theme.url = "github:Beriholic/fcitx5-simple-theme";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

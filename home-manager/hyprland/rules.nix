@@ -1,7 +1,16 @@
 {
   settings = {
+    windowrule = [
+      "center,class:^(jetbrains-.*)$,title:^(splash)$,floating:1"
+      "nofocus,class:^(jetbrains-.*)$,title:^(splash)$,floating:1"
+      "noborder,class:^(jetbrains-.*)$,title:^(splash)$,floating:1"
+      "center,class:^(jetbrains-.*)$,title:^( )$,floating:1"
+      "stayfocused,class:^(jetbrains-.*)$,title:^( )$,floating:1"
+      "noborder,class:^(jetbrains-.*)$,title:^( )$,floating:1"
+      "nofocus,class:^(jetbrains-.*)$,title:^(win.*)$,floating:1"
+    ];
     windowrulev2 = [
-      "float, class:^(blueberry\.py)$"
+      "float, class:^(blueberry.py)$"
       "float, class:^(steam)$"
       "float, class:^(guifetch)$"
       "float, class:^(pavucontrol)$"
@@ -13,13 +22,13 @@
       "float, class:^(nm-connection-editor)$"
       "size 45%, class:^(nm-connection-editor)$"
       "center, class:^(nm-connection-editor)$"
-      "tile, class:^dev\.warp\.Warp$"
-      "float, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
-      "keepaspectratio, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
-      "move 73% 72%, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$ "
-      "size 25%, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
-      "float, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
-      "pin, title:^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$"
+      "tile, class:^dev.warp.Warp$"
+      "float, title:^([Pp]icture[-s]?[Ii]n[-s]?[Pp]icture)(.*)$"
+      "keepaspectratio, title:^([Pp]icture[-s]?[Ii]n[-s]?[Pp]icture)(.*)$"
+      "move 73% 72%, title:^([Pp]icture[-s]?[Ii]n[-s]?[Pp]icture)(.*)$ "
+      "size 25%, title:^([Pp]icture[-s]?[Ii]n[-s]?[Pp]icture)(.*)$"
+      "float, title:^([Pp]icture[-s]?[Ii]n[-s]?[Pp]icture)(.*)$"
+      "pin, title:^([Pp]icture[-s]?[Ii]n[-s]?[Pp]icture)(.*)$"
       "center, title:^(Open File)(.*)$"
       "center, title:^(Select a File)(.*)$"
       "center, title:^(Choose wallpaper)(.*)$"
@@ -39,7 +48,7 @@
       "float, title:^(打开文件夹)(.*)$"
       "float, title:^(保存至)(.*)$"
       "float, title:^(上传文件)(.*)$"
-      "immediate, title:.*\.exe"
+      "immediate, title:.*.exe"
       "immediate, class:^(steam_app)"
       "noshadow, floating:0"
     ];

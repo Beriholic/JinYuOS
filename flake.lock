@@ -396,11 +396,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748498601,
-        "narHash": "sha256-fz3e9Vf+UfP48bu8/J5LCcw9cijGRR6VoVdxEXrqkwM=",
+        "lastModified": 1749141212,
+        "narHash": "sha256-YC9WEi74d9L1rjVnjNXqWCUPhHgCj6npQWZ0KT6l2nA=",
         "owner": "cpiber",
         "repo": "hyprscroller",
-        "rev": "2c72e35b985a275a02ec1fe79dea5b6e41cb2ea8",
+        "rev": "80f9a9c6ec9423cfd3f17e801e92934ffc5d52d2",
         "type": "github"
       },
       "original": {

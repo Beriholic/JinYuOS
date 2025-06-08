@@ -89,7 +89,6 @@
     fastfetch
     nixfmt-rfc-style
     upower
-    firefox
     kitty
     starship
   ];

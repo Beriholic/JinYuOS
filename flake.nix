@@ -20,6 +20,10 @@
       inputs.hyprland.follows = "hyprland";
     };
     fcitx5-simple-theme.url = "github:Beriholic/fcitx5-simple-theme";
+    firefox-gnome-theme = {
+      url = "github:rafaelmardojai/firefox-gnome-theme";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

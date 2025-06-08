@@ -6,12 +6,12 @@ in {
   imports = [
     inputs.hyprland.homeManagerModules.default
     ./ags.nix
-    ./mimelist.nix
     ./packages.nix
     ./theme.nix
     ./hyprland
     ./dconf.nix
-    ./minelist.nix
+    ./mimelist.nix
+    ./firefox.nix
   ];
 
   nixpkgs = {

@@ -66,6 +66,6 @@ in {
       env.settings
       { source = [ "./colors.conf" ]; }
     ];
-    plugins = [ inputs.hyprscroller.packages.${pkgs.system}.hyprscroller ];
+    plugins = [ pkgs.hyprscroller ];
   };
 }

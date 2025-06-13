@@ -11,6 +11,10 @@
     # ...
     # });
     hyprscroller = inputs.hyprscroller.packages.${final.system}.hyprscroller;
+    wpsoffice-cn =
+      inputs.nix-wpsoffice-cn.packages.${final.system}.wpsoffice-cn;
+    chinese-fonts =
+      inputs.nix-wpsoffice-cn.packages.${final.system}.chinese-fonts;
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

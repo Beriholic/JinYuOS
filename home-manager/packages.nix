@@ -15,6 +15,7 @@
     geminic
     hmcl
     lazysql
+    nix-search-tv
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })

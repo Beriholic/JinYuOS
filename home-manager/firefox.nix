@@ -9,6 +9,7 @@
 
   programs.firefox = {
     enable = true;
+    policies = { DisablePocket = true; };
     profiles.default = {
       name = "Default";
       settings = {

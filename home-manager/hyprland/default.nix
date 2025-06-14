@@ -25,8 +25,7 @@ in {
     swaylock-effects
     swayidle
     slurp
-    unstable.swww
-    wayshot
+    swww
     wlsunset
     wl-clipboard
     wf-recorder

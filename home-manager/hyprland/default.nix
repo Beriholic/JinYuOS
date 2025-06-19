@@ -50,6 +50,7 @@ in {
     mpvpaper
     w3m
     loupe
+    quickshell
   ];
 
   wayland.windowManager.hyprland = {

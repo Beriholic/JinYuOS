@@ -80,18 +80,21 @@
   networking.networkmanager.enable = true;
   security.polkit.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    git
-    vim
-    unstable.neovim
-    curl
-    wget
-    fastfetch
-    nixfmt-rfc-style
-    upower
-    kitty
-    starship
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      git
+      vim
+      unstable.neovim
+      curl
+      wget
+      fastfetch
+      nixfmt-rfc-style
+      upower
+      kitty
+      starship
+    ];
+    sessionVariables = { LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib"; };
+  };
 
   xdg = {
     portal = {
@@ -101,8 +104,11 @@
         common.default = [ "gtk" ];
         hyprland.default = [ "gtk" "hyprland" ];
       };
-      extraPortals =
-        [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
+      extraPortals = [
+        pkgs.xdg-desktop-portal
+        pkgs.xdg-desktop-portal-gtk
+        pkgs.xdg-desktop-portal-hyprland
+      ];
     };
   };
 

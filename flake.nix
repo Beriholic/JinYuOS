@@ -15,7 +15,6 @@
       inputs.hyprland.follows = "hyprland";
     };
     ags.url = "github:Aylur/ags/v1";
-    matugen.url = "github:/InioX/Matugen";
     minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
     hyprscroller = {
       url = "github:cpiber/hyprscroller";
@@ -27,6 +26,10 @@
       flake = false;
     };
     nix-wpsoffice-cn.url = "github:Beriholic/nix-wpsoffice-cn";
+    quickshell = {
+      url = "github:quickshell-mirror/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -52,18 +55,18 @@
       homeManagerModules = import ./modules/home-manager;
 
       nixosConfigurations = {
-        Jiny = nixpkgs.lib.nixosSystem {
+        JinYu = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs system; };
           modules = [
-            ./nixos/Jiny
+            ./nixos/JinYu
             inputs.minegrub-world-sel-theme.nixosModules.default
             inputs.hyprland.nixosModules.default
           ];
         };
-        JinyLite = nixpkgs.lib.nixosSystem {
+        JinYuLite = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs system; };
           modules = [
-            ./nixos/JinyLite
+            ./nixos/JinYuLite
             inputs.minegrub-world-sel-theme.nixosModules.default
             inputs.hyprland.nixosModules.default
           ];

@@ -23,30 +23,19 @@
       "SUPER,RETURN,exec,kitty"
       "SUPER,E,exec,nautilus"
       # Action
-      "SUPER,Escape, exec, ~/.config/ags/scripts/open_session.sh"
-      "Control+Super, T, exec, ~/.config/ags/scripts/color_generation/switchwall.sh"
-      "Control+Super, B, exec, ags run-js 'openColorScheme.value = true;Utils.timeout(8000, () => openColorScheme.value = false)'"
-      "bind = SUPER,m,exec, mpvpaper '*' -o 'no-audio --loop' $HOME/Videos/12.mp4"
-      "SUPERSHIFT,m,exec, pkill -9 mpvpaper"
-      "Ctrl+Alt, Slash, exec, ags run-js 'cycleMode()'"
+      "SUPER,Escape, exec, wlogout"
+      "Control+Super, T, exec, ~/.config/matugen/gencolor.sh"
     ];
-    bindm = [
-      "SUPER,mouse:272,movewindow"
-      "SUPER,mouse:273,resizewindow"
-    ];
+    bindm = [ "SUPER,mouse:272,movewindow" "SUPER,mouse:273,resizewindow" ];
     bindle = [
-      #Volum
-      ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
-      ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-      ",XF86AudioRaiseVolume, exec, ags run-js 'indicator.popup(1);'"
-      ",XF86AudioLowerVolume, exec, ags run-js 'indicator.popup(1);'"
-      ",XF86MonBrightnessUp, exec, ags run-js 'brightness.screen_value += 0.05; indicator.popup(1);'"
-      ",XF86MonBrightnessDown, exec, ags run-js 'brightness.screen_value -= 0.05; indicator.popup(1);'"
+      ", XF86MonBrightnessUp, exec, qs ipc call brightness increment"
+      ", XF86MonBrightnessDown, exec, qs ipc call brightness decrement"
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+"
+      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
     ];
     bindl = [
       "ALT,m, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle"
       ",XF86AudioMute, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%"
-      ",XF86AudioMute, exec, ags run-js 'indicator.popup(1);'"
     ];
   };
 }

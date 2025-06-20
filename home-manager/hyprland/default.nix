@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, ... }:
+{ lib, pkgs, ... }:
 let
   execs = import ./execs.nix { inherit pkgs; };
   general = import ./general.nix;
@@ -7,16 +7,26 @@ let
   layout = import ./layout/scroll.nix;
   env = import ./env.nix;
 in {
+  imports = [ ./shell/quickshell.nix ];
+
   home.packages = with pkgs; [
     blueberry
     icon-library
     yad
-    hyprshot
+    hyprutils
+    hyprpicker
+    hyprlang
+    hypridle
+    hyprland-qt-support
+    hyprland-qtutils
+    hyprlock
+    hyprcursor
+    hyprwayland-scanner
+    wl-clipboard
     brightnessctl
     cliphist
     fuzzel
     grim
-    hyprpicker
     tesseract
     imagemagick
     pavucontrol
@@ -39,18 +49,13 @@ in {
     gnome-tweaks
     ddcutil
     nautilus
-    hypridle
-    hyprutils
-    hyprwayland-scanner
     d-spy
     dconf-editor
-    hyprlock
     gnome-keyring
     font-manager
     mpvpaper
     w3m
     loupe
-    quickshell
   ];
 
   wayland.windowManager.hyprland = {

@@ -5,7 +5,6 @@ let
 in {
   imports = [
     inputs.hyprland.homeManagerModules.default
-    ./ags.nix
     ./packages.nix
     ./theme.nix
     ./hyprland
@@ -48,8 +47,8 @@ in {
 
   qt = {
     enable = true;
-    platformTheme.name = "qt5ct";
-    style.name = "kvantum";
+    platformTheme.name = "qtct";
+    # style.name = "kvantum";
   };
 
   xdg.userDirs = { createDirectories = true; };

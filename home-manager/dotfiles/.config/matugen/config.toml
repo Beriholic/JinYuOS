@@ -1,0 +1,44 @@
+# [config.wallpaper]
+# command = "swww"
+# arguments = ["img", "--transition-type", "center"]
+# set = true
+#
+#
+# [templates.waybar]
+# input_path = './templates/colors.css'
+# output_path = '~/.config/waybar/colors.css'
+# post_hook = 'pkill -SIGUSR2 waybar'
+[config]
+version_check = false
+
+[templates.m3colors]
+input_path = '~/.config/matugen/template/colors.json'
+output_path = '~/.local/state/quickshell/user/generated/colors.json'
+
+[templates.kitty]
+input_path = '~/.config/matugen/template/kitty/kitty.conf'
+output_path = '~/.config/kitty/kitty.conf'
+
+[templates.ags]
+input_path = '~/.config/matugen/template/ags/_material.scss'
+output_path = '~/.config/ags/scss/fallback/_material.scss'
+
+[templates.hyprland]
+input_path = '~/.config/matugen/template/hyprland/color.conf'
+output_path = '~/.config/hypr/colors.conf'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/template/hyprland/hyprlock.conf'
+output_path = '~/.config/hypr/hyprlock.conf'
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/template/fuzzel/fuzzel_theme.ini'
+output_path = '~/.config/fuzzel/fuzzel_theme.ini'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/template/gtk/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/template/gtk/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/gtk.css'

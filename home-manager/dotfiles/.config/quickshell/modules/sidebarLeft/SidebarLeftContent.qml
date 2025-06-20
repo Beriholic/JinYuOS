@@ -20,7 +20,7 @@ Item {
     property var tabButtonList: [
         ...(ConfigOptions.policies.ai !== 0 ? [{"icon": "neurology", "name": qsTr("Intelligence")}] : []),
         {"icon": "translate", "name": qsTr("Translator")},
-        ...(ConfigOptions.policies.weeb === 1 ? [{"icon": "bookmark_heart", "name": qsTr("Anime")}] : [])
+        ...(ConfigOptions.policies.weeb === 1 ? [{"icon": "art_track", "name": qsTr("Anime")}] : [])
     ]
     property int selectedTab: 0
 

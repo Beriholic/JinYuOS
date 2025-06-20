@@ -21,6 +21,7 @@ in {
     hyprland-qtutils
     hyprlock
     hyprcursor
+    hyprshot
     hyprwayland-scanner
     wl-clipboard
     brightnessctl

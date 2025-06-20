@@ -21,6 +21,7 @@
       kdePackages.qt5compat
       kdePackages.syntax-highlighting
       wlogout
+      translate-shell
     ];
   };
 }

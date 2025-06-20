@@ -16,7 +16,7 @@
     hmcl
     lazysql
     nix-search-tv
-    ollama-cuda
+    meld
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })

@@ -56,6 +56,9 @@
     pandoc
     neovide
     upx
+    eza
+    bc
+    ddcutil
 
     # dev
     nodejs

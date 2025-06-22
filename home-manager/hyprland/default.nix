@@ -57,6 +57,7 @@ in {
     mpvpaper
     w3m
     loupe
+    libsForQt5.qtstyleplugin-kvantum
   ];
 
   wayland.windowManager.hyprland = {

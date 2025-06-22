@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   settings = {
     "exec-once" = [
-      "swww-daemon --format xrgb"
+      "swww-daemon --format xrgb --no-cache"
       "qs &"
       "fcitx5"
       "gnome-keyring-daemon --start --components=secrets"
@@ -21,6 +21,9 @@
       "xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 1"
       "echo 'Xft.dpi:144' | xrdb -merge"
       #exec-once=sh $HOME/.config/hypr/script/adjust-kitty-opactiy.sh
+      ''
+        swww img "$(cat ~/.local/state/wallpaper.txt)";sleep 2;swww img "$(cat ~/.local/state/wallpaper.txt)"
+      ''
     ];
   };
 }

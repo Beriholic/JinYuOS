@@ -1,6 +1,6 @@
 {
   settings = {
-    monitor = [ ",2560x1600@165,auto,auto" ];
+    monitor = [ ",2560x1600@165,auto,auto.vrr.0" ];
     xwayland = { force_zero_scaling = true; };
     dwindle = {
       preserve_split = true;

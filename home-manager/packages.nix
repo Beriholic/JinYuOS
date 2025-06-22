@@ -17,6 +17,7 @@
     lazysql
     nix-search-tv
     meld
+    upscayl-ncnn
 
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })
@@ -59,6 +60,7 @@
     eza
     bc
     ddcutil
+    pavucontrol
 
     # dev
     nodejs

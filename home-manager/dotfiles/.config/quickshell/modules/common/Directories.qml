@@ -29,7 +29,7 @@ Singleton {
     property string notificationsPath: FileUtils.trimFileProtocol(`${Directories.cache}/notifications/notifications.json`)
     property string generatedMaterialThemePath: FileUtils.trimFileProtocol(`${Directories.state}/user/generated/colors.json`)
     property string cliphistDecode: FileUtils.trimFileProtocol(`/tmp/quickshell/media/cliphist`)
-    property string wallpaperSwitchScriptPath: FileUtils.trimFileProtocol(`${Directories.config}/quickshell/scripts/colors/switchwall.sh`)
+    property string wallpaperSwitchScriptPath: FileUtils.trimFileProtocol(`${Directories.config}/matugen/gencolor.sh`)
     // Cleanup on init
     Component.onCompleted: {
         Quickshell.execDetached(["bash", "-c", `mkdir -p '${shellConfig}'`])

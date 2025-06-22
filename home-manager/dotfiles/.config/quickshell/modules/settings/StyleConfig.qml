@@ -15,18 +15,6 @@ ContentPage {
     baseWidth: lightDarkButtonGroup.implicitWidth
     forceWidth: true
 
-    Process {
-        id: konachanWallProc
-        property string status: ""
-        command: ["bash", "-c", FileUtils.trimFileProtocol(`${Directories.config}/quickshell/scripts/colors/random_konachan_wall.sh`)]
-        stdout: SplitParser {
-            onRead: data => {
-                console.log(`Konachan wall proc output: ${data}`);
-                konachanWallProc.status = data.trim();
-            }
-        }
-    }
-
     ContentSection {
         title: "Colors & Wallpaper"
 
@@ -50,6 +38,7 @@ ContentPage {
                 configOptionName: "appearance.palette.type"
                 onSelected: (newValue) => {
                     ConfigLoader.setConfigValueAndSave("appearance.palette.type", newValue);
+                    Quickshell.execDetached(["bash", "-c", `${Directories.wallpaperSwitchScriptPath} --type ${newValue} --no-switch`])
                 }
                 options: [
                     {"value": "auto", "displayName": "Auto"},
@@ -72,19 +61,6 @@ ContentPage {
             RowLayout {
                 Layout.alignment: Qt.AlignHCenter
                 RippleButtonWithIcon {
-                    id: rndWallBtn
-                    buttonRadius: Appearance.rounding.small
-                    materialIcon: "wallpaper"
-                    mainText: konachanWallProc.running ? "Be patient..." : "Random: Konachan"
-                    onClicked: {
-                        console.log(konachanWallProc.command.join(" "))
-                        konachanWallProc.running = true;
-                    }
-                    StyledToolTip {
-                        content: "Random SFW Anime wallpaper from Konachan\nImage is saved to ~/Pictures/Wallpapers"
-                    }
-                }
-                RippleButtonWithIcon {
                     materialIcon: "wallpaper"
                     StyledToolTip {
                         content: "Pick wallpaper image on your system"
@@ -100,21 +76,24 @@ ContentPage {
                                 text: "Choose file"
                                 color: Appearance.colors.colOnSecondaryContainer
                             }
-                            RowLayout {
-                                spacing: 3
-                                KeyboardKey {
-                                    key: "Ctrl"
-                                }
-                                KeyboardKey {
-                                    key: "󰖳"
-                                }
-                                StyledText {
-                                    Layout.alignment: Qt.AlignVCenter
-                                    text: "+"
-                                }
-                                KeyboardKey {
-                                    key: "T"
-                                }
+                        }
+                    }
+                }
+                RippleButtonWithIcon {
+                    materialIcon: "wallpaper"
+                    StyledToolTip {
+                        content: "Random wallpaper image on your system"
+                    }
+                    onClicked: {
+                        Quickshell.execDetached(`${Directories.wallpaperSwitchScriptPath} --random`)
+                    }
+                    mainContentComponent: Component {
+                        RowLayout {
+                            spacing: 10
+                            StyledText {
+                                font.pixelSize: Appearance.font.pixelSize.small
+                                text: "Random file"
+                                color: Appearance.colors.colOnSecondaryContainer
                             }
                         }
                     }

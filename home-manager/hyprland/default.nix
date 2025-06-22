@@ -6,7 +6,8 @@ let
   rules = import ./rules.nix;
   layout = import ./layout/scroll.nix;
   env = import ./env.nix;
-in {
+in
+{
   imports = [ ./shell/quickshell.nix ];
 
   home.packages = with pkgs; [

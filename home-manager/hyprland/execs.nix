@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   settings = {
     "exec-once" = [
       "swww-daemon --format xrgb --no-cache"

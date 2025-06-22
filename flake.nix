@@ -8,8 +8,7 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url =
-      "github:hyprwm/Hyprland?rev=9958d297641b5c84dcff93f9039d80a5ad37ab00";
+    hyprland.url = "github:hyprwm/Hyprland?rev=9958d297641b5c84dcff93f9039d80a5ad37ab00";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -32,7 +31,13 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       inherit (self) outputs;
       # systems = [
@@ -44,7 +49,8 @@
       # ];
       # forAllSystems = nixpkgs.lib.genAttrs systems;
       system = "x86_64-linux";
-    in {
+    in
+    {
       #packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
       #formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
       packages = import ./pkgs nixpkgs.legacyPackages.${system};

@@ -1,7 +1,9 @@
 {
   settings = {
     monitor = [ ",2560x1600@165,auto,auto.vrr.0" ];
-    xwayland = { force_zero_scaling = true; };
+    xwayland = {
+      force_zero_scaling = true;
+    };
     dwindle = {
       preserve_split = true;
       smart_split = false;
@@ -35,7 +37,9 @@
       no_focus_fallback = true;
       allow_tearing = true;
     };
-    binds = { scroll_event_delay = 0; };
+    binds = {
+      scroll_event_delay = 0;
+    };
     gestures = {
       workspace_swipe = true;
       workspace_swipe_distance = 700;

@@ -1,5 +1,6 @@
 # This file defines overlays
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   # This one brings our custom packages from the 'pkgs' directory
   additions = final: _prev: import ../pkgs { pkgs = final; };
 
@@ -11,10 +12,8 @@
     # ...
     # });
     hyprscroller = inputs.hyprscroller.packages.${final.system}.hyprscroller;
-    wpsoffice-cn =
-      inputs.nix-wpsoffice-cn.packages.${final.system}.wpsoffice-cn;
-    chinese-fonts =
-      inputs.nix-wpsoffice-cn.packages.${final.system}.chinese-fonts;
+    wpsoffice-cn = inputs.nix-wpsoffice-cn.packages.${final.system}.wpsoffice-cn;
+    chinese-fonts = inputs.nix-wpsoffice-cn.packages.${final.system}.chinese-fonts;
     quickshell = inputs.quickshell.packages.${final.system}.default;
   };
 

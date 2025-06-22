@@ -1,6 +1,8 @@
 {
   settings = {
-    general = { layout = "scroller"; };
+    general = {
+      layout = "scroller";
+    };
 
     bind = [
       "CTRLSUPER,j,movefocus,d"

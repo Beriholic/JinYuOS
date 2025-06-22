@@ -1,6 +1,11 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   #   networking.firewall.enable = false;
-  networking = { firewall = { trustedInterfaces = [ "Mihomo" ]; }; };
+  networking = {
+    firewall = {
+      trustedInterfaces = [ "Mihomo" ];
+    };
+  };
   services = {
     mihomo = {
       package = pkgs.mihomo-alpha;

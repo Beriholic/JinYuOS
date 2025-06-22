@@ -1,6 +1,14 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
   # You can import other NixOS modules here
   imports = [
     inputs.home-manager.nixosModules.home-manager
@@ -28,12 +36,14 @@
         useOSProber = true;
         minegrub-world-sel = {
           enable = true;
-          customIcons = [{
-            name = "NixOS";
-            lineTop = "NixOS (23/11/2023, 23:03)";
-            lineBottom = "Survival Mode, No Cheats, Version: 24.11";
-            imgName = "nixos";
-          }];
+          customIcons = [
+            {
+              name = "NixOS";
+              lineTop = "NixOS (23/11/2023, 23:03)";
+              lineBottom = "Survival Mode, No Cheats, Version: 24.11";
+              imgName = "nixos";
+            }
+          ];
         };
       };
       efi.canTouchEfiVariables = true;
@@ -47,35 +57,40 @@
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
     ];
-    config = { allowUnfree = true; };
+    config = {
+      allowUnfree = true;
+    };
   };
 
-  nix = let flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
-    settings = {
-      experimental-features = "nix-command flakes";
-      flake-registry = "";
-      nix-path = config.nix.nixPath;
-      substituters = [
-        "https://mirrors.ustc.edu.cn/nix-channels/store"
-        # "https://mirrors.cernet.edu.cn/nix-channels/store"
-        "https://hyprland.cachix.org"
-      ];
-      trusted-public-keys = [
-        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      ];
-      auto-optimise-store = true;
+  nix =
+    let
+      flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+    in
+    {
+      settings = {
+        experimental-features = "nix-command flakes";
+        flake-registry = "";
+        nix-path = config.nix.nixPath;
+        substituters = [
+          "https://mirrors.ustc.edu.cn/nix-channels/store"
+          # "https://mirrors.cernet.edu.cn/nix-channels/store"
+          "https://hyprland.cachix.org"
+        ];
+        trusted-public-keys = [
+          "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        ];
+        auto-optimise-store = true;
+      };
+      # Opinionated: disable channels
+      #channel.enable = false;
+      registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+      nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+      gc = {
+        automatic = true;
+        dates = "daily";
+        options = "--delete-older-than 3d";
+      };
     };
-    # Opinionated: disable channels
-    #channel.enable = false;
-    registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
-    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-    gc = {
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 3d";
-    };
-  };
 
   networking.networkmanager.enable = true;
   security.polkit.enable = true;
@@ -93,7 +108,9 @@
       kitty
       starship
     ];
-    sessionVariables = { LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib"; };
+    sessionVariables = {
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+    };
   };
 
   xdg = {
@@ -102,7 +119,10 @@
       xdgOpenUsePortal = true;
       config = {
         common.default = [ "gtk" ];
-        hyprland.default = [ "gtk" "hyprland" ];
+        hyprland.default = [
+          "gtk"
+          "hyprland"
+        ];
       };
       extraPortals = [
         pkgs.xdg-desktop-portal
@@ -116,14 +136,20 @@
     users.beri = {
       initialPassword = "114514";
       isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" "docker" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "docker"
+      ];
     };
     defaultUserShell = pkgs.fish;
   };
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
-    users = { beri = import ../home-manager/home.nix; };
+    users = {
+      beri = import ../home-manager/home.nix;
+    };
     backupFileExtension = "hm_bkp";
   };
 

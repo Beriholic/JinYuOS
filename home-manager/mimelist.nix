@@ -2,7 +2,8 @@ let
   browser = "firefox.desktop";
   file-manager = "org.gnome.Nautilus.desktop";
   image-viewer = "org.gnome.Loupe.desktop";
-in {
+in
+{
   xdg.mimeApps = rec {
     enable = true;
     associations.added = defaultApplications;

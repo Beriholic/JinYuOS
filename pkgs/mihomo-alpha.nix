@@ -1,4 +1,9 @@
-{ lib, fetchFromGitHub, buildGoModule, nixosTests, }:
+{
+  lib,
+  fetchFromGitHub,
+  buildGoModule,
+  nixosTests,
+}:
 
 buildGoModule rec {
   pname = "mihomo-alpha";
@@ -15,15 +20,20 @@ buildGoModule rec {
 
   excludedPackages = [ "./test" ];
 
-  ldflags =
-    [ "-s" "-w" "-X github.com/metacubex/mihomo/constant.Version=${version}" ];
+  ldflags = [
+    "-s"
+    "-w"
+    "-X github.com/metacubex/mihomo/constant.Version=${version}"
+  ];
 
   tags = [ "with_gvisor" ];
 
   # network required
   doCheck = false;
 
-  passthru.tests = { mihomo = nixosTests.mihomo; };
+  passthru.tests = {
+    mihomo = nixosTests.mihomo;
+  };
 
   meta = with lib; {
     description = "Rule-based tunnel in Go";

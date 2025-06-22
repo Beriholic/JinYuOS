@@ -1,4 +1,5 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }:
+{
   imports = [ inputs.ags.homeManagerModules.default ];
 
   home = {
@@ -29,8 +30,8 @@
       gnome-bluetooth
       gammastep
       gnome-control-center
-      (python3.withPackages (p:
-        with p; [
+      (python3.withPackages (
+        p: with p; [
           pillow
           libsass
           setproctitle
@@ -38,14 +39,14 @@
           material-color-utilities
           psutil
           pywayland
-        ]))
+        ]
+      ))
     ];
   };
 
   programs.ags = {
     enable = true;
-    configDir =
-      null; # if ags dir is managed by home-manager, it'll end up being read-only. not too cool.
+    configDir = null; # if ags dir is managed by home-manager, it'll end up being read-only. not too cool.
     # configDir = ./../.config/ags;
     extraPackages = with pkgs; [
       brightnessctl
@@ -74,8 +75,8 @@
       gnome-bluetooth
       gammastep
       gnome-control-center
-      (python3.withPackages (p:
-        with p; [
+      (python3.withPackages (
+        p: with p; [
           pillow
           libsass
           setproctitle
@@ -83,7 +84,8 @@
           material-color-utilities
           psutil
           pywayland
-        ]))
+        ]
+      ))
     ];
   };
 }

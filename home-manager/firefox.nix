@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   home = {
     sessionVariables.BROWSER = "firefox";
     file."firefox-gnome-theme" = {
@@ -9,7 +10,9 @@
 
   programs.firefox = {
     enable = true;
-    policies = { DisablePocket = true; };
+    policies = {
+      DisablePocket = true;
+    };
     profiles.default = {
       name = "Default";
       settings = {

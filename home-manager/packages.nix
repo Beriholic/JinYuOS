@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{
+  pkgs,
+  ...
+}:
+{
   home.packages = with pkgs; [
     # app
     kitty
@@ -72,10 +76,13 @@
     typescript
     eslint
     jdk17
+    nixfmt-rfc-style
 
     # ide
     jetbrains-toolbox
   ];
 
-  services = { udiskie.enable = true; };
+  services = {
+    udiskie.enable = true;
+  };
 }

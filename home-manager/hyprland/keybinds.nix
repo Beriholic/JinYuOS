@@ -26,7 +26,10 @@
       "SUPER,Escape, exec, wlogout"
       "Control+Super, T, exec, ~/.config/matugen/gencolor.sh"
     ];
-    bindm = [ "SUPER,mouse:272,movewindow" "SUPER,mouse:273,resizewindow" ];
+    bindm = [
+      "SUPER,mouse:272,movewindow"
+      "SUPER,mouse:273,resizewindow"
+    ];
     bindle = [
       ", XF86MonBrightnessUp, exec, qs ipc call brightness increment"
       ", XF86MonBrightnessDown, exec, qs ipc call brightness decrement"

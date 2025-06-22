@@ -1,9 +1,12 @@
-{ config, ... }: {
+{ config, ... }:
+{
   services.xserver.videoDrivers = [ "nvidia" ];
 
   boot.kernelParams = [ "modprobe.blacklist=nouveau" ];
   hardware = {
-    graphics = { enable = true; };
+    graphics = {
+      enable = true;
+    };
     nvidia = {
       modesetting.enable = true;
       nvidiaSettings = true;

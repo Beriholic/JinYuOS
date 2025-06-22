@@ -1,8 +1,14 @@
-{ pkgs, lib, inputs, ... }:
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 let
   cursor-theme = "Bibata-Modern-Classic";
   cursor-package = pkgs.bibata-cursors;
-in {
+in
+{
 
   home = {
     packages = with pkgs; [

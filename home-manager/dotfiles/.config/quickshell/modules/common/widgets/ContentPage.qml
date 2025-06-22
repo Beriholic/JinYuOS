@@ -6,17 +6,21 @@ import "root:/modules/common/widgets/"
 
 Flickable {
     id: root
-    property real baseWidth: 400
+    property real baseWidth: 500
+    property bool forceWidth: false
+    property real bottomContentPadding: 100
+
     default property alias data: contentColumn.data
 
     clip: true
-    contentHeight: contentColumn.implicitHeight
-    implicitWidth: Math.max(contentColumn.implicitWidth, baseWidth)
+    contentHeight: contentColumn.implicitHeight + root.bottomContentPadding // Add some padding at the bottom
+    implicitWidth: contentColumn.implicitWidth
+    
     ColumnLayout {
         id: contentColumn
+        width: root.forceWidth ? root.baseWidth : Math.max(root.baseWidth, implicitWidth)
         anchors {
             top: parent.top
-            bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
             margins: 10
         }

@@ -16,8 +16,8 @@ Singleton {
     property string syntaxHighlightingTheme
 
     // Extremely conservative transparency values for consistency and readability
-    property real transparency: ConfigOptions?.appearance.transparency ? (m3colors.darkmode ? 0.1 : 0) : 0
-    property real contentTransparency: ConfigOptions?.appearance.transparency ? (m3colors.darkmode ? 0.55 : 0) : 0
+    property real transparency: ConfigOptions?.appearance.transparency ? (m3colors.darkmode ? 0.1 : 0.07) : 0
+    property real contentTransparency: ConfigOptions?.appearance.transparency ? (m3colors.darkmode ? 0.55 : 0.55) : 0
 
     m3colors: QtObject {
         property bool darkmode: false
@@ -130,7 +130,7 @@ Singleton {
         property color colSecondary: m3colors.m3secondary
         property color colSecondaryHover: ColorUtils.mix(m3colors.m3secondary, colLayer1Hover, 0.85)
         property color colSecondaryActive: ColorUtils.mix(m3colors.m3secondary, colLayer1Active, 0.4)
-        property color colSecondaryContainer: ColorUtils.transparentize(m3colors.m3secondaryContainer, root.contentTransparency)
+        property color colSecondaryContainer: m3colors.m3secondaryContainer
         property color colSecondaryContainerHover: ColorUtils.mix(m3colors.m3secondaryContainer, colLayer1Hover, 0.6)
         property color colSecondaryContainerActive: ColorUtils.mix(m3colors.m3secondaryContainer, colLayer1Active, 0.54)
         property color colOnSecondaryContainer: m3colors.m3onSecondaryContainer
@@ -203,7 +203,7 @@ Singleton {
 
     animation: QtObject {
         property QtObject elementMove: QtObject {
-            property int duration: 500
+            property int duration: animationCurves.expressiveDefaultSpatialDuration
             property int type: Easing.BezierSpline
             property list<real> bezierCurve: animationCurves.expressiveDefaultSpatial
             property int velocity: 650
@@ -249,7 +249,7 @@ Singleton {
             }
         }
         property QtObject elementMoveFast: QtObject {
-            property int duration: 200
+            property int duration: animationCurves.expressiveEffectsDuration
             property int type: Easing.BezierSpline
             property list<real> bezierCurve: animationCurves.expressiveEffects
             property int velocity: 850

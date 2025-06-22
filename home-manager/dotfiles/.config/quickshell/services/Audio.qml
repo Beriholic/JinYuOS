@@ -28,14 +28,21 @@ Singleton {
         function onVolumeChanged() {
             if (!ConfigOptions.audio.protection.enable) return;
             if (!lastReady) {
-                lastVolume = sink.audio.volume;
                 lastReady = true;
+                const initialVolume = sink.audio.volume;
+                const maxAllowed = ConfigOptions.audio.protection.maxAllowed;
+                if (initialVolume > maxAllowed) {
+                    sink.audio.volume = maxAllowed;
+                    lastVolume = maxAllowed;
+                } else {
+                    lastVolume = initialVolume;
+                }
+                
                 return;
             }
             const newVolume = sink.audio.volume;
             const maxAllowedIncrease = ConfigOptions.audio.protection.maxAllowedIncrease / 100; 
-            const maxAllowed = ConfigOptions.audio.protection.maxAllowed ;
-
+            const maxAllowed = ConfigOptions.audio.protection.maxAllowed;
             if (newVolume - lastVolume > maxAllowedIncrease) {
                 sink.audio.volume = lastVolume;
                 root.sinkProtectionTriggered("Illegal increment");
@@ -43,12 +50,11 @@ Singleton {
                 root.sinkProtectionTriggered("Exceeded max allowed");
                 sink.audio.volume = Math.min(lastVolume, maxAllowed);
             }
+            
             if (sink.ready && (isNaN(sink.audio.volume) || sink.audio.volume === undefined || sink.audio.volume === null)) {
                 sink.audio.volume = 0;
             }
             lastVolume = sink.audio.volume;
         }
-        
     }
-
 }

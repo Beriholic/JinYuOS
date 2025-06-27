@@ -23,7 +23,7 @@
       "echo 'Xft.dpi:144' | xrdb -merge"
       #exec-once=sh $HOME/.config/hypr/script/adjust-kitty-opactiy.sh
       ''
-        swww img "$(cat ~/.local/state/wallpaper.txt)";sleep 2;swww img "$(cat ~/.local/state/wallpaper.txt)"
+        sleep1;swww img "$(cat ~/.local/state/wallpaper.txt)";sleep 1;swww img "$(cat ~/.local/state/wallpaper.txt)"
       ''
     ];
   };

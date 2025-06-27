@@ -7,6 +7,7 @@
     power-profiles-daemon.enable = true;
     displayManager.sessionPackages = [ pkgs.hyprland ];
     flatpak.enable = true;
+    sysprof.enable = true;
 
     xserver = {
       enable = true;

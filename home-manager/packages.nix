@@ -77,6 +77,7 @@
     eslint
     jdk17
     nixfmt-rfc-style
+    python312
 
     # ide
     jetbrains-toolbox

@@ -25,6 +25,7 @@
       # Action
       "SUPER,Escape, exec, wlogout"
       "Control+Super, T, exec, ~/.config/matugen/gencolor.sh"
+      "ALT+Super, T, exec, ~/.config/matugen/gencolor.sh --random"
     ];
     bindm = [
       "SUPER,mouse:272,movewindow"

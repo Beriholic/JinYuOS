@@ -78,6 +78,9 @@
     jdk17
     nixfmt-rfc-style
     python312
+    minikube
+    kubernetes-helm
+    kubectl
 
     # ide
     jetbrains-toolbox

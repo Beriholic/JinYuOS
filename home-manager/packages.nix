@@ -70,7 +70,7 @@
     nodejs
     gjs
     bun
-    cargo
+    rustup
     go
     gcc
     typescript

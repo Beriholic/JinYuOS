@@ -17,7 +17,8 @@ function nix-utils --description "A Nix utility wrapper for common profile/run/s
             for arg in $args
                 set -a processed_args "nixpkgs#$arg"
             end
-            command nix profile install $processed_args
+            set --export allowUnfree true
+            command nix profile install $processed_args --impure
 
         case list
             command nix profile list
@@ -49,6 +50,11 @@ function nix-utils --description "A Nix utility wrapper for common profile/run/s
                 command nix shell $processed_args --command fish
             end
 
+        case clean
+            echo "Running garbage collection to delete generations older than 3 days..."
+            command sudo nix-collect-garbage --delete-older-than 3d
+            echo "Cleanup complete."
+
         case help -h --help
             __nix_util_help
 
@@ -63,7 +69,7 @@ function __nix_util_help
     echo "A Nix utility wrapper for common commands."
     echo
     echo "USAGE:"
-    echo "  nix-utilss <subcommand> [arguments...]"
+    echo "  nix-utils <subcommand> [arguments...]"
     echo
     echo "SUBCOMMANDS:"
     echo "  install <pkg...>" -d "Install packages to your profile (e.g., nix-utils install ripgrep fd)"
@@ -71,5 +77,6 @@ function __nix_util_help
     echo "  remove <pkg...>"  -d "Remove packages from your profile (e.g., nix-utils remove ripgrep)"
     echo "  run <pkg> -- [args...]" -d "Run a command from a package (e.g., nix-utils run cowsay -- 'Hello Fish')"
     echo "  shell [pkg...]"   -d "Start a fish shell with temporary packages (e.g., nix-utils shell go nodejs)"
+    echo "  clean"            -d "Clean up Nix store generations older than 3 days"
     echo "  help"             -d "Show this help message"
 end

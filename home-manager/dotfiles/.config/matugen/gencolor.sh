@@ -37,7 +37,6 @@ usage() {
   echo "  $0 --mode light --no-switch --type scheme-tonal-spot # Switch current wallpaper's theme to light using a specific type."
 }
 
-# --- Argument Parsing (no changes here) ---
 while [[ "$#" -gt 0 ]]; do
   case $1 in
   --random)
@@ -91,13 +90,10 @@ while [[ "$#" -gt 0 ]]; do
   esac
 done
 
-# --- Matugen Command Runner (This is where the change is) ---
 run_matugen() {
   local img_path="$1"
   local matugen_cmd=("matugen" "image" "$img_path" "-m" "$THEME_MODE")
 
-  # --- MODIFIED LOGIC ---
-  # Only add the --type flag if the value is NOT 'auto'.
   if [ "$MATUGEN_TYPE" != "auto" ]; then
     matugen_cmd+=("--type" "$MATUGEN_TYPE")
     echo "Using generation type: $MATUGEN_TYPE"
@@ -105,11 +101,9 @@ run_matugen() {
     echo "Using default (auto) generation type."
   fi
 
-  # Execute the final constructed command
   "${matugen_cmd[@]}"
 }
 
-# === BEHAVIOR 1: Theme-only switch for the current wallpaper ===
 if [ "$THEME_ONLY_SWITCH" == "true" ]; then
   echo "Mode: Switching theme for the current wallpaper..."
   if [ ! -r "$WALLPAPER_STATE_FILE" ]; then

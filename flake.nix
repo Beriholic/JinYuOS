@@ -29,6 +29,7 @@
       url = "github:quickshell-mirror/quickshell?rev=20c3da01f1b2bc038582eee831e4f5055b4f71ff";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nutil.url = "github:Beriholic/nutil";
   };
 
   outputs =

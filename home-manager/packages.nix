@@ -65,6 +65,7 @@
     bc
     ddcutil
     pavucontrol
+    nutil
 
     # dev
     nodejs

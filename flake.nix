@@ -13,7 +13,6 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-    ags.url = "github:Aylur/ags/v1";
     minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
     hyprscroller = {
       url = "github:cpiber/hyprscroller";

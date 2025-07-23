@@ -8,6 +8,11 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-25.05-darwin";
+    nix-darwin = {
+      url = "github:lnl7/nix-darwin/nix-darwin-25.05";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
     hyprland.url = "github:hyprwm/Hyprland?rev=9958d297641b5c84dcff93f9039d80a5ad37ab00";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -35,26 +40,25 @@
     {
       self,
       nixpkgs,
+      nix-darwin,
       home-manager,
       ...
     }@inputs:
     let
       inherit (self) outputs;
-      # systems = [
-      #   "aarch64-linux"
-      #   "i686-linux"
-      #   "x86_64-linux"
-      #   "aarch64-darwin"
-      #   "x86_64-darwin"
-      # ];
-      # forAllSystems = nixpkgs.lib.genAttrs systems;
+      systems = [
+        "aarch64-linux"
+        "i686-linux"
+        "x86_64-linux"
+        "aarch64-darwin"
+        "x86_64-darwin"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
       system = "x86_64-linux";
     in
     {
-      #packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-      #formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
-      packages = import ./pkgs nixpkgs.legacyPackages.${system};
-      formatter = nixpkgs.legacyPackages.${system}.alejandra;
+      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
       overlays = import ./overlays { inherit inputs; };
       nixosModules = import ./modules/nixos;
@@ -78,16 +82,12 @@
           ];
         };
       };
-
-      # homeConfigurations = {
-      #   "beri@Jiny" = home-manager.lib.homeManagerConfiguration {
-      #     pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      #     extraSpecialArgs = { inherit inputs outputs hyprland; };
-      #     modules = [
-      #       hyprland.homeManagerModules.default
-      #       ./home-manager/home.nix
-      #     ];
-      #   };
-      # };
+      darwinConfigurations = {
+        JinYuDarwin = nix-darwin.lib.darwinSystem {
+          system = "aarch64-darwin";
+          specialArgs = { inherit inputs outputs; };
+          modules = [ ./nixos/JinYuDarwin ];
+        };
+      };
     };
 }

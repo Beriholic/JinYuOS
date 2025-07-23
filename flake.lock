@@ -540,6 +540,27 @@
         "type": "github"
       }
     },
+    "nix-darwin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-darwin"
+        ]
+      },
+      "locked": {
+        "lastModified": 1749744770,
+        "narHash": "sha256-MEM9XXHgBF/Cyv1RES1t6gqAX7/tvayBC1r/KPyK1ls=",
+        "owner": "lnl7",
+        "repo": "nix-darwin",
+        "rev": "536f951efb1ccda9b968e3c9dee39fbeb6d3fdeb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lnl7",
+        "ref": "nix-darwin-25.05",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
     "nix-wpsoffice-cn": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -571,6 +592,22 @@
       "original": {
         "owner": "NixOS",
         "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-darwin": {
+      "locked": {
+        "lastModified": 1753067396,
+        "narHash": "sha256-xrK/8DVZjBMlDzrX/L2DWTy9pcdoGm7zJ06ko+yGmNY=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "b597645d5bb4b67c9eca9734710b57d9425cdb47",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-25.05-darwin",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -745,8 +782,10 @@
         "hyprland-plugins": "hyprland-plugins",
         "hyprscroller": "hyprscroller",
         "minegrub-world-sel-theme": "minegrub-world-sel-theme",
+        "nix-darwin": "nix-darwin",
         "nix-wpsoffice-cn": "nix-wpsoffice-cn",
         "nixpkgs": "nixpkgs_5",
+        "nixpkgs-darwin": "nixpkgs-darwin",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nutil": "nutil",
         "quickshell": "quickshell"

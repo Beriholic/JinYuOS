@@ -16,6 +16,7 @@
     chinese-fonts = inputs.nix-wpsoffice-cn.packages.${final.system}.chinese-fonts;
     quickshell = inputs.quickshell.packages.${final.system}.default;
     nutil = inputs.nutil.packages.${final.system}.default;
+    geminic = inputs.geminic.packages.${final.system}.default;
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

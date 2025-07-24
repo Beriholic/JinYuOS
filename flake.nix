@@ -34,6 +34,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nutil.url = "github:Beriholic/nutil";
+    geminic.url = "github:Beriholic/geminic";
   };
 
   outputs =

@@ -25,6 +25,7 @@
     nixfmt-rfc-style
     nutil
     tldr
+    geminic
   ];
 
   homebrew = {

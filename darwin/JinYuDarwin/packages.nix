@@ -26,6 +26,9 @@
     nutil
     tldr
     geminic
+    docker
+    docker-compose
+    colima
   ];
 
   homebrew = {

@@ -10,6 +10,7 @@
     go
     thrift
     bun
+    pnpm
     chsrc
     uv
     zoxide
@@ -29,6 +30,8 @@
     docker
     docker-compose
     colima
+    firefox
+    ranger
   ];
 
   homebrew = {

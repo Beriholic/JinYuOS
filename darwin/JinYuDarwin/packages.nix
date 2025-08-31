@@ -32,6 +32,7 @@
     colima
     firefox
     ranger
+    wget
   ];
 
   homebrew = {

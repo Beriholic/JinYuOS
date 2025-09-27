@@ -21,8 +21,7 @@
     go-musicfox
     nix-search-tv
     fzf
-    jdk8
-    jdk17
+    jdk24
     nixfmt-rfc-style
     nutil
     tldr
@@ -30,9 +29,10 @@
     docker
     docker-compose
     colima
-    firefox
     ranger
     wget
+    fd
+    nodejs_24
   ];
 
   homebrew = {

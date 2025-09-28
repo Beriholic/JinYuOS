@@ -72,6 +72,7 @@
         flake-registry = "";
         nix-path = config.nix.nixPath;
         substituters = [
+          "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
           "https://mirrors.ustc.edu.cn/nix-channels/store"
           # "https://mirrors.cernet.edu.cn/nix-channels/store"
           "https://hyprland.cachix.org"
@@ -92,7 +93,15 @@
       };
     };
 
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager.enable = true;
+    nameservers = [
+      "8.8.8.8"
+      "8.8.4.4"
+    ];
+
+  };
+
   security.polkit.enable = true;
 
   environment = {

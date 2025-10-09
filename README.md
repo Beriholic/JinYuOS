@@ -1,1 +1,1 @@
-![](https://img.beriholic.xyz/JinYuOS.webp)
+![](https://img.beriholic.cv/JinYuOS.webp)

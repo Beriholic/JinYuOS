@@ -3,12 +3,11 @@
   #   networking.firewall.enable = false;
   networking = {
     firewall = {
-      trustedInterfaces = [ "Mihomo" ];
+      trustedInterfaces = [ "Meta" ];
     };
   };
   services = {
     mihomo = {
-      package = pkgs.mihomo-alpha;
       enable = true;
       tunMode = true;
       configFile = "/home/beri/.config/mihomo/config.yaml";

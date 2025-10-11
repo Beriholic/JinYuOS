@@ -44,7 +44,6 @@
     pciutils
     usbutils
     btop
-    gradience
     ranger
     duf
     xdg-user-dirs

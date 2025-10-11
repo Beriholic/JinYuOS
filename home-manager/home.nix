@@ -1,5 +1,4 @@
 {
-  inputs,
   outputs,
   pkgs,
   ...
@@ -10,10 +9,9 @@ let
 in
 {
   imports = [
-    inputs.hyprland.homeManagerModules.default
     ./packages.nix
     ./theme.nix
-    ./hyprland
+    ./niri
     ./dconf.nix
     ./mimelist.nix
     ./firefox.nix
@@ -23,7 +21,7 @@ in
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
-      outputs.overlays.unstable-packages
+      outputs.overlays.stable-packages
     ];
     config = {
       allowUnfree = true;
@@ -56,6 +54,27 @@ in
       ];
   };
 
+  xdg = {
+    portal = {
+      enable = true;
+      config.niri = {
+        default = [
+          "gnome"
+          "gtk"
+        ];
+        "org.freedesktop.impl.portal.Access" = "gtk";
+        "org.freedesktop.impl.portal.FileChooser" = "gtk";
+        "org.freedesktop.impl.portal.ScreenCast" = "gnome";
+        "org.freedesktop.impl.portal.Secret" = "gnome-keyring";
+      };
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-gnome
+      ];
+    };
+  };
+
   qt = {
     enable = true;
     platformTheme.name = "qtct";
@@ -66,14 +85,14 @@ in
     createDirectories = true;
   };
 
-  programs.home-manager.enable = true;
-  programs.git = {
-    enable = true;
-    userName = "Beriholic";
-    userEmail = "beriholic@petalmail.com";
+  programs = {
+    home-manager.enable = true;
+    git = {
+      enable = true;
+      userName = "Beriholic";
+      userEmail = "beriholic@petalmail.com";
+    };
   };
-
-  #systemd.user.startServices = "sd-switch";
 
   home.stateVersion = "24.11";
 }

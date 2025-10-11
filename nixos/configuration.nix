@@ -55,7 +55,7 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
-      outputs.overlays.unstable-packages
+      outputs.overlays.stable-packages
     ];
     config = {
       allowUnfree = true;
@@ -75,10 +75,6 @@
           "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
           "https://mirrors.ustc.edu.cn/nix-channels/store"
           # "https://mirrors.cernet.edu.cn/nix-channels/store"
-          "https://hyprland.cachix.org"
-        ];
-        trusted-public-keys = [
-          "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         ];
         auto-optimise-store = true;
       };
@@ -108,7 +104,7 @@
     systemPackages = with pkgs; [
       git
       vim
-      unstable.neovim
+      neovim
       curl
       wget
       fastfetch
@@ -119,25 +115,6 @@
     ];
     sessionVariables = {
       LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
-    };
-  };
-
-  xdg = {
-    portal = {
-      enable = true;
-      xdgOpenUsePortal = true;
-      config = {
-        common.default = [ "gtk" ];
-        hyprland.default = [
-          "gtk"
-          "hyprland"
-        ];
-      };
-      extraPortals = [
-        pkgs.xdg-desktop-portal
-        pkgs.xdg-desktop-portal-gtk
-        pkgs.xdg-desktop-portal-hyprland
-      ];
     };
   };
 

@@ -4,11 +4,9 @@ SYSTEM_CONFIG_DIR="$HOME/.config"
 GIT_REPO_CONFIG_DIR="./.config"
 
 SKIP_DIRS=("mihomo")
-NO_DELETE_DIRS=("hypr")
+NO_DELETE_DIRS=()
 
 declare -A SYNC_FILES_MAP
-
-SYNC_FILES_MAP["hypr"]="colors.conf hyprlock.conf"
 
 export_starship() {
   local starship_toml_in_repo="$GIT_REPO_CONFIG_DIR/starship.toml"

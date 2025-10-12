@@ -165,9 +165,9 @@ layout {
 // 使用起来可能更方便。
 // 有关更多 spawn 示例，请参阅下面的 binds 部分。
 //
+spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
 spawn-at-startup "dms" "run"
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
-spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
 spawn-at-startup "fcitx5"
 
 config-notification {
@@ -180,10 +180,19 @@ environment {
   SDL_IM_MODULE "fcitx"
   GLFW_IM_MODULE "ibus"
   INPUT_METHOD "fcitx"
+  CLUTTER_BACKEND "wayland"
+  GDK_BACKEND "wayland,x11,*"
+  GDK_DPI_SCALE "1"
+  GDK_SCALE "1"
+  QT_AUTO_SCREEN_SCALE_FACTOR "1"
+  QT_QPA_PLATFORM "wayland;xcb"
   QT_QPA_PLATFORMTHEME "gtk3"
-  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-  QT_QPA_PLATFORMTHEME "qt6ct"
-  QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+  QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+  SDL_VIDEODRIVER "wayland"
+  GSK_RENDERER "ngl"
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  WLR_NO_HARDWARE_CURSORS "1"
+  DMS_DISABLE_MATUGEN "1"
 }
 
 // 取消注释此行以请求客户端在可能的情况下省略其客户端装饰。
@@ -204,107 +213,17 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // 动画设置。
 // Wiki 解释了如何配置单个动画:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
-animations {
-    // off
-    // slowdown 10.0
-    // slowdown 4.0
-    // slowdown 2.0
-    // slowdown 1.5
+//
+//
 
-    workspace-switch {
-        // off
-        // duration-ms 2500
-        // curve "ease-out-cubic"
-        // spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
-    }
 
-    window-open {
-        // off
-        // duration-ms 2500
-        // curve "ease-out-expo"
-        // spring damping-ratio=0.8 stiffness=1000 epsilon=0.0001
-    }
-
-    window-close {
-        // off
-        // duration-ms 2500
-        // curve "ease-out-cubic"
-        // spring damping-ratio=0.8 stiffness=1000 epsilon=0.0001
-    }
-
-    horizontal-view-movement {
-        // off
-        // duration-ms 500
-        // curve "ease-out-cubic"
-        // spring damping-ratio=1.0 stiffness=20 epsilon=0.00001
-        // spring damping-ratio=10.0 stiffness=800 epsilon=0.0001
-    }
-
-    window-movement {
-        // off
-        // duration-ms 750
-        // curve "ease-out-cubic"
-        // spring damping-ratio=1.0 stiffness=20 epsilon=0.00001
-        // spring damping-ratio=0.2 stiffness=800 epsilon=0.0001
-    }
-
-    window-resize {
-        // off
-        // duration-ms 500
-        // duration-ms 2500
-        // curve "ease-out-cubic"
-        // spring damping-ratio=0.2 stiffness=800 epsilon=0.0001
-
-        custom-shader r"
-            vec4 resize_color(vec3 coords_curr_geo, vec3 size_curr_geo) {
-                vec3 coords_next_geo = niri_curr_geo_to_next_geo * coords_curr_geo;
-                vec3 coords_prev_geo = niri_curr_geo_to_prev_geo * coords_curr_geo;
-
-                vec3 coords_crop = niri_geo_to_tex_next * coords_next_geo;
-                vec3 coords_stretch = niri_geo_to_tex_next * coords_curr_geo;
-                vec3 coords_stretch_prev = niri_geo_to_tex_prev * coords_curr_geo;
-
-                // We can crop if the current window size is smaller than the next window
-                // size. One way to tell is by comparing to 1.0 the X and Y scaling
-                // coefficients in the current-to-next transformation matrix.
-                bool can_crop_by_x = niri_curr_geo_to_next_geo[0][0] <= 1.0;
-                bool can_crop_by_y = niri_curr_geo_to_next_geo[1][1] <= 1.0;
-                bool crop = can_crop_by_x && can_crop_by_y;
-
-                vec4 color;
-
-                if (crop) {
-                    // However, when we crop, we also want to crop out anything outside the
-                    // current geometry. This is because the area of the shader is unspecified
-                    // and usually bigger than the current geometry, so if we don't fill pixels
-                    // outside with transparency, the texture will leak out.
-                    //
-                    // When stretching, this is not an issue because the area outside will
-                    // correspond to client-side decoration shadows, which are already supposed
-                    // to be outside.
-                    if (coords_curr_geo.x < 0.0 || 1.0 < coords_curr_geo.x ||
-                            coords_curr_geo.y < 0.0 || 1.0 < coords_curr_geo.y) {
-                        color = vec4(0.0);
-                    } else {
-                        color = texture2D(niri_tex_next, coords_crop.st);
-                    }
-                } else {
-                    // If we can't crop, then crossfade.
-                    color = texture2D(niri_tex_next, coords_stretch.st);
-                    vec4 color_prev = texture2D(niri_tex_prev, coords_stretch_prev.st);
-                    color = mix(color_prev, color, niri_clamped_progress);
-                }
-
-                return color;
-            }
-        "
-    }
-
-    config-notification-open-close {
-        // off
-        // duration-ms 250
-        // curve "ease-out-cubic"
-        // spring damping-ratio=0.1 stiffness=1000 epsilon=0.001
+overview {
+    backdrop-color "#1a1b26"
+    workspace-shadow {
+        softness 50
+        spread 20
+        offset x=0 y=10
+        color "#0007"
     }
 }
 
@@ -344,10 +263,15 @@ window-rule {
 
 // 示例：为所有窗口启用圆角。
 // (此示例规则已用 "/-" 注释掉。)
-// window-rule {
-//     geometry-corner-radius 64
-//     clip-to-geometry true
-// }
+window-rule {
+     geometry-corner-radius 16
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
 
 binds {
     // 按键由用 + 号分隔的修饰符组成，最后是 XKB 键名。

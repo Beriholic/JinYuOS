@@ -515,11 +515,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1751435003,
-        "narHash": "sha256-7PHMkUGz/hvTlIpPtjFGBtU4Ps+4tziEF9AcxX034HA=",
+        "lastModified": 1760238739,
+        "narHash": "sha256-lHDRfy3yJSOczwkQurPjCY2Wm4s6ghG7ri3oMkYpyck=",
         "owner": "Beriholic",
         "repo": "nutil",
-        "rev": "07f04e7fe49281f198d959916fb2b2551714d1b4",
+        "rev": "75d9edc64e94f577103bc253b6f9b852c7a473e8",
         "type": "github"
       },
       "original": {

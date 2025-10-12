@@ -7,7 +7,7 @@
     # app
     kitty
     vscode
-    wechat-uos
+    wechat
     jetbrains-toolbox
     bilibili
     qq

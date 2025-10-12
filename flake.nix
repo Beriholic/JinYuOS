@@ -15,10 +15,6 @@
     };
     minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
     fcitx5-simple-theme.url = "github:Beriholic/fcitx5-simple-theme";
-    firefox-gnome-theme = {
-      url = "github:rafaelmardojai/firefox-gnome-theme";
-      flake = false;
-    };
     nix-wpsoffice-cn.url = "github:Beriholic/nix-wpsoffice-cn";
     nutil.url = "github:Beriholic/nutil";
     geminic.url = "github:Beriholic/geminic";
@@ -32,6 +28,10 @@
     };
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

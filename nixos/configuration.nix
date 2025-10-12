@@ -136,7 +136,7 @@
     users = {
       beri = import ../home-manager/home.nix;
     };
-    backupFileExtension = "hm_bkp";
+    backupFileExtension = "backup";
   };
 
   system.stateVersion = "24.11";

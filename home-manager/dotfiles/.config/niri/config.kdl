@@ -1,3 +1,5 @@
+include "dms/colors.kdl"
+include "dms/layout.kdl"
 // 此配置采用 KDL 格式: https://kdl.dev
 // "/-" 注释掉后面的节点。
 // 完整配置说明请查阅 wiki:
@@ -101,9 +103,7 @@ output "eDP-1" {
 // 更多信息请查阅 wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
-    // 设置窗口周围的间隙（逻辑像素）。
-    gaps 16
-
+    gaps 12
     // 何时在改变焦点时居中列，选项有:
     // - "never"，默认行为，聚焦屏幕外的列将保持在屏幕的左边缘或右边缘。
     // - "always"，聚焦的列将始终居中。
@@ -140,93 +140,18 @@ layout {
     //
     // 或者，您可以使用名为 `draw-border-with-background` 的窗口规则来覆盖它。
 
-    // 您可以更改焦点环的外观。
-    focus-ring {
-        // 取消注释此行以禁用焦点环。
-        // off
-
-        // 环从窗口向外延伸多少逻辑像素。
-        width 4
-
-        // 颜色可以通过多种方式设置:
-        // - CSS 命名颜色: "red"
-        // - RGB 十六进制: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
-        // - CSS 样式表示法: "rgb(255, 127, 0)", rgba(), hsl() 及其他一些。
-
-        // 活动监视器上环的颜色。
-        active-color "#7fc8ff"
-
-        // 非活动监视器上环的颜色。
-        inactive-color "#505050"
-
-        // 您也可以使用渐变。它们优先于纯色。
-        // 渐变的渲染方式与 CSS linear-gradient(angle, from, to) 相同。
-        // 角度与 linear-gradient 中的相同，并且是可选的，
-        // 默认为 180（从上到下的渐变）。
-        // 您可以使用网络上的任何 CSS linear-gradient 工具来设置这些。
-        // 也支持更改颜色空间，更多信息请查看 wiki。
-        //
-        // active-gradient from="#80c8ff" to="#bbddff" angle=45
-
-        // 您还可以相对于工作区的整个视图为渐变着色，
-        // 而不是仅相对于窗口本身。
-        // 为此，请设置 relative-to="workspace-view"。
-        //
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
-    }
-
     // 您也可以添加边框。它类似于焦点环，但始终可见。
     border {
-        // 设置与焦点环相同。
-        // 如果启用边框，您可能想要禁用焦点环。
         off
-
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
-
-        // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
-    // 您可以为窗口启用投影。
     shadow {
-        // 取消注释下一行以启用阴影。
         on
-
-        // 默认情况下，阴影仅绘制在其窗口周围，而不是后面。
-        // 取消注释此设置以使阴影绘制在其窗口后面。
-        //
-        // 请注意，niri 无法知道 CSD 窗口的圆角半径。
-        // 它必须假设窗口有直角，导致在 CSD 圆角内部出现阴影伪影。
-        // 此设置修复了这些伪影。
-        // 
-        // 但是，您可能更想设置 prefer-no-csd 和/或 geometry-corner-radius。
-        // 然后，niri 将知道圆角半径并正确绘制阴影，而无需在窗口后面绘制。
-        // 如果窗口绘制了任何客户端阴影，这些设置也会移除它们。
-        // 
-        // draw-behind-window true
-
-        // 您可以更改阴影的外观。以下值以逻辑像素为单位，
-        // 并与 CSS box-shadow 属性匹配。
-
-        // softness 控制阴影模糊半径。
         softness 30
-
-        // spread 扩展阴影。
         spread 5
-
-        // offset 相对于窗口移动阴影。
         offset x=0 y=5
-
-        // 您也可以更改阴影的颜色和不透明度。
-        color "#0007"
     }
 
-    // Struts 缩小窗口占用的区域，类似于 layer-shell 面板。
-    // 您可以将它们视为一种外部间隙。它们以逻辑像素设置。
-    // 左侧和右侧的 strut 将导致侧面的下一个窗口始终可见。
-    // 顶部和底部的 strut 将简单地添加外部间隙，附加到 layer-shell 面板和常规间隙占用的区域之上。
     struts {
         // left 64
         // right 64
@@ -664,5 +589,3 @@ binds {
 
     Mod+grave { toggle-overview; }
 }
-include "dms/colors.kdl"
-include "dms/layout.kdl"

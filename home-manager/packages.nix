@@ -22,7 +22,7 @@
     nix-search-tv
     meld
     upscayl-ncnn
-
+    zen-browser
     # tools
     (mpv.override { scripts = [ mpvScripts.mpris ]; })
     imv

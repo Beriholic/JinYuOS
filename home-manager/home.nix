@@ -14,7 +14,6 @@ in
     ./niri
     ./dconf.nix
     ./mimelist.nix
-    ./firefox.nix
   ];
 
   nixpkgs = {

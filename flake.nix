@@ -8,10 +8,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-25.05-darwin";
     nix-darwin = {
-      url = "github:lnl7/nix-darwin/nix-darwin-25.05";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
     fcitx5-simple-theme.url = "github:Beriholic/fcitx5-simple-theme";

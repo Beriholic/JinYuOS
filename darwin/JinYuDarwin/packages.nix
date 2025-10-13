@@ -21,7 +21,7 @@
     go-musicfox
     nix-search-tv
     fzf
-    jdk24
+    jdk17
     nixfmt-rfc-style
     nutil
     tldr

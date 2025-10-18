@@ -93,7 +93,7 @@
         JinYuDarwin = nix-darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./darwin/JinYuDarwin ];
+          modules = [ ./nixos/JinYuDarwin ];
         };
       };
     };

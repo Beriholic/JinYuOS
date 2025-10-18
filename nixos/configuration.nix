@@ -13,6 +13,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./hardware.nix
+    ./network.nix
     ./fonts.nix
     ./locate.nix
     ./audio.nix
@@ -88,15 +89,6 @@
         options = "--delete-older-than 3d";
       };
     };
-
-  networking = {
-    networkmanager.enable = true;
-    nameservers = [
-      "8.8.8.8"
-      "8.8.4.4"
-    ];
-
-  };
 
   security.polkit.enable = true;
 

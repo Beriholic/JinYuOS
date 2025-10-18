@@ -6,13 +6,13 @@
   "dankBarTransparency": 1,
   "dankBarWidgetTransparency": 1,
   "popupTransparency": 1,
-  "dockTransparency": 1,
+  "dockTransparency": 0.49,
   "use24HourClock": true,
   "useFahrenheit": false,
   "nightModeEnabled": false,
-  "weatherLocation": "成都市, 四川省",
-  "weatherCoordinates": "30.6598670,104.0633150",
-  "useAutoLocation": false,
+  "weatherLocation": "武侯区, 四川省",
+  "weatherCoordinates": "30.6442131,104.0406683",
+  "useAutoLocation": true,
   "weatherEnabled": true,
   "showLauncherButton": true,
   "showWorkspaceSwitcher": true,
@@ -132,6 +132,10 @@
       "enabled": true
     },
     {
+      "id": "privacyIndicator",
+      "enabled": true
+    },
+    {
       "id": "notificationButton",
       "enabled": true
     },
@@ -173,7 +177,7 @@
   "dockGroupByApp": false,
   "dockOpenOnOverview": false,
   "dockPosition": 1,
-  "dockSpacing": 4,
+  "dockSpacing": 15,
   "dockBottomGap": 0,
   "cornerRadius": 12,
   "notificationOverlayEnabled": false,
@@ -187,7 +191,7 @@
   "dankBarNoBackground": false,
   "dankBarGothCornersEnabled": true,
   "dankBarBorderEnabled": false,
-  "dankBarBorderColor": "surfaceText",
+  "dankBarBorderColor": "primary",
   "dankBarBorderOpacity": 1,
   "dankBarBorderThickness": 1,
   "dankBarPosition": 0,

@@ -192,7 +192,6 @@ environment {
   GSK_RENDERER "ngl"
   ELECTRON_OZONE_PLATFORM_HINT "auto"
   WLR_NO_HARDWARE_CURSORS "1"
-  DMS_DISABLE_MATUGEN "1"
 }
 
 // 取消注释此行以请求客户端在可能的情况下省略其客户端装饰。
@@ -288,9 +287,6 @@ binds {
     Mod+Return { spawn "kitty"; }
     Mod+E { spawn "nautilus"; }
     // Alt+Space { spawn "fuzzel"; }
-    Alt+Space hotkey-overlay-title="Application Launcher" {
-      spawn "dms" "ipc" "call" "spotlight" "toggle";
-    }
 
     Mod+C { close-window; }
 
@@ -506,10 +502,57 @@ binds {
     // 例如移动鼠标或按下任何其他键。
     Mod+Shift+P { power-off-monitors; }
 
-    // Night mode toggle
-    Mod+Shift+N allow-when-locked=true {
-      spawn "dms" "ipc" "call" "night" "toggle";
-    }
 
     Mod+grave { toggle-overview; }
+
+    Alt+Space hotkey-overlay-title="Application Launcher" { 
+        spawn "dms" "ipc" "call" "spotlight" "toggle"; 
+    }
+
+    Mod+V hotkey-overlay-title="Clipboard Manager" { 
+        spawn "dms" "ipc" "call" "clipboard" "toggle"; 
+    }
+
+    Mod+M hotkey-overlay-title="Task Manager" { 
+        spawn "dms" "ipc" "call" "processlist" "toggle"; 
+    }
+
+    Shift+Mod+Comma hotkey-overlay-title="Settings" { 
+        spawn "dms" "ipc" "call" "settings" "toggle"; 
+    }
+
+    Mod+N hotkey-overlay-title="Notification Center" {
+        spawn "dms" "ipc" "call" "notifications" "toggle"; 
+    }
+
+    Mod+Shift+N hotkey-overlay-title="Notepad" {
+      spawn "dms" "ipc" "call" "notepad" "toggle";  
+    }
+    
+    Mod+Alt+L hotkey-overlay-title="Lock Screen" { 
+        spawn "dms" "ipc" "call" "lock" "lock"; 
+    }
+
+    // Audio
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "increment" "3";
+    }
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "decrement" "3";
+    }
+    XF86AudioMute allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "mute";
+    }
+    XF86AudioMicMute allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "micmute";
+    }
+    
+    // BL
+    XF86MonBrightnessUp allow-when-locked=true {
+       spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
+    }
+    XF86MonBrightnessDown allow-when-locked=true {
+       spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
+    }  
 }
+

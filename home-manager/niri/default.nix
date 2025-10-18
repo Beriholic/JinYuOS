@@ -2,8 +2,7 @@
 {
   imports = [
     inputs.niri.homeModules.niri
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
+    ./shell.nix
     ./packages.nix
   ];
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
@@ -12,6 +11,5 @@
       enable = true;
       package = pkgs.niri-unstable;
     };
-    dankMaterialShell.enable = true;
   };
 }

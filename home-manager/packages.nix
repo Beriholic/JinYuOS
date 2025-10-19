@@ -7,7 +7,7 @@
     # app
     kitty
     vscode
-    wechat
+    wechat-uos
     jetbrains-toolbox
     bilibili
     qq
@@ -81,6 +81,7 @@
     minikube
     kubernetes-helm
     kubectl
+    uv
 
     # ide
     jetbrains-toolbox

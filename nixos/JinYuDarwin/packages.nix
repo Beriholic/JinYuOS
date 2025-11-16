@@ -25,7 +25,6 @@
     nixfmt-rfc-style
     nutil
     tldr
-    geminic
     docker
     docker-compose
     colima
@@ -48,9 +47,8 @@
     brews = [ ];
 
     casks = [
-      "apifox"
       "kitty"
-      "wechat"
+      "obs"
     ];
   };
 }

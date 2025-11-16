@@ -16,7 +16,6 @@
     telegram-desktop
     efile
     discord
-    geminic
     hmcl
     lazysql
     nix-search-tv

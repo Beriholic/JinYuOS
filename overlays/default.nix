@@ -16,7 +16,6 @@
     chinese-fonts = inputs.nix-wpsoffice-cn.packages.${final.system}.chinese-fonts;
     quickshell = inputs.quickshell.packages.${final.system}.default;
     nutil = inputs.nutil.packages.${final.system}.default;
-    geminic = inputs.geminic.packages.${final.system}.default;
     zen-browser = inputs.zen-browser.packages."${final.system}".default;
   };
 

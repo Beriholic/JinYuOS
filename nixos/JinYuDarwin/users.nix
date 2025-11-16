@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   system.primaryUser = "beriholic";
   networking.hostName = "JinYuDarwin";
   users = {

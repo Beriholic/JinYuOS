@@ -16,7 +16,6 @@
     fcitx5-simple-theme.url = "github:Beriholic/fcitx5-simple-theme";
     nix-wpsoffice-cn.url = "github:Beriholic/nix-wpsoffice-cn";
     nutil.url = "github:Beriholic/nutil";
-    geminic.url = "github:Beriholic/geminic";
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";

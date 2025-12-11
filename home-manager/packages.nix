@@ -15,7 +15,8 @@
     wpsoffice-cn
     telegram-desktop
     efile
-    discord
+    vesktop
+    geminic
     hmcl
     lazysql
     nix-search-tv
@@ -64,6 +65,7 @@
     ddcutil
     pavucontrol
     nutil
+    ripgrep
 
     # dev
     nodejs

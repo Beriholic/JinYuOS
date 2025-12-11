@@ -83,11 +83,6 @@
       #channel.enable = false;
       registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
       nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-      gc = {
-        automatic = true;
-        dates = "daily";
-        options = "--delete-older-than 3d";
-      };
     };
 
   security.polkit.enable = true;
@@ -107,6 +102,7 @@
     ];
     sessionVariables = {
       LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+      NH_OS_FLAKE = "/etc/nixos";
     };
   };
 

@@ -86,7 +86,7 @@ in
 
   programs = {
     home-manager.enable = true;
-    git = {
+    git.settings.user = {
       enable = true;
       userName = "Beriholic";
       userEmail = "beriholic@petalmail.com";

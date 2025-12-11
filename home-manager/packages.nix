@@ -16,7 +16,6 @@
     telegram-desktop
     efile
     vesktop
-    geminic
     hmcl
     lazysql
     nix-search-tv
@@ -83,8 +82,6 @@
     kubernetes-helm
     kubectl
     uv
-
-    nh
 
     # ide
     jetbrains-toolbox

@@ -14,7 +14,6 @@
     hyprscroller = inputs.hyprscroller.packages.${final.system}.hyprscroller;
     wpsoffice-cn = inputs.nix-wpsoffice-cn.packages.${final.system}.wpsoffice-cn;
     chinese-fonts = inputs.nix-wpsoffice-cn.packages.${final.system}.chinese-fonts;
-    quickshell = inputs.quickshell.packages.${final.system}.default;
     nutil = inputs.nutil.packages.${final.system}.default;
     zen-browser = inputs.zen-browser.packages."${final.system}".default;
   };

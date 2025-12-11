@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     git
@@ -32,6 +32,7 @@
     wget
     fd
     nodejs_24
+    nh
   ];
 
   homebrew = {

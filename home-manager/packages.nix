@@ -82,6 +82,8 @@
     kubectl
     uv
 
+    nh
+
     # ide
     jetbrains-toolbox
   ];

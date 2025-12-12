@@ -6,6 +6,5 @@
   ...
 }:
 {
-  efile = pkgs.callPackage ./efile.nix { };
   hmcl = pkgs.callPackage ./hmcl.nix { };
 }

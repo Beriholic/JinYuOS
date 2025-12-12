@@ -15,7 +15,8 @@
     wpsoffice-cn = inputs.nix-wpsoffice-cn.packages.${final.system}.wpsoffice-cn;
     chinese-fonts = inputs.nix-wpsoffice-cn.packages.${final.system}.chinese-fonts;
     nutil = inputs.nutil.packages.${final.system}.default;
-    zen-browser = inputs.zen-browser.packages."${final.system}".default;
+    zen-browser = inputs.zen-browser.packages.${final.system}.default;
+    efile = inputs.efile.defaultPackage.${final.system};
   };
 
   # When applied, the stable nixpkgs set (declared in the flake inputs) will

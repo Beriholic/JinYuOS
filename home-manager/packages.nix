@@ -82,6 +82,7 @@
     kubernetes-helm
     kubectl
     uv
+    nix-init
 
     # ide
     jetbrains-toolbox

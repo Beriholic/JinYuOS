@@ -33,6 +33,9 @@
     fd
     nodejs_24
     nh
+    localsend
+    nix-init
+    efile
   ];
 
   homebrew = {
@@ -42,10 +45,6 @@
       autoUpdate = false;
       cleanup = "zap";
     };
-
-    taps = [ ];
-
-    brews = [ ];
 
     casks = [
       "kitty"

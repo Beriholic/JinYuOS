@@ -23,6 +23,7 @@
       waylandFrontend = true;
       addons = with pkgs; [
         fcitx5-gtk
+        fcitx5-rime
         qt6Packages.fcitx5-chinese-addons
         inputs.fcitx5-simple-theme.defaultPackage.${pkgs.system}
       ];

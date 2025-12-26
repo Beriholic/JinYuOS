@@ -24,7 +24,7 @@
     jdk17
     nixfmt-rfc-style
     nutil
-    tldr
+    tlrc
     docker
     docker-compose
     colima
@@ -36,6 +36,8 @@
     localsend
     nix-init
     efile
+    rustup
+    atool
   ];
 
   homebrew = {
@@ -47,7 +49,8 @@
     };
 
     casks = [
-      "kitty"
+      "ghostty"
+      "termius"
       "obs"
     ];
   };

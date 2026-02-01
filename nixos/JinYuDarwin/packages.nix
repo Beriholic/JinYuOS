@@ -15,7 +15,6 @@
     uv
     zoxide
     neovim
-    ripgrep
     bat
     eza
     go-musicfox
@@ -38,15 +37,29 @@
     efile
     rustup
     atool
+    neovide
   ];
 
   homebrew = {
     enable = true;
-
     onActivation = {
       autoUpdate = false;
       cleanup = "zap";
     };
+
+    taps = [
+      "steipete/tap"
+      "yakitrak/yakitrak"
+    ];
+
+    brews = [
+      "steipete/tap/remindctl"
+      "steipete/tap/summarize"
+      "yakitrak/yakitrak/obsidian-cli"
+      "gh"
+      "ripgrep"
+      "gog"
+    ];
 
     casks = [
       "ghostty"

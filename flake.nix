@@ -27,7 +27,6 @@
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.dgop.follows = "dgop";
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";

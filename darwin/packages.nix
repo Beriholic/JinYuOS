@@ -58,7 +58,6 @@
       "yakitrak/yakitrak/obsidian-cli"
       "gh"
       "ripgrep"
-      "gog"
     ];
 
     casks = [

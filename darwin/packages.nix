@@ -20,14 +20,14 @@
     go-musicfox
     nix-search-tv
     fzf
-    jdk17
+    jdk21
     nixfmt-rfc-style
     nutil
     tlrc
     docker
     docker-compose
     colima
-    ranger
+    yazi
     wget
     fd
     nodejs_24
@@ -58,11 +58,11 @@
       "yakitrak/yakitrak/obsidian-cli"
       "gh"
       "ripgrep"
+      "mole"
     ];
 
     casks = [
       "ghostty"
-      "termius"
       "obs"
     ];
   };

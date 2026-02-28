@@ -22,11 +22,9 @@
     fzf
     jdk21
     nixfmt-rfc-style
-    nutil
     tlrc
     docker
     docker-compose
-    colima
     yazi
     wget
     fd
@@ -34,7 +32,6 @@
     nh
     localsend
     nix-init
-    efile
     rustup
     atool
     neovide

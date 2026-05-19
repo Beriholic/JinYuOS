@@ -4,8 +4,8 @@
   ...
 }:
 let
-  username = "beri";
-  homeDirectory = "/home/beri";
+  username = "beriholic";
+  homeDirectory = "/home/beriholic";
 in
 {
   imports = [

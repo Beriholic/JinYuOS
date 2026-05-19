@@ -107,7 +107,7 @@
   };
 
   users = {
-    users.beri = {
+    users.beriholic = {
       initialPassword = "114514";
       isNormalUser = true;
       extraGroups = [
@@ -122,7 +122,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      beri = import ../home-manager/home.nix;
+      beriholic = import ../home-manager/home.nix;
     };
     backupFileExtension = "backup";
   };

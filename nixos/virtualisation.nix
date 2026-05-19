@@ -6,6 +6,6 @@
     # libvirtd.enable = true;
     # spiceUSBRedirection.enable = true;
   };
-  # users.groups.libvirtd.members = [ "beri" ];
+  # users.groups.libvirtd.members = [ "beriholic" ];
   environment.systemPackages = with pkgs; [ docker-compose ];
 }

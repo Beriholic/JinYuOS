@@ -10,7 +10,7 @@
     mihomo = {
       enable = true;
       tunMode = true;
-      configFile = "/home/beri/.config/mihomo/config.yaml";
+      configFile = "/home/beriholic/.config/mihomo/config.yaml";
       webui = pkgs.metacubexd;
     };
   };

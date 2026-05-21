@@ -1,0 +1,99 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "cli_default_open_behavior": "existing_window",
+  "agent_servers": {
+    
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "soft_wrap": "editor_width",
+  "snippet_sort_order": "inline",
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
+  "agent": {
+    "dock": "right",
+    "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "openai-subscribed",
+      "model": "gpt-5.4-mini"
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "language_models": {
+    "openai_compatible": {
+      "MiniMax": {
+        "api_url": "https://api.minimaxi.com/v1",
+        "available_models": [
+          {
+            "name": "MiniMax-M2.5",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true
+            }
+          }
+        ]
+      }
+    }
+  },
+  "vim_mode": true,
+  "base_keymap": "VSCode",
+  "relative_line_numbers": "enabled",
+  "gutter": {
+    "line_numbers": true
+  },
+  "buffer_font_family": "Maple Mono NF CN",
+  "file_types": {
+    "go": [
+      "*.go"
+    ]
+  },
+  "show_edit_predictions": true,
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 16,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "dark",
+    "light": "macOS Classic Light",
+    "dark": "One Dark Pro",
+  },
+}

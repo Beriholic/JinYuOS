@@ -11,6 +11,7 @@
     eslint
     jdk17
     nixfmt
+    statix
     python312
     minikube
     kubernetes-helm

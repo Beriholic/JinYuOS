@@ -95,7 +95,7 @@
       curl
       wget
       fastfetch
-      nixfmt-rfc-style
+      nixfmt
       upower
       kitty
       starship

@@ -7,7 +7,7 @@
     # app
     kitty
     vscode
-    wechat-uos
+    wechat
     jetbrains-toolbox
     bilibili
     qq
@@ -41,6 +41,7 @@
     starship
     btop
     pciutils
+    papirus-icon-theme
     usbutils
     btop
     ranger
@@ -76,7 +77,7 @@
     typescript
     eslint
     jdk17
-    nixfmt-rfc-style
+    nixfmt
     python312
     minikube
     kubernetes-helm

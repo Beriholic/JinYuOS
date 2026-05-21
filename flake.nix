@@ -24,8 +24,8 @@
       url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dankMaterialShell = {
-      url = "github:AvengeMedia/DankMaterialShell";
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
@@ -34,6 +34,10 @@
     };
     efile = {
       url = "github:Beriholic/efile";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nh = {
+      url = "github:nix-community/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

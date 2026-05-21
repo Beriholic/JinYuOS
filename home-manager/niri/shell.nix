@@ -1,12 +1,21 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
-    inputs.dankMaterialShell.homeModules."dank-material-shell"
-    inputs.dankMaterialShell.homeModules.niri
+    inputs.niri.homeModules.niri
+    inputs.dms.homeModules.dank-material-shell
+    inputs.dms.homeModules.niri
   ];
 
   programs = {
-    dankMaterialShell.enable = true;
-    niri.settings.layout.border.enable = false;
+    dank-material-shell = {
+      enable = true;
+      enableSystemMonitoring = true;
+      dgop.package = inputs.dgop.packages.${pkgs.system}.default;
+      niri = {
+        includes.enable = false;
+        enableKeybinds = false; # Sets static preset keybinds
+        enableSpawn = false; # Auto-start DMS with niri, if enabled
+      };
+    };
   };
 }

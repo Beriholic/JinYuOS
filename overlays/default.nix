@@ -11,19 +11,19 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
-    hyprscroller = inputs.hyprscroller.packages.${final.system}.hyprscroller;
-    wpsoffice-cn = inputs.nix-wpsoffice-cn.packages.${final.system}.wpsoffice-cn;
-    chinese-fonts = inputs.nix-wpsoffice-cn.packages.${final.system}.chinese-fonts;
-    nutil = inputs.nutil.packages.${final.system}.default;
-    zen-browser = inputs.zen-browser.packages.${final.system}.default;
-    efile = inputs.efile.defaultPackage.${final.system};
+    hyprscroller = inputs.hyprscroller.packages.${final.stdenv.hostPlatform.system}.hyprscroller;
+    wpsoffice-cn = inputs.nix-wpsoffice-cn.packages.${final.stdenv.hostPlatform.system}.wpsoffice-cn;
+    chinese-fonts = inputs.nix-wpsoffice-cn.packages.${final.stdenv.hostPlatform.system}.chinese-fonts;
+    nutil = inputs.nutil.packages.${final.stdenv.hostPlatform.system}.default;
+    zen-browser = inputs.zen-browser.packages.${final.stdenv.hostPlatform.system}.default;
+    efile = inputs.efile.defaultPackage.${final.stdenv.hostPlatform.system};
   };
 
   # When applied, the stable nixpkgs set (declared in the flake inputs) will
   # be accessible through 'pkgs.unstable'
   stable-packages = final: _prev: {
     stable = import inputs.nixpkgs-stable {
-      system = final.system;
+      system = final.stdenv.hostPlatform.system;
       config.allowUnfree = true;
     };
   };

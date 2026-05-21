@@ -74,7 +74,7 @@
         JinYu = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs system; };
           modules = [
-            ./nixos/JinYu
+            ./hosts/JinYu
             inputs.minegrub-world-sel-theme.nixosModules.default
           ];
         };

@@ -1,6 +1,6 @@
 {
   imports = [
-    ../configuration.nix
+    ../core.nix
     ./graphic.nix
     ./hardware-configuration.nix
   ];

@@ -12,17 +12,17 @@
   # You can import other NixOS modules here
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./hardware.nix
-    ./network.nix
-    ./fonts.nix
-    ./locate.nix
-    ./audio.nix
-    ./virtualisation.nix
-    ./programs.nix
-    ./services.nix
-    ./steam.nix
-    ./mihomo.nix
-    ./nix-ld.nix
+    ../modules/nixos/hardware.nix
+    ../modules/nixos/network.nix
+    ../modules/nixos/fonts.nix
+    ../modules/nixos/locate.nix
+    ../modules/nixos/audio.nix
+    ../modules/nixos/virtualisation.nix
+    ../modules/nixos/programs.nix
+    ../modules/nixos/services.nix
+    ../modules/nixos/steam.nix
+    ../modules/nixos/mihomo.nix
+    ../modules/nixos/nix-ld.nix
   ];
 
   boot = {
@@ -122,7 +122,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      beriholic = import ../home-manager/home.nix;
+      beriholic = import ../home/home.nix;
     };
     backupFileExtension = "backup";
   };

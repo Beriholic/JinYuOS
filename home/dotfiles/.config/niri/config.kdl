@@ -500,7 +500,7 @@ binds {
 
     // 关闭监视器电源。要重新打开它们，请执行任何输入操作，
     // 例如移动鼠标或按下任何其他键。
-    Mod+Shift+P { power-off-monitors; }
+    // Mod+Shift+P { power-off-monitors; }
 
 
     Mod+grave { toggle-overview; }

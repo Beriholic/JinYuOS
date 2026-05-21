@@ -3,4 +3,17 @@
 {
   # List your module files here
   # my-module = import ./my-module.nix;
+  imports = [
+    ./hardware.nix
+    ./network.nix
+    ./fonts.nix
+    ./locate.nix
+    ./audio.nix
+    ./virtualisation.nix
+    ./programs.nix
+    ./services.nix
+    ./steam.nix
+    ./mihomo.nix
+    ./nix-ld.nix
+  ];
 }

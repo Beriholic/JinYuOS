@@ -1,0 +1,27 @@
+{ pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+    git
+    lazygit
+    lazydocker
+    bat
+    duf
+    btop
+    zoxide
+    eza
+    fzf
+    tlrc
+    yazi
+    wget
+    fd
+    localsend
+    atool
+    ripgrep
+    gh
+    lazyssh
+    nix-search-tv
+    nh
+    go-musicfox
+    chsrc
+  ];
+}

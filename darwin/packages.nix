@@ -20,8 +20,7 @@
     go-musicfox
     nix-search-tv
     fzf
-    jdk21
-    nixfmt-rfc-style
+    nixfmt
     tlrc
     docker
     docker-compose
@@ -34,7 +33,9 @@
     nix-init
     rustup
     atool
-    neovide
+    ripgrep
+    gh
+    lazyssh
   ];
 
   homebrew = {
@@ -45,17 +46,10 @@
     };
 
     taps = [
-      "steipete/tap"
-      "yakitrak/yakitrak"
     ];
 
     brews = [
-      "steipete/tap/remindctl"
-      "steipete/tap/summarize"
-      "yakitrak/yakitrak/obsidian-cli"
-      "gh"
-      "ripgrep"
-      "mole"
+      "domcyrus/rustnet/rustnet"
     ];
 
     casks = [

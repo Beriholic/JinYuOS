@@ -78,13 +78,6 @@
             inputs.minegrub-world-sel-theme.nixosModules.default
           ];
         };
-        JinYuLite = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs system; };
-          modules = [
-            ./nixos/JinYuLite
-            inputs.minegrub-world-sel-theme.nixosModules.default
-          ];
-        };
       };
     };
 }

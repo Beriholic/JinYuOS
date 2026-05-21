@@ -1,0 +1,45 @@
+{ pkgs, ... }:
+{
+  home.packages = with pkgs; [
+    (mpv.override { scripts = [ mpvScripts.mpris ]; })
+    imv
+    bat
+    fd
+    eza
+    ripgrep
+    fzf
+    jq
+    gojq
+    acpi
+    ffmpeg
+    libnotify
+    zip
+    unzip
+    glib
+    starship
+    btop
+    pciutils
+    papirus-icon-theme
+    usbutils
+    ranger
+    duf
+    xdg-user-dirs
+    xorg.xrdb
+    xorg.xprop
+    lazygit
+    zoxide
+    typos-lsp
+    cmake
+    gnumake
+    tlrc
+    go-musicfox
+    lazydocker
+    pandoc
+    neovide
+    upx
+    bc
+    ddcutil
+    pavucontrol
+    nutil
+  ];
+}

@@ -18,5 +18,6 @@
     meld
     upscayl-ncnn
     zen-browser
+    zed-editor
   ];
 }

@@ -13,7 +13,7 @@
     ./programs.nix
     ./services.nix
     ./steam.nix
-    ./mihomo.nix
+    ./singbox.nix
     ./nix-ld.nix
   ];
 }

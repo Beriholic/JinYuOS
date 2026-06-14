@@ -7,4 +7,5 @@
 }:
 {
   hmcl = pkgs.callPackage ./hmcl.nix { };
+  sing-box = pkgs.callPackage ./singbox.nix { };
 }

@@ -7,8 +7,13 @@
   copyDesktopItems,
   imagemagick,
   jre,
-  xorg,
   glib,
+  libxcursor,
+  libxext,
+  libxrandr,
+  libxtst,
+  libx11,
+  libxxf86vm,
   libGL,
   glfw,
   openal,
@@ -81,12 +86,12 @@ stdenv.mkDerivation (finalAttrs: {
           vulkan-loader
         ]
         ++ lib.optionals stdenv.hostPlatform.isLinux [
-          xorg.libX11
-          xorg.libXxf86vm
-          xorg.libXext
-          xorg.libXcursor
-          xorg.libXrandr
-          xorg.libXtst
+          libx11
+          libxxf86vm
+          libxext
+          libxcursor
+          libxrandr
+          libxtst
           libpulseaudio
           wayland
           alsa-lib

@@ -24,8 +24,8 @@
     ranger
     duf
     xdg-user-dirs
-    xorg.xrdb
-    xorg.xprop
+    xrdb
+    xprop
     lazygit
     zoxide
     typos-lsp

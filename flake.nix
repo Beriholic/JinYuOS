@@ -8,10 +8,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-darwin = {
-      url = "github:nix-darwin/nix-darwin/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
     fcitx5-simple-theme.url = "github:Beriholic/fcitx5-simple-theme";
     nix-wpsoffice-cn.url = "github:Beriholic/nix-wpsoffice-cn";
@@ -45,7 +41,6 @@
     {
       self,
       nixpkgs,
-      nix-darwin,
       home-manager,
       ...
     }@inputs:
@@ -53,10 +48,7 @@
       inherit (self) outputs;
       systems = [
         "aarch64-linux"
-        "i686-linux"
         "x86_64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
       ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
       system = "x86_64-linux";

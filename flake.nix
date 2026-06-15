@@ -15,7 +15,6 @@
     minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
     fcitx5-simple-theme.url = "github:Beriholic/fcitx5-simple-theme";
     nix-wpsoffice-cn.url = "github:Beriholic/nix-wpsoffice-cn";
-    nutil.url = "github:Beriholic/nutil";
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,10 +29,6 @@
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    efile = {
-      url = "github:Beriholic/efile";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nh = {

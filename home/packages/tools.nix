@@ -40,6 +40,5 @@
     bc
     ddcutil
     pavucontrol
-    nutil
   ];
 }

@@ -10,7 +10,6 @@
     obs-studio
     wpsoffice-cn
     telegram-desktop
-    efile
     vesktop
     hmcl
     lazysql

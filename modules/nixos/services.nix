@@ -10,12 +10,7 @@
     displayManager.sessionPackages = [ pkgs.niri-unstable ];
     desktopManager.gnome.enable = true;
     displayManager.gdm.enable = true;
-    displayManager.gdm.wayland = true;
     flatpak.enable = true;
     sysprof.enable = true;
-
-    xserver = {
-      enable = true;
-    };
   };
 }

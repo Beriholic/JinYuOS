@@ -11,7 +11,6 @@
     wpsoffice-cn
     telegram-desktop
     vesktop
-    hmcl
     lazysql
     nix-search-tv
     meld

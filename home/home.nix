@@ -14,6 +14,7 @@ in
     ./niri
     ./dconf.nix
     ./mimelist.nix
+    ./xmcl.nix
   ];
 
 

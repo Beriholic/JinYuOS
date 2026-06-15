@@ -405,6 +405,7 @@
         "nix-wpsoffice-cn": "nix-wpsoffice-cn",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-stable": "nixpkgs-stable_2",
+        "xmcl": "xmcl",
         "zen-browser": "zen-browser"
       }
     },
@@ -435,6 +436,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "xmcl": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1781526513,
+        "narHash": "sha256-YkUWWTq3VVxR0PoDfHPi1vly81EWkECH5FQSu/Ddpp4=",
+        "owner": "x45iq",
+        "repo": "xmcl-nix",
+        "rev": "f85bd295ba4d470b668c43a0db395dc6d430e3d9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "x45iq",
+        "repo": "xmcl-nix",
         "type": "github"
       }
     },

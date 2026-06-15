@@ -6,5 +6,4 @@
   ...
 }:
 {
-  sing-box = pkgs.callPackage ./singbox.nix { };
 }

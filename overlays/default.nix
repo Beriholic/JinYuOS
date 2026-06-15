@@ -11,6 +11,7 @@ in
   # Each sub-file is an overlay: final: prev: { ... }
   modifications = lib.composeManyExtensions [
     (import ./bun.nix)
+    (import ./sing-box.nix)
     (import ./inputs.nix { inherit inputs; })
   ];
 

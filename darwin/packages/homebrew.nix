@@ -6,13 +6,6 @@
       cleanup = "zap";
     };
 
-    taps = [
-    ];
-
-    brews = [
-      "domcyrus/rustnet/rustnet"
-    ];
-
     casks = [
       "ghostty"
       "obs"

@@ -1,10 +1,9 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    statix
     go
     thrift
-    bun
-    pnpm
     uv
     neovim
     nixfmt

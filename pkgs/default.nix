@@ -6,5 +6,4 @@
   ...
 }:
 {
-  hmcl = pkgs.callPackage ./hmcl.nix { };
 }

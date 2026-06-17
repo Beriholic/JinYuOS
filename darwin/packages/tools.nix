@@ -24,5 +24,6 @@
     go-musicfox
     chsrc
     sing-box
+    surge
   ];
 }

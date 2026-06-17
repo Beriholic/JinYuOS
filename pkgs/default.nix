@@ -6,4 +6,5 @@
   ...
 }:
 {
+  surge = pkgs.callPackage ./surge.nix { };
 }

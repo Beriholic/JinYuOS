@@ -23,5 +23,6 @@
     nh
     go-musicfox
     chsrc
+    sing-box
   ];
 }

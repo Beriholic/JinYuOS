@@ -1,0 +1,3 @@
+{ inputs, ... }:
+final: _prev: {
+}

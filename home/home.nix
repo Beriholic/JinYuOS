@@ -15,6 +15,7 @@ in
     ./dconf.nix
     ./mimelist.nix
     ./xmcl.nix
+    ./neovim
   ];
 
 

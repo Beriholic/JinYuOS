@@ -2,8 +2,8 @@
 {
   home.packages = with pkgs; [
     kitty
+    wechat
     vscode
-    # wechat-uos
     jetbrains-toolbox
     bilibili
     qq

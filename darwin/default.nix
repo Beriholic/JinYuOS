@@ -1,6 +1,7 @@
 {
   imports = [
     ./configuration.nix
+    ./home.nix
     ./packages.nix
     ./users.nix
     ./system.nix

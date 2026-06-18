@@ -4,6 +4,8 @@
   networking.hostName = "JinYuDarwin";
   users = {
     users.beriholic = {
+      name = "beriholic";
+      home = "/Users/beriholic";
       shell = pkgs.fish;
       ignoreShellProgramCheck = true;
     };

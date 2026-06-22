@@ -12,7 +12,18 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lazyvim.url = "github:pfassina/lazyvim-nix";
+    nix4lazyvim = {
+      url = "github:Gandharikos/nix4lazyvim";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
   };
 
   outputs =

@@ -14,7 +14,7 @@ in
     ./dconf.nix
     ./mimelist.nix
     ./xmcl.nix
-    ../../../libs/nvim
+    ./libs.nix
   ];
 
   home = {

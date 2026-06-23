@@ -1,6 +1,6 @@
 {
   imports = [
-    ../../../libs/nvim
+    ../libs.nix
   ];
 
   home.stateVersion = "26.05";

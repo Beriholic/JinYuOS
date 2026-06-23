@@ -97,7 +97,7 @@
           };
 
           modules = [
-            ./systems/nixos/JinYu
+            ./systems/nixos/hosts/JinYu
             inputs.minegrub-world-sel-theme.nixosModules.default
           ];
         };

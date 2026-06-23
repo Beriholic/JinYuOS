@@ -10,8 +10,6 @@ in
   # Per-package modifications, split into sub-files for readability.
   # Each sub-file is an overlay: final: prev: { ... }
   modifications = lib.composeManyExtensions [
-    (import ./bun.nix)
-    (import ./sing-box.nix)
     (import ./inputs.nix { inherit inputs; })
   ];
 

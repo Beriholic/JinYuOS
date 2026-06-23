@@ -1,5 +1,4 @@
 {
-  outputs,
   pkgs,
   ...
 }:
@@ -15,10 +14,8 @@ in
     ./dconf.nix
     ./mimelist.nix
     ./xmcl.nix
-    ./neovim
+    ../../../libs/nvim
   ];
-
-
 
   home = {
     inherit username homeDirectory;

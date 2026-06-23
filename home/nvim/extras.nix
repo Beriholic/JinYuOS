@@ -12,7 +12,9 @@
     formatting.prettier.enable = true;
     linting.eslint.enable = true;
 
-    util.rest.enable = true;
+    util = {
+      rest.enable = true;
+    };
 
     lang = {
       docker.enable = true;

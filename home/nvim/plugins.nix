@@ -1,8 +1,6 @@
-{ pkgs, ... }:
+# { pkgs, ... }:
 {
-  programs.lazyvim.extraPlugins =
-    with pkgs.vimPlugins;
-    [
-      diffview-nvim
-    ];
+  # programs.lazyvim.extraPlugins = with pkgs.vimPlugins; [
+  #
+  # ];
 }

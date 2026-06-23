@@ -114,7 +114,7 @@
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      beriholic = import ../home/home.nix;
+      beriholic = import ./home/home.nix;
     };
     backupFileExtension = "backup";
   };

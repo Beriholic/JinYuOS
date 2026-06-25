@@ -7,6 +7,7 @@
       snacks_picker.enable = true;
       outline.enable = true;
       illuminate.enable = true;
+      inc-rename.enable = true;
     };
 
     formatting.prettier.enable = true;

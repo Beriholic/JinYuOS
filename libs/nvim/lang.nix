@@ -17,8 +17,13 @@
       typescript.enable = true;
       yaml.enable = true;
       python.enable = true;
+      clangd.enable = true;
+      java.enable = true;
+      kotlin.enable = true;
     };
     extraPackages = with pkgs; [
+      jdt-language-server
+      kotlin-language-server
       statix
     ];
   };

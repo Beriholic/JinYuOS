@@ -6,9 +6,14 @@
       cleanup = "zap";
     };
 
+    taps = [
+      "jipika/waifux"
+    ];
+
     casks = [
       "ghostty"
       "obs"
+      "jipika/waifux/waifux"
     ];
   };
 }

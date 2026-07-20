@@ -7,7 +7,6 @@
     docker-compose
     nodejs_24
     nix-init
-    rustc
-    cargo
+    rustup
   ];
 }

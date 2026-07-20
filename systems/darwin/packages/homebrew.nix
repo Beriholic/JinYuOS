@@ -5,13 +5,5 @@
       autoUpdate = false;
       cleanup = "zap";
     };
-
-    taps = [
-    ];
-
-    casks = [
-      "ghostty"
-      "obs"
-    ];
   };
 }

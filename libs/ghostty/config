@@ -1,0 +1,14 @@
+#background-opacity = 0.8
+keybind = alt+backspace=text:\x1b\x7f
+keybind = shift+enter=text:\n
+
+#custom-shader = ./shaders/mnoise.glsl
+#custom-shader = ./shaders/water_ripple.glsl
+#custom-shader = ./shaders/bloom.glsl
+custom-shader = ./shaders/smear_cursor_blocks.glsl
+
+theme = Catppuccin Mocha
+
+font-family = Maple Mono NF CN
+font-size = 13
+

@@ -3,5 +3,6 @@
     ../../libs/nvim
     ../../libs/starship
     ../../libs/rime
+    ../../libs/ghostty
   ];
 }

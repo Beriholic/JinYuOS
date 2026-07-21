@@ -12,7 +12,17 @@
   # You can import other NixOS modules here
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ../../modules/nixos
+    ./hardware.nix
+    ./network.nix
+    ./fonts.nix
+    ./locate.nix
+    ./audio.nix
+    ./virtualisation.nix
+    ./programs.nix
+    ./services.nix
+    ./steam.nix
+    ./singbox.nix
+    ./nix-ld.nix
   ];
 
   boot = {

@@ -5,8 +5,15 @@
     uv
     docker
     docker-compose
-    nodejs_24
     nix-init
     rustup
+    fnm
+    unar
   ];
+
+  homebrew = {
+    brews = [
+      "python@3.13"
+    ];
+  };
 }

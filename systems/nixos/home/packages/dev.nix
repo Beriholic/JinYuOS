@@ -17,6 +17,5 @@
     kubernetes-helm
     kubectl
     uv
-    nix-init
   ];
 }

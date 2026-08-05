@@ -26,5 +26,6 @@
     chsrc
     sing-box
     surge
+    python3Packages.weasyprint
   ];
 }

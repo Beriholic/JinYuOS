@@ -5,7 +5,6 @@
     uv
     docker
     docker-compose
-    nix-init
     rustup
     fnm
     unar

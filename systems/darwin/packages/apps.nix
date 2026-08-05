@@ -4,7 +4,6 @@
     ghostty-bin
     qbittorrent
     keka
-    zed-editor
     orbstack
     qq
     wechat
@@ -28,6 +27,7 @@
       "feishu"
       "vesktop"
       "dingtalk"
+      "zed"
     ];
   };
 }

@@ -15,11 +15,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    minegrub-world-sel-theme.url = "github:Lxtharia/minegrub-world-sel-theme";
+    minegrub-world-sel-theme = {
+      url = "github:Lxtharia/minegrub-world-sel-theme";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    fcitx5-simple-theme.url = "github:Beriholic/fcitx5-simple-theme";
+    fcitx5-simple-theme = {
+      url = "github:Beriholic/fcitx5-simple-theme";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    nix-wpsoffice-cn.url = "github:Beriholic/nix-wpsoffice-cn";
+    nix-wpsoffice-cn = {
+      url = "github:Beriholic/nix-wpsoffice-cn";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     niri = {
       url = "github:sodiboo/niri-flake";

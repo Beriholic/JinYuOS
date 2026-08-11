@@ -10,6 +10,7 @@
     google-chrome
     obsidian
     mos
+    qlmarkdown
   ];
 
   homebrew = {
@@ -28,6 +29,8 @@
       "vesktop"
       "dingtalk"
       "zed"
+      "stablyai/orca/orca"
+      "finetune"
     ];
   };
 }

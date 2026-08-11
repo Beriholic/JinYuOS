@@ -5,6 +5,7 @@
     uv
     docker
     docker-compose
+    rust-analyzer
     rustup
     fnm
     unar

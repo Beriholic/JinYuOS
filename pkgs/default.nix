@@ -7,5 +7,4 @@
 }:
 {
   go-musicfox = pkgs.callPackage ./go-musicfox.nix { };
-  surge = pkgs.callPackage ./surge.nix { };
 }

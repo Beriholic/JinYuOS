@@ -7,14 +7,14 @@
 
 buildGoModule (finalAttrs: {
   pname = "go-musicfox";
-  version = "4.8.5";
+  version = "5.1.0";
   __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "go-musicfox";
     repo = "go-musicfox";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-fgzj1L/oIVMCfiWaB83e9GEMyn6lfFSzF/hqq+i+5I0=";
+    hash = "sha256-gM3gnUbevPSa2gmiC0DGYPrVRtwHF2TQB0Hu99ISVU8=";
   };
   vendorHash = null;
 

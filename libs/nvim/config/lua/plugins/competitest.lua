@@ -7,9 +7,9 @@ return {
 		evaluate_template_modifiers = true,
 		-- 需要时在这里覆盖其他配置
 		-- 例如:
-		-- compile_command = {
-		-- 	cpp = { exec = "g++", args = { "-O2", "-std=c++17", "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
-		-- },
+		compile_command = {
+			cpp = { exec = "g++", args = { "-O2", "-std=c++17", "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
+		},
 	},
 	keys = {
 		{ "<leader>acp", "<cmd>CompetiTest run<cr>", desc = "CompetiTest: Run testcases" },

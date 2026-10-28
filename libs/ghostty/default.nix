@@ -1,6 +1,5 @@
 let
   files = [
-    "shaders"
     "config"
   ];
   path = ".config/ghostty";

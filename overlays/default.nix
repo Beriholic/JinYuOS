@@ -11,6 +11,7 @@ in
   # Each sub-file is an overlay: final: prev: { ... }
   modifications = lib.composeManyExtensions [
     (import ./inputs.nix { inherit inputs; })
+    (import ./ghostty.nix)
   ];
 
   # When applied, the stable nixpkgs set (declared in the flake inputs) will

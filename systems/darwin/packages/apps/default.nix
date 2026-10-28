@@ -29,7 +29,6 @@
       "vesktop"
       "dingtalk"
       "zed"
-      "stablyai/orca/orca"
       "finetune"
     ];
   };

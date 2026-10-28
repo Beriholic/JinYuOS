@@ -3,14 +3,14 @@
   # 启用 sing-box 服务
   services.sing-box = {
     enable = true;
-    package = pkgs.sing-box; # 或指定版本 pkgs.sing-box_1_13_12
+    package = pkgs.pre.sing-box;
   };
 
   systemd.services.sing-box.serviceConfig = {
     ExecStartPre = lib.mkForce [ ];
     ExecStart = lib.mkForce [
       ""
-      "${lib.getExe pkgs.sing-box} run -c /etc/sing-box/config.json"
+      "${lib.getExe pkgs.pre.sing-box} run -c /etc/sing-box/config.json"
     ];
   };
 

@@ -427,6 +427,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-pre": {
+      "locked": {
+        "lastModified": 1793110635,
+        "narHash": "sha256-dhoW6VgFWlaodSY5jrBn+CF2FLmaUvDVgM7+C7T2+NM=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "31ecbaca1bdefa45dffc409f0250bd8039ea0010",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1782847189,
@@ -473,6 +489,7 @@
         "nix-wpsoffice-cn": "nix-wpsoffice-cn",
         "nix4lazyvim": "nix4lazyvim",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-pre": "nixpkgs-pre",
         "nixpkgs-stable": "nixpkgs-stable_2",
         "xmcl": "xmcl",
         "zen-browser": "zen-browser"

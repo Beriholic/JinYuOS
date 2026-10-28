@@ -24,7 +24,7 @@
     nh
     go-musicfox
     chsrc
-    sing-box
+    pkgs.pre.sing-box
     python3Packages.weasyprint
   ];
 }

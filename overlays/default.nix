@@ -14,9 +14,18 @@ in
   ];
 
   # When applied, the stable nixpkgs set (declared in the flake inputs) will
-  # be accessible through 'pkgs.unstable'
+  # be accessible through 'pkgs.stable'
   stable-packages = final: _prev: {
     stable = import inputs.nixpkgs-stable {
+      system = final.stdenv.hostPlatform.system;
+      config.allowUnfree = true;
+    };
+  };
+
+  # When applied, the nixpkgs-pre set (declared in the flake inputs) will
+  # be accessible through 'pkgs.pre'
+  pre-packages = final: _prev: {
+    pre = import inputs.nixpkgs-pre {
       system = final.stdenv.hostPlatform.system;
       config.allowUnfree = true;
     };

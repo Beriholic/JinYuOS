@@ -1,5 +1,6 @@
 background-opacity = 0.88
 background-blur = true
+macos-titlebar-style = tabs
 
 keybind = alt+backspace=text:\x1b\x7f
 keybind = shift+enter=text:\n

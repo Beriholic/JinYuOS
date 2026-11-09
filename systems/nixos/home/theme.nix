@@ -20,6 +20,7 @@ in
       XCURSOR_SIZE = "24";
     };
     pointerCursor = {
+      enable = true;
       package = cursor-package;
       name = cursor-theme;
       size = 24;

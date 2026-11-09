@@ -43,7 +43,8 @@
     keyutils.lib
     libGL
     libGLU
-    libappindicator-gtk2
+    libappindicator-gtk3
+    libayatana-appindicator
     libcaca
     libcanberra
     libcap
@@ -57,7 +58,7 @@
     libjpeg
     libmikmod
     libogg
-    libpng12
+    libpng
     libpulseaudio
     librsvg
     libsamplerate

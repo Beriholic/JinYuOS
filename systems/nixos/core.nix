@@ -61,6 +61,9 @@
     ];
     config = {
       allowUnfree = true;
+      # gtk2 在新版 nixpkgs 里被标记为 broken（上游计划 27.05 移除），
+      # 求值阶段会直接拒绝；WPS 仍然依赖它，这里只降级成警告。
+      problems.handlers."gtk+".broken = "warn";
     };
   };
 
@@ -70,7 +73,10 @@
     in
     {
       settings = {
-        experimental-features = "nix-command flakes";
+        experimental-features = [
+          "nix-command"
+          "flakes"
+        ];
         flake-registry = "";
         nix-path = config.nix.nixPath;
         substituters = [

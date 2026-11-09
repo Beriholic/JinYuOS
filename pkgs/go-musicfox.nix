@@ -3,6 +3,10 @@
   buildGoModule,
   fetchFromGitHub,
   nix-update-script,
+  pkg-config,
+  flac,
+  stdenv,
+  alsa-lib,
 }:
 
 buildGoModule (finalAttrs: {
@@ -17,6 +21,12 @@ buildGoModule (finalAttrs: {
     hash = "sha256-gM3gnUbevPSa2gmiC0DGYPrVRtwHF2TQB0Hu99ISVU8=";
   };
   vendorHash = null;
+
+  # goflac 和 oto/v3 通过 cgo 在构建时探测 libFLAC / ALSA（Linux 上走 pkg-config），
+  # 缺了这些就会报 `exec: "pkg-config": executable file not found in $PATH`。
+  # darwin 上 oto 直接用 AudioToolbox，不需要 alsa-lib。
+  nativeBuildInputs = [ pkg-config ];
+  buildInputs = [ flac ] ++ lib.optionals stdenv.hostPlatform.isLinux [ alsa-lib ];
 
   # The avcore package's TestMain calls NSApplication.Run(), which needs a
   # live WindowServer. Nix's darwin sandbox can't provide one, so go test

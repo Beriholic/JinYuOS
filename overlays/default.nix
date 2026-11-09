@@ -12,6 +12,7 @@ in
   modifications = lib.composeManyExtensions [
     (import ./inputs.nix { inherit inputs; })
     (import ./ghostty.nix)
+    (import ./fnm.nix)
   ];
 
   # When applied, the stable nixpkgs set (declared in the flake inputs) will

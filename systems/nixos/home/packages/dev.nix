@@ -13,9 +13,7 @@
     nixfmt
     statix
     python312
-    minikube
     kubernetes-helm
-    kubectl
     uv
   ];
 }

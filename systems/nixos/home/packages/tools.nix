@@ -35,7 +35,6 @@
     go-musicfox
     lazydocker
     pandoc
-    neovide
     upx
     bc
     ddcutil

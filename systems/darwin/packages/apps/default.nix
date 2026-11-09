@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    ghostty-bin
-    qbittorrent
     keka
     orbstack
     qq

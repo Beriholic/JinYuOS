@@ -13,7 +13,6 @@
     nixfmt
     statix
     python312
-    kubernetes-helm
     uv
   ];
 }

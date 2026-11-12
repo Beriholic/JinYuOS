@@ -14,5 +14,7 @@
     statix
     python312
     uv
+    pnpm
+    fnm
   ];
 }

@@ -39,5 +39,10 @@
     bc
     ddcutil
     pavucontrol
+    gh
+    yazi
+    unar
+    ffmpeg
+    yt-dlp
   ];
 }

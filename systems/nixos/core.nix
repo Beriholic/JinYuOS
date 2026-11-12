@@ -62,8 +62,11 @@
     config = {
       allowUnfree = true;
       # gtk2 在新版 nixpkgs 里被标记为 broken（上游计划 27.05 移除），
-      # 求值阶段会直接拒绝；WPS 仍然依赖它，这里只降级成警告。
-      problems.handlers."gtk+".broken = "warn";
+      # 这条 broken 只是"即将移除"的预告，不是真的坏掉。配置里还有两处会碰到它：
+      #   - nix-ld 的库集合（给外部 GTK2 程序兜底），buildEnv 会强制求值 gtk2；
+      #   - 上游 wpsoffice-cn 的 buildInputs（12.1 的 deb 里其实已经没有 gtk2 引用）。
+      # 在它们跟上之前把这条 broken 静默掉，否则每次构建都会刷一遍警告。
+      problems.handlers."gtk+".broken = "ignore";
     };
   };
 
